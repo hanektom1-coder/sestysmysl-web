@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masáže &amp; Terapie – Maderoterapie UH | Šestý Smysl Uherské Hradiště</title>
+  <meta name="description" content="Maderoterapie UH – Bc. Lenka Hanáčková. Maderoterapie, lymfodrenáž, španělská masáž, reflexní terapie a čínská masáž nohou v Uherském Hradišti. Rezervujte online.">
+  <meta name="keywords" content="masáže Uherské Hradiště, maderoterapie Uherské Hradiště, lymfodrenáž, španělská masáž, reflexní terapie, čínská masáž nohou, Lenka Hanáčková, celulitida, lymfatický systém">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sestysmysl.cz/masaze">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Maderoterapie UH – Bc. Lenka Hanáčková","description":"Maderoterapie, lymfodrenáž, španělská masáž, reflexní terapie a čínská masáž nohou v Uherském Hradišti","telephone":"+420776323427","email":"maderoterapieuh@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Hradební 1543","addressLocality":"Uherské Hradiště","postalCode":"686 01","addressCountry":"CZ"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --off: #F7F5F2; --cream: #F2EFE9;
+      --gold: #B8965A; --gold-light: #D4AE74;
+      --sage: #3D4A3E; --sage-mid: #5A6B5B; --sage-pale: #8A9E8B;
+      --ink: #1A1F1B; --border: rgba(61,74,62,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); font-weight: 300; overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Big Shoulders Display', sans-serif; font-weight: 200; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1; }
+    .nav-brand-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1rem; font-weight: 400; letter-spacing: .15em; text-transform: uppercase; color: var(--sage); }
+    .nav-brand-sub { font-size: .52rem; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; margin-top: 2px; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--sage); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; transition: color .25s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-btn { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; padding: .55rem 1.4rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; }
+    .nav-btn:hover { background: var(--sage); color: var(--white); }
+
+    /* HERO */
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
+    .page-hero h1 em { font-style: normal; color: var(--sage); font-weight: 100; }
+    .hero-tagline { font-size: 0.68rem; font-weight: 300; color: var(--sage-pale); letter-spacing: 0.36em; text-transform: uppercase; margin-bottom: 4rem; }
+    .hero-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .hero-p { font-size: 0.88rem; line-height: 1.9; color: var(--sage-mid); max-width: 400px; }
+    .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-dark { display: inline-block; padding: .9rem 2.2rem; background: var(--sage); color: var(--white); text-decoration: none; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; transition: background .3s; }
+    .btn-dark:hover { background: var(--ink); }
+    .btn-ghost { display: inline-block; padding: .9rem 2.2rem; border: 1px solid var(--border); color: var(--sage-mid); text-decoration: none; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; transition: all .3s; }
+    .btn-ghost:hover { border-color: var(--sage); color: var(--sage); }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 8vw; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .trust-item { padding: 2.2rem 1.5rem 2.2rem 0; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.3rem; }
+    .trust-item:last-child { border-right: none; padding-left: 1.5rem; }
+    .trust-item:first-child { padding-left: 0; }
+    .trust-num { font-family: 'Big Shoulders Display', sans-serif; font-size: 2rem; font-weight: 200; color: var(--gold); line-height: 1; }
+    .trust-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-mid); }
+
+    /* SHARED */
+    .label { font-size: .63rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; display: flex; align-items: center; gap: 1rem; }
+    .label::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; }
+
+    /* LENKA */
+    .lenka { display: grid; grid-template-columns: 1fr 1fr; background: var(--off); border-bottom: 1px solid var(--border); }
+    .lenka-text { padding: 7rem 8vw 7rem 8vw; display: flex; flex-direction: column; justify-content: center; }
+    .lenka-text h2 { font-size: clamp(2.5rem, 4vw, 5rem); line-height: 0.9; margin-bottom: 2rem; }
+    .lenka-text h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .lenka-text p { font-size: 0.85rem; line-height: 1.95; color: var(--sage-mid); margin-bottom: 1.2rem; max-width: 480px; }
+    .lenka-text p:last-of-type { margin-bottom: 2rem; }
+    .lenka-quote { padding: 7rem 8vw; background: var(--sage); display: flex; flex-direction: column; justify-content: center; gap: 2rem; }
+    .lenka-quote blockquote { font-size: clamp(1.4rem, 2vw, 2rem); font-family: 'Big Shoulders Display', sans-serif; font-weight: 100; color: rgba(255,255,255,0.9); line-height: 1.3; letter-spacing: 0.04em; text-transform: uppercase; }
+    .lenka-quote cite { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+    .lenka-credentials { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .lenka-cred-item { font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; }
+    .lenka-cred-item strong { color: rgba(255,255,255,0.85); font-weight: 400; }
+
+    /* SERVICE LIST */
+    .services { padding: 8rem 8vw; }
+    .services-header { margin-bottom: 5rem; }
+    .services-header h2 { font-size: clamp(3rem, 5vw, 6rem); line-height: 0.9; }
+    .services-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .service-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 3rem; align-items: start; padding: 3.5rem 0; border-top: 1px solid var(--border); transition: all .25s; }
+    .service-item:last-child { border-bottom: 1px solid var(--border); }
+    .service-item:hover { background: var(--off); margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
+    .svc-num { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.8rem; font-weight: 100; color: rgba(184,150,90,0.35); line-height: 1; padding-top: .5rem; }
+    .svc-body h3 { font-size: clamp(1.8rem, 2.5vw, 2.8rem); color: var(--ink); margin-bottom: .6rem; font-weight: 200; }
+    .svc-body p { font-size: .84rem; line-height: 1.85; color: var(--sage-mid); max-width: 580px; margin-bottom: 0.8rem; }
+    .svc-detail { font-size: 0.78rem; line-height: 1.8; color: var(--sage-pale); max-width: 580px; }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .tag { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; padding: .25rem .7rem; border: 1px solid rgba(61,74,62,.12); color: var(--sage-mid); }
+    .svc-meta { text-align: right; display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.5rem; min-width: 120px; }
+    .svc-price { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 200; color: var(--ink); line-height: 1; }
+    .svc-price-from { font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-pale); }
+    .svc-duration { font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-pale); }
+
+    /* CONTRAINDICATIONS */
+    .contra { padding: 5rem 8vw; background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .contra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .contra h2 { font-size: clamp(2rem, 3.5vw, 4rem); line-height: 0.9; margin-bottom: 2rem; }
+    .contra h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .contra-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .contra-list li { font-size: 0.82rem; color: var(--sage-mid); line-height: 1.7; padding: 0.7rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.8rem; }
+    .contra-list li::before { content: '×'; color: rgba(184,150,90,0.5); font-family: 'Big Shoulders Display', sans-serif; font-size: 1rem; flex-shrink: 0; }
+    .contra-note { font-size: 0.8rem; line-height: 1.85; color: var(--sage-mid); padding-top: 1.5rem; }
+    .contra-note strong { color: var(--ink); font-weight: 400; }
+
+    /* DARK STRIP */
+    .strip { padding: 8rem 8vw; background: var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+    .strip h2 { font-size: clamp(2.5rem, 4vw, 5rem); color: var(--white); line-height: 0.9; }
+    .strip h2 em { color: var(--gold); font-style: normal; font-weight: 100; }
+    .strip-right { display: flex; flex-direction: column; }
+    .strip-item { border-top: 1px solid rgba(255,255,255,.08); padding: 2rem 0; }
+    .strip-item:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .strip-item h3 { font-size: 1.3rem; color: var(--white); margin-bottom: .5rem; font-weight: 200; }
+    .strip-item p { font-size: .8rem; line-height: 1.8; color: rgba(255,255,255,.4); }
+
+    /* BLOG */
+    .blog { padding: 8rem 8vw; background: var(--white); border-top: 1px solid var(--border); }
+    .blog-header { margin-bottom: 4rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .blog-header h2 { font-size: clamp(2.5rem, 4vw, 5rem); line-height: 0.9; }
+    .blog-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); }
+    .blog-card { background: var(--white); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; transition: background .25s; cursor: default; }
+    .blog-card:hover { background: var(--off); }
+    .blog-tag { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .blog-card h3 { font-size: 1.4rem; color: var(--ink); line-height: 1.1; font-weight: 200; }
+    .blog-card p { font-size: 0.8rem; line-height: 1.8; color: var(--sage-mid); flex: 1; }
+    .blog-read { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-pale); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+    /* CTA */
+    .page-cta { padding: 8rem 8vw; background: var(--white); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .page-cta h2 { font-size: clamp(3rem, 5vw, 6rem); color: var(--ink); line-height: .9; }
+    .page-cta h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .cta-contact { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-end; }
+    .cta-contact a { font-size: 0.85rem; color: var(--sage-mid); text-decoration: none; letter-spacing: 0.04em; transition: color .25s; }
+    .cta-contact a:hover { color: var(--gold); }
+    .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+
+    /* FOOTER */
+    footer { background: var(--ink); padding: 5rem 8vw 2.5rem; color: rgba(255,255,255,0.4); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2.5rem; }
+    .footer-brand p { font-size: 0.78rem; line-height: 1.9; max-width: 280px; color: rgba(255,255,255,0.38); }
+    .footer-brand-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.1rem; font-weight: 400; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.5rem; display: block; }
+    .footer-brand-sub { font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1.4rem; }
+    .footer-col h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; margin-bottom: 1.4rem; font-weight: 400; text-transform: uppercase; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.65rem; font-size: 0.76rem; }
+    .footer-col a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.25s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: rgba(255,255,255,0.28); }
+    .footer-bottom-links { display: flex; gap: 2rem; }
+    .footer-bottom-links a { color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.25s; }
+    .footer-bottom-links a:hover { color: var(--gold); }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 300; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--sage); transition: all 0.3s ease; transform-origin: center; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-menu { position: fixed; inset: 0; z-index: 250; background: var(--white); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 10vw; transform: translateX(100%); transition: transform 0.4s cubic-bezier(.77,0,.18,1); border-left: 3px solid var(--gold); }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 0; width: 100%; margin-bottom: 3rem; }
+    .mobile-menu-links li { border-bottom: 1px solid var(--border); }
+    .mobile-menu-links li:first-child { border-top: 1px solid var(--border); }
+    .mobile-menu-links a { display: block; padding: 1.4rem 0; font-family: 'Big Shoulders Display', sans-serif; font-size: clamp(2rem, 7vw, 3rem); font-weight: 200; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; transition: color 0.2s, padding-left 0.2s; }
+    .mobile-menu-links a:hover, .mobile-menu-links a.active { color: var(--gold); padding-left: 0.5rem; }
+    .mobile-menu-bottom { display: flex; flex-direction: column; gap: 0.8rem; width: 100%; }
+    .mobile-cta { display: block; padding: 1rem 2rem; background: var(--sage); color: var(--white); text-align: center; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.3s; }
+    .mobile-cta:hover { background: var(--ink); }
+    .mobile-brand-sub { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-pale); text-align: center; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav .nav-links, nav .nav-btn { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 100px 6vw 70px; }
+      .page-hero h1 { font-size: clamp(3.8rem, 14vw, 7rem); }
+      .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
+      .trust-bar { grid-template-columns: 1fr 1fr; }
+      .trust-item:nth-child(2) { border-right: none; padding-left: 1.5rem; }
+      .trust-item:nth-child(3) { border-right: 1px solid var(--border); padding-left: 0; }
+      .lenka { grid-template-columns: 1fr; }
+      .lenka-text { padding: 5rem 6vw; }
+      .lenka-quote { padding: 4rem 6vw; }
+      .services { padding: 5rem 6vw; }
+      .service-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+      .svc-meta { display: none; }
+      .contra-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .contra { padding: 4rem 6vw; }
+      .strip { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 6vw; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog { padding: 5rem 6vw; }
+      .page-cta { flex-direction: column; padding: 5rem 6vw; align-items: flex-start; }
+      .cta-contact { align-items: flex-start; }
+      footer { padding: 4rem 6vw 2.5rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .page-hero { padding: 88px 5vw 60px; }
+      .page-hero h1 { font-size: clamp(3rem, 16vw, 5.5rem); }
+      .trust-bar { grid-template-columns: 1fr 1fr; }
+      .services { padding: 4rem 5vw; }
+      .blog { padding: 4rem 5vw; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-brand">
+      <span class="nav-brand-name">Šestý Smysl</span>
+      <span class="nav-brand-sub">body · beauty · interier design</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="masaze.html" class="active">Masáže</a></li>
+    <li><a href="kosmetika.html">Kosmetika</a></li>
+    <li><a href="interier.html">Interiérový design</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <a href="https://maderoterapie-uh.reservio.com/" target="_blank" class="nav-btn">Rezervace</a>
+  <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigace">
+  <ul class="mobile-menu-links">
+    <li><a href="masaze.html" class="active">Masáže</a></li>
+    <li><a href="kosmetika.html">Kosmetika</a></li>
+    <li><a href="interier.html">Interiérový design</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <div class="mobile-menu-bottom">
+    <a href="https://maderoterapie-uh.reservio.com/" class="mobile-cta" target="_blank">Rezervace online</a>
+    <span class="mobile-brand-sub">body · beauty · interier design</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <p class="hero-eyebrow">Šestý Smysl · Uherské Hradiště</p>
+  <h1>Masáže<br>&amp; <em>Terapie</em></h1>
+  <p class="hero-tagline">Maderoterapie UH — Bc. Lenka Hanáčková</p>
+  <div class="hero-bottom">
+    <p class="hero-p">Profesionální terapeutické masáže s individuálním přístupem. Každý klient je jedinečný projekt — základ není služba navíc, je to základ.</p>
+    <div class="hero-cta-row">
+      <a href="https://maderoterapie-uh.reservio.com/" target="_blank" class="btn-dark">Rezervovat online</a>
+      <a href="#prehled" class="btn-ghost">Všechny masáže</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar reveal">
+  <div class="trust-item">
+    <span class="trust-num">100%</span>
+    <span class="trust-label">Přírodní &amp; neinvazivní metody</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">od 2016</span>
+    <span class="trust-label">Práce s lymfou a terapiemi</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">Zdarma</span>
+    <span class="trust-label">Konzultace před ošetřením</span>
+  </div>
+  <div class="trust-item">
+    <span class="trust-num">5★</span>
+    <span class="trust-label">Spokojení klienti — osobní přístup</span>
+  </div>
+</div>
+
+<!-- LENKA -->
+<section class="lenka reveal">
+  <div class="lenka-text">
+    <p class="label">Maderoterapie UH</p>
+    <h2>Bc. Lenka<br><em>Hanáčková</em></h2>
+    <p>Věnuji se lymfě od roku 2016. Cesta začala studiem na zdravotnické škole a pokračovala vlastní zdravotní zkušeností — záhadná lymfa mě nejprve přivedla k hledání odpovědí pro sebe, a pak jsem zjistila, že stejný problém řeší spousta dalších žen.</p>
+    <p>Ke každému klientovi přistupuji individuálně a své znalosti neustále rozšiřuji studiem nových technik a tradičních medicínských umění. Každá z vás je u mě vítána a je pro mě výzvou.</p>
+    <a href="https://maderoterapie-uh.reservio.com/" target="_blank" class="btn-dark">Objednat se k Lence</a>
+  </div>
+  <div class="lenka-quote">
+    <blockquote>Každý klient je pro mě jedinečný projekt — osobní přístup není služba navíc, je to základ.</blockquote>
+    <cite>— Bc. Lenka Hanáčková, Maderoterapie UH</cite>
+    <div class="lenka-credentials">
+      <div class="lenka-cred-item"><strong>Vzdělání:</strong> Střední zdravotnická škola, Bc. specializace ve zdravotnictví</div>
+      <div class="lenka-cred-item"><strong>Praxe s lymfou:</strong> od roku 2016</div>
+      <div class="lenka-cred-item"><strong>Aktivní praxe s klienty:</strong> od roku 2021</div>
+      <div class="lenka-cred-item"><strong>Kontakt:</strong> maderoterapieuh@gmail.com · +420 776 323 427</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="prehled" class="services reveal">
+  <div class="services-header">
+    <p class="label">Nabídka · Maderoterapie UH</p>
+    <h2>Všechny<br><em>terapie</em></h2>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">01</div>
+    <div class="svc-body">
+      <h3>Maderoterapie těla</h3>
+      <p>Celosvětově známá jako <em>Wood Therapy</em> — moderní a revoluční technika pro formování postavy a zlepšení kvality pokožky. Speciálně anatomicky navržené dřevěné pomůcky umožňují 100% přírodní, neinvazivní a šetrné ošetření.</p>
+      <p class="svc-detail">Maderoterapie vznikla před více než sto lety v Kolumbii. Stimuluje lymfatický systém, aby se v těle nehromadily toxiny — díky tomu její účinky trvají déle než u laserových či ultrazvukových metod. Vhodná pro celulitidu, otoky nohou, po liposukci nebo při snížené funkci štítné žlázy.</p>
+      <div class="svc-tags"><span class="tag">Celulitida</span><span class="tag">Otoky</span><span class="tag">Formování postavy</span><span class="tag">Detoxikace lymfy</span><span class="tag">Zpevnění pokožky</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">890 Kč</span>
+      <span class="svc-duration">60 / 90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">02</div>
+    <div class="svc-body">
+      <h3>Lymfodrenáž</h3>
+      <p>Jemná, rytmická masáž cíleně stimulující lymfatický systém — přirozenou obranu těla. Na rozdíl od krevního oběhu nemá lymfa vlastní pumpu, proto při nedostatečném proudění dochází k hromadění škodlivin v tkáních.</p>
+      <p class="svc-detail">Lymfodrenáž pomáhá odstraňovat otoky, zbavovat tělo toxinů a posilovat imunitu. Ideální po chirurgických zákrocích, jako podpora při hubnutí nebo při pocitu těžkých nohou. Přináší hluboký pocit lehkosti celého těla.</p>
+      <div class="svc-tags"><span class="tag">Otoky</span><span class="tag">Imunita</span><span class="tag">Těžké nohy</span><span class="tag">Po operaci</span><span class="tag">Detox</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">790 Kč</span>
+      <span class="svc-duration">60 / 90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">03</div>
+    <div class="svc-body">
+      <h3>Španělská masáž</h3>
+      <p>Hloubková relaxační masáž celého těla s prémiovými oleji. Kombinuje prvky švédské a terapeutické masáže pro dokonalé uvolnění svalového napětí a zklidnění nervového systému.</p>
+      <p class="svc-detail">Španělská masáž pracuje s celým tělem jako s celkem — uvolňuje fascie, zlepšuje prokrvení a navozuje stav hluboké relaxace. Ideální při chronickém stresu, bolestech zad nebo jako pravidelná regenerační péče.</p>
+      <div class="svc-tags"><span class="tag">Relaxace</span><span class="tag">Svalové napětí</span><span class="tag">Stres</span><span class="tag">Záda</span><span class="tag">Regenerace</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">790 Kč</span>
+      <span class="svc-duration">60 / 90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">04</div>
+    <div class="svc-body">
+      <h3>Reflexní terapie</h3>
+      <p>Starobylá technika pracující s reflexními zónami na chodidlech, které odpovídají jednotlivým orgánům a systémům těla. Jemným tlakem na přesně definované body stimulujeme samoléčebné procesy organismu.</p>
+      <p class="svc-detail">Reflexní terapie vychází z principu, že celé tělo je „zmapováno" na ploskách nohou. Pravidelná péče pomáhá navracet rovnováhu, podporuje funkci vnitřních orgánů a přináší celkový pocit harmonie.</p>
+      <div class="svc-tags"><span class="tag">Reflexní zóny</span><span class="tag">Orgány</span><span class="tag">Rovnováha</span><span class="tag">Holismus</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">650 Kč</span>
+      <span class="svc-duration">45 / 60 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">05</div>
+    <div class="svc-body">
+      <h3>Čínská masáž nohou</h3>
+      <p>Tradiční čínská technika propojující reflexní terapii s akupresurními body na chodidlech a lýtkách. Vychází z tisícileté čínské medicíny a teorie energetických drah — meridiánů.</p>
+      <p class="svc-detail">Revitalizuje energetické dráhy, uvolňuje únavu dolních končetin, zlepšuje kvalitu spánku a harmonizuje tok energie v celém organismu. Oblíbená procedura pro ty, kdo tráví hodně času ve stoje nebo mají problémy se spánkem.</p>
+      <div class="svc-tags"><span class="tag">Čínská medicína</span><span class="tag">Meridiány</span><span class="tag">Spánek</span><span class="tag">Únava nohou</span><span class="tag">Energie</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">590 Kč</span>
+      <span class="svc-duration">45 / 60 min</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRAINDICATIONS -->
+<section class="contra reveal">
+  <div class="contra-grid">
+    <div>
+      <p class="label">Důležité info</p>
+      <h2>Pro koho<br><em>není</em> určeno</h2>
+      <p class="contra-note">Bezpečnost klientů je na prvním místě. Před každým ošetřením probíhá krátká konzultace, při které společně zjistíme, která terapie je pro vás nejvhodnější. <strong>Konzultace je zdarma.</strong></p>
+    </div>
+    <div>
+      <ul class="contra-list">
+        <li>Osoby užívající léky na ředění krve</li>
+        <li>Těhotné a kojící ženy</li>
+        <li>Osoby s nádorovým onemocněním</li>
+        <li>Akutní záněty a infekce v místě ošetření</li>
+        <li>Kožní onemocnění v aktivní fázi</li>
+        <li>Trombóza nebo varixy v těžkém stadiu</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DARK STRIP – proč -->
+<section class="strip reveal">
+  <h2>Proč<br>masáže<br><em>fungují</em></h2>
+  <div class="strip-right">
+    <div class="strip-item">
+      <h3>Lymfatický systém — klíč ke zdraví</h3>
+      <p>Lymfa nemá vlastní pumpu jako srdce. Bez stimulace se v tkáních hromadí toxiny, voda a tukové buňky — to je skutečná příčina celulitidy a otoků, ne jen kosmetický problém.</p>
+    </div>
+    <div class="strip-item">
+      <h3>Přírodní, ne invazivní</h3>
+      <p>Na rozdíl od laserových či ultrazvukových metod maderoterapie řeší příčinu, ne jen viditelný symptom. Výsledky trvají déle a tělo se přirozeně adaptuje.</p>
+    </div>
+    <div class="strip-item">
+      <h3>Psychická i fyzická obnova</h3>
+      <p>Vědomý terapeutický dotek snižuje hladinu kortizolu, zvyšuje produkci endorfinů a aktivuje parasympatický nervový systém — přirozený stav klidu a regenerace.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog reveal">
+  <div class="blog-header">
+    <div>
+      <p class="label">Ze světa terapií</p>
+      <h2>Čtěte<br><em>více</em></h2>
+    </div>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <span class="blog-tag">Maderoterapie</span>
+      <h3>Co je maderoterapie a jak funguje Wood Therapy?</h3>
+      <p>Maderoterapie vznikla před více než sto lety v Kolumbii. Název pochází ze španělského „madero" — dřevo. Dřevěné nástroje speciálně anatomicky tvarované umožňují přesnou stimulaci lymfatického systému a rozvolnění tukových buněk, které jinými metodami není možné.</p>
+      <span class="blog-read">Maderoterapie UH · 3 min čtení</span>
+    </div>
+    <div class="blog-card">
+      <span class="blog-tag">Lymfatický systém</span>
+      <h3>Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h3>
+      <p>Lymfatický systém je do určité míry podobný systému krevnímu, ale nemá vlastní pumpu. Nedostatečným prouděním lymfy dochází ke snížení funkce celého mízního systému a hromadění škodlivých látek v tkáních. Co s tím dělat?</p>
+      <span class="blog-read">Maderoterapie UH · 4 min čtení</span>
+    </div>
+    <div class="blog-card">
+      <span class="blog-tag">Celulitida</span>
+      <h3>Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h3>
+      <p>Celulitida postihuje až 90 % žen bez ohledu na věk nebo váhu. Hrudkovité útvary připomínající pomerančovou kůži vznikají omezením průtoku krve a lymfy v tkáních — ne jen přebytkem tuku. Proto samotná dieta nestačí a co skutečně funguje.</p>
+      <span class="blog-read">Maderoterapie UH · 5 min čtení</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta reveal">
+  <h2>Objednejte<br>se k <em>Lence</em></h2>
+  <div class="cta-contact">
+    <a href="tel:+420776323427">+420 776 323 427</a>
+    <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>
+    <div class="cta-buttons">
+      <a href="https://maderoterapie-uh.reservio.com/" target="_blank" class="btn-dark">Rezervovat online</a>
+      <a href="index.html#kontakt" class="btn-ghost">Kde nás najdete</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Šestý Smysl</span>
+      <span class="footer-brand-sub">body · beauty · interier design</span>
+      <p>Tři světy péče v jednom elegantním prostoru. Masáže &amp; terapie, profesionální kosmetika a interiérový design na jednom místě v Uherském Hradišti.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Masáže &amp; Terapie</h4>
+      <ul>
+        <li><a href="masaze.html">Maderoterapie těla</a></li>
+        <li><a href="masaze.html">Lymfodrenáž</a></li>
+        <li><a href="masaze.html">Španělská masáž</a></li>
+        <li><a href="masaze.html">Reflexní terapie</a></li>
+        <li><a href="masaze.html">Čínská masáž nohou</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kosmetika &amp; Design</h4>
+      <ul>
+        <li><a href="kosmetika.html">Ošetření pleti</a></li>
+        <li><a href="kosmetika.html">Anti-age terapie</a></li>
+        <li><a href="interier.html">Showroom OR</a></li>
+        <li><a href="interier.html">Bytový textil</a></li>
+        <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="index.html#kontakt">Hradební 1543, UH</a></li>
+        <li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+        <li><a href="tel:+420776323427">+420 776 323 427</a></li>
+        <li><a href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervace online</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
+    <div class="footer-bottom-links">
+      <a href="#">Ochrana osobních údajů</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>
