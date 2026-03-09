@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kosmetika &amp; Beauty – R-Studio | Šestý Smysl Uherské Hradiště</title>
+  <meta name="description" content="R-Studio — profesionální kosmetika a péče o pleť v Uherském Hradišti. Hloubkové čištění, anti-age ošetření, hydratace a péče pro každý typ pleti.">
+  <meta name="keywords" content="kosmetika Uherské Hradiště, R-Studio, ošetření pleti Uherské Hradiště, hloubkové čištění, anti-age ošetření, hydratace pleti, Šestý Smysl">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sestysmysl.cz/kosmetika">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"R-Studio – Šestý Smysl","description":"Profesionální kosmetika a péče o pleť v Uherském Hradišti","address":{"@type":"PostalAddress","addressLocality":"Uherské Hradiště","addressCountry":"CZ"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --off: #F7F5F2; --cream: #F2EFE9;
+      --gold: #B8965A; --gold-light: #D4AE74;
+      --sage: #3D4A3E; --sage-mid: #5A6B5B; --sage-pale: #8A9E8B;
+      --ink: #1A1F1B; --border: rgba(61,74,62,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); font-weight: 300; overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Big Shoulders Display', sans-serif; font-weight: 200; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1; }
+    .nav-brand-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1rem; font-weight: 400; letter-spacing: .15em; text-transform: uppercase; color: var(--sage); }
+    .nav-brand-sub { font-size: .58rem; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--sage); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; transition: color .25s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-btn { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; padding: .55rem 1.4rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; }
+    .nav-btn:hover { background: var(--sage); color: var(--white); }
+
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
+    .page-hero h1 em { font-style: normal; color: var(--sage); font-weight: 100; }
+    .hero-tagline { font-size: 0.68rem; font-weight: 300; color: var(--sage-pale); letter-spacing: 0.36em; text-transform: uppercase; margin-bottom: 4rem; }
+    .hero-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .hero-p { font-size: 0.88rem; line-height: 1.9; color: var(--sage-mid); max-width: 400px; }
+    .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-dark { display: inline-block; padding: .9rem 2.2rem; background: var(--sage); color: var(--white); text-decoration: none; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; transition: background .3s; }
+    .btn-dark:hover { background: var(--ink); }
+    .btn-ghost { display: inline-block; padding: .9rem 2.2rem; border: 1px solid var(--border); color: var(--sage-mid); text-decoration: none; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; transition: all .3s; }
+    .btn-ghost:hover { border-color: var(--sage); color: var(--sage); }
+
+    .label { font-size: .63rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; display: flex; align-items: center; gap: 1rem; }
+    .label::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; }
+
+    .services { padding: 8rem 8vw; }
+    .services-header { margin-bottom: 5rem; }
+    .services-header h2 { font-size: clamp(3rem, 5vw, 6rem); line-height: 0.9; }
+    .services-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+
+    .service-item { display: grid; grid-template-columns: 60px 1fr 120px; gap: 3rem; align-items: start; padding: 3.5rem 0; border-top: 1px solid var(--border); transition: all .25s; }
+    .service-item:last-child { border-bottom: 1px solid var(--border); }
+    .service-item:hover { background: var(--off); margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
+    .svc-num { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.8rem; font-weight: 100; color: rgba(184,150,90,0.35); line-height: 1; padding-top: .5rem; }
+    .svc-body h3 { font-size: clamp(1.8rem, 2.5vw, 2.8rem); color: var(--ink); margin-bottom: .8rem; font-weight: 200; }
+    .svc-body p { font-size: .84rem; line-height: 1.85; color: var(--sage-mid); max-width: 600px; }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.2rem; }
+    .tag { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; padding: .25rem .7rem; border: 1px solid rgba(61,74,62,.12); color: var(--sage-mid); }
+    .svc-meta { text-align: right; padding-top: .5rem; }
+    .svc-duration { font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-pale); }
+
+    /* Skin types — cream background, full-width grid */
+    .skin { padding: 8rem 8vw; background: var(--cream); }
+    .skin h2 { font-size: clamp(3rem, 5vw, 6rem); line-height: 0.9; margin-bottom: 5rem; }
+    .skin h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .skin-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(61,74,62,.08); }
+    .skin-card { background: var(--cream); padding: 2.5rem 2rem; border-top: 2px solid var(--gold); }
+    .skin-card h3 { font-size: 1.4rem; color: var(--ink); margin-bottom: .7rem; font-weight: 200; }
+    .skin-card p { font-size: .78rem; line-height: 1.8; color: var(--sage-mid); }
+
+    .strip { padding: 8rem 8vw; background: var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+    .strip h2 { font-size: clamp(2.5rem, 4vw, 5rem); color: var(--white); line-height: 0.9; }
+    .strip h2 em { color: var(--gold); font-style: normal; font-weight: 100; }
+    .strip-right { display: flex; flex-direction: column; }
+    .strip-item { border-top: 1px solid rgba(255,255,255,.08); padding: 2rem 0; }
+    .strip-item:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .strip-item h3 { font-size: 1.3rem; color: var(--white); margin-bottom: .5rem; font-weight: 200; }
+    .strip-item p { font-size: .8rem; line-height: 1.8; color: rgba(255,255,255,.4); }
+
+    .page-cta { padding: 8rem 8vw; background: var(--white); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .page-cta h2 { font-size: clamp(3rem, 5vw, 6rem); color: var(--ink); line-height: .9; }
+    .page-cta h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+
+    footer { background: var(--ink); padding: 3rem 8vw; border-top: 1px solid rgba(255,255,255,.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer span { font-size: .7rem; color: rgba(255,255,255,.28); }
+    .footer-links { display: flex; gap: 2.5rem; }
+    .footer-links a { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.28); text-decoration: none; transition: color .25s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px; height: 40px;
+      cursor: pointer;
+      background: none; border: none; padding: 4px;
+      z-index: 300;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--sage);
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ── MOBILE MENU OVERLAY ── */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 250;
+      background: var(--white);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 0 10vw;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+      border-left: 3px solid var(--gold);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    .mobile-menu-links {
+      list-style: none;
+      display: flex; flex-direction: column;
+      gap: 0; width: 100%;
+      margin-bottom: 3rem;
+    }
+    .mobile-menu-links li { border-bottom: 1px solid var(--border); }
+    .mobile-menu-links li:first-child { border-top: 1px solid var(--border); }
+    .mobile-menu-links a {
+      display: block;
+      padding: 1.4rem 0;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(2rem, 7vw, 3rem);
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .mobile-menu-links a:hover,
+    .mobile-menu-links a.active { color: var(--gold); padding-left: 0.5rem; }
+
+    .mobile-menu-bottom {
+      display: flex; flex-direction: column; gap: 0.8rem; width: 100%;
+    }
+    .mobile-cta {
+      display: block; padding: 1rem 2rem;
+      background: var(--sage); color: var(--white);
+      text-align: center; text-decoration: none;
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      transition: background 0.3s;
+    }
+    .mobile-cta:hover { background: var(--ink); }
+    .mobile-brand-sub {
+      font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--sage-pale); text-align: center;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+
+      /* Hero */
+      .hero { padding: 100px 6vw 70px; }
+      .page-hero { padding: 100px 6vw 70px; }
+      .hero-h1, .page-hero h1 { font-size: clamp(3.8rem, 14vw, 7rem); }
+      .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
+      .hero-tagline { font-size: 0.6rem; letter-spacing: 0.22em; }
+
+      /* Tiles */
+      .tiles { grid-template-columns: 1fr; gap: 2px; }
+      .tile { aspect-ratio: 4/3; }
+
+      /* About */
+      .about { grid-template-columns: 1fr; }
+      .about-visual { min-height: 260px; }
+      .about-text { padding: 4rem 6vw; }
+
+      /* Why */
+      .why { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 6vw; }
+      .why-items { grid-template-columns: 1fr 1fr; gap: 2px; }
+
+      /* Location */
+      .location { grid-template-columns: 1fr; }
+      .loc-info { padding: 4rem 6vw; }
+
+      /* CTA */
+      .cta { flex-direction: column; padding: 4rem 6vw; text-align: left; }
+
+      /* Services list */
+      .services { padding: 5rem 6vw; }
+      .service-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+      .svc-meta { display: none; }
+      .svc-body h3 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+      .categories { padding: 5rem 6vw; }
+      .cat-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+      .cat-body h3 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+
+      /* Strip */
+      .strip { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 6vw; }
+
+      /* Skin / styles grids */
+      .skin { padding: 5rem 6vw; }
+      .skin-grid { grid-template-columns: 1fr 1fr; }
+      .styles { padding: 5rem 6vw; }
+      .styles-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Page CTA */
+      .page-cta { flex-direction: column; padding: 5rem 6vw; }
+      footer { padding: 4rem 6vw 2.5rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+      .page-cta h2 { font-size: clamp(2.5rem, 10vw, 5rem); }
+
+      /* Section headers */
+      .services-header h2, .categories-header h2,
+      .skin h2, .styles h2, .strip h2,
+      .about-text h2, .why .section-title { font-size: clamp(2.5rem, 9vw, 5rem); }
+
+      /* Footer */
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding-bottom: 3rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+      footer { padding: 3rem 6vw 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 88px 5vw 60px; }
+      .page-hero { padding: 88px 5vw 60px; }
+      .hero-h1, .page-hero h1 { font-size: clamp(3rem, 16vw, 5.5rem); }
+      .tiles { gap: 2px; }
+      .tile { aspect-ratio: 3/2; }
+      .tile-title { font-size: 1.6rem; }
+      .why-items { grid-template-columns: 1fr; }
+      .skin-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .styles-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .services { padding: 4rem 5vw; }
+      .categories { padding: 4rem 5vw; }
+      .strip { padding: 4rem 5vw; }
+      .page-cta { padding: 4rem 5vw; }
+    }
+
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-brand">
+      <span class="nav-brand-name">Šestý Smysl</span>
+      <span class="nav-brand-sub">body · beauty · interier design</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="masaze.html">Masáže</a></li>
+    <li><a href="kosmetika.html" class="active">Kosmetika</a></li>
+    <li><a href="interier.html">Interiérový design</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <a href="index.html#rezervace" class="nav-btn">Rezervace</a>
+</nav>
+
+<section class="page-hero">
+  <p class="hero-eyebrow">Šestý Smysl · Uherské Hradiště</p>
+  <h1>Kosmetika<br>&amp; <em>Beauty</em></h1>
+  <p class="hero-tagline">R-Studio — krása, péče, sebevědomí</p>
+  <div class="hero-bottom">
+    <p class="hero-p">Profesionální kosmetická péče s individuálním přístupem. Prémiové produkty, moderní techniky, viditelné výsledky již po prvním ošetření.</p>
+    <div class="hero-cta-row">
+      <a href="index.html#rezervace" class="btn-dark">Rezervovat ošetření</a>
+      <a href="#prehled" class="btn-ghost">Všechna ošetření</a>
+    </div>
+  </div>
+</section>
+
+<section id="prehled" class="services reveal">
+  <div class="services-header">
+    <p class="label">Nabídka · R-Studio</p>
+    <h2>Všechna<br><em>ošetření</em></h2>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">01</div>
+    <div class="svc-body">
+      <h3>Hloubkové čištění pleti</h3>
+      <p>Komplexní ošetření zahrnující parní lázeň, mechanické a chemické čištění pórů, extrakce a zklidňující masku. Výsledkem je čistá, svěží a zářivá pleť bez nečistot a přebytečného mazu. Základ pravidelné péče každých 4–6 týdnů.</p>
+      <div class="svc-tags"><span class="tag">Čistění pórů</span><span class="tag">Maz</span><span class="tag">Svěžest</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">02</div>
+    <div class="svc-body">
+      <h3>Anti-age ošetření</h3>
+      <p>Intenzivní liftingové ošetření pro zralou nebo začínající zralou pleť. Séra s aktivními látkami, masážní techniky stimulující tvorbu kolagenu a zpevňující masky. Viditelný lifting, vyhlazení vrásek a obnovení elasticity.</p>
+      <div class="svc-tags"><span class="tag">Lifting</span><span class="tag">Vrásky</span><span class="tag">Kolagen</span><span class="tag">Elasticita</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">75 min</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">03</div>
+    <div class="svc-body">
+      <h3>Hydratační terapie</h3>
+      <p>Hluboká hydratace pro vyprahlou a dehydratovanou pleť. Vícevrstvá séra a masky s kyselinou hyaluronovou obnoví přirozenou hydrataci, posílí ochrannou bariéru a vrátí pleti pružnost. Pleť doslova napijeme.</p>
+      <div class="svc-tags"><span class="tag">Kyselina hyaluronová</span><span class="tag">Hydratace</span><span class="tag">Bariéra</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">04</div>
+    <div class="svc-body">
+      <h3>Péče o problematickou pleť</h3>
+      <p>Specializované ošetření pro aknózní, smíšenou nebo citlivou pleť. Antibakteriální a protizánětlivé přísady zklidní zarudlou pleť, minimalizují póry a zabrání vzniku nových nedokonalostí. Bez agrese, s výsledky.</p>
+      <div class="svc-tags"><span class="tag">Akné</span><span class="tag">Záněty</span><span class="tag">Citlivá pleť</span><span class="tag">Póry</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">05</div>
+    <div class="svc-body">
+      <h3>Rozjasnění &amp; sjednocení tónu</h3>
+      <p>Ošetření zaměřené na hyperpigmentaci, skvrny a nerovnoměrný tón pleti. Kyseliny a enzymy pracují na rovnoměrném rozjasnění a sjednocení komplexu. Výsledkem je pleti zdravý, jednotný glow.</p>
+      <div class="svc-tags"><span class="tag">Pigmentace</span><span class="tag">Rozjasnění</span><span class="tag">Glow</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">06</div>
+    <div class="svc-body">
+      <h3>Oční okolí &amp; rty</h3>
+      <p>Speciální ošetření pro jemnou partii očního okolí a rtů. Minimalizuje jemné linky, tmavé kruhy a otoky. Intenzivní séra obnoví elasticitu a hydrataci v nejcitlivějších partiích obličeje.</p>
+      <div class="svc-tags"><span class="tag">Oční kruhy</span><span class="tag">Oční okolí</span><span class="tag">Rty</span></div>
+    </div>
+    <div class="svc-meta"><span class="svc-duration">45 min</span></div>
+  </div>
+</section>
+
+<section class="skin reveal">
+  <p class="label">Přístup</p>
+  <h2>Péče pro<br><em>každou</em> pleť</h2>
+  <div class="skin-grid">
+    <div class="skin-card">
+      <h3>Suchá pleť</h3>
+      <p>Hluboká hydratace a výživa. Obnovujeme přirozenou bariéru a vracíme pleti pružnost a jemnost.</p>
+    </div>
+    <div class="skin-card">
+      <h3>Mastná &amp; aknózní</h3>
+      <p>Regulace mazu, antibakteriální péče a minimalizace pórů bez agresivního vysušení pleti.</p>
+    </div>
+    <div class="skin-card">
+      <h3>Citlivá &amp; reaktivní</h3>
+      <p>Zklidňující a protizánětlivé přísady pro jemnou péči bez podráždění a zarudnutí.</p>
+    </div>
+    <div class="skin-card">
+      <h3>Zralá pleť</h3>
+      <p>Anti-age péče pro obnovu elasticity, podporu kolagenu a viditelný liftingový efekt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="strip reveal">
+  <h2>Proč<br>R-Studio<br><em>funguje</em></h2>
+  <div class="strip-right">
+    <div class="strip-item">
+      <h3>Individuální analýza</h3>
+      <p>Každé ošetření začíná důkladnou analýzou pleti. Žádný univerzální postup — pouze péče šitá na míru.</p>
+    </div>
+    <div class="strip-item">
+      <h3>Prémiové produkty</h3>
+      <p>Pracujeme výhradně s prověřenými produkty s klinicky prokázanými účinnými látkami.</p>
+    </div>
+    <div class="strip-item">
+      <h3>Viditelné výsledky</h3>
+      <p>Výsledky jsou cítitelné i viditelné již po prvním ošetření. Dlouhodobá péče přináší trvalou proměnu.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page-cta reveal">
+  <h2>Rezervujte<br>si <em>ošetření</em></h2>
+  <div class="hero-cta-row">
+    <a href="index.html#rezervace" class="btn-dark">Rezervovat termín</a>
+    <a href="index.html#kontakt" class="btn-ghost">Kontakt</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Šestý Smysl</span>
+      <span class="footer-brand-sub">body · beauty · interier design</span>
+      <p>Tři světy péče v jednom elegantním prostoru. Masáže &amp; terapie, profesionální kosmetika a interiérový design na jednom místě v Uherském Hradišti.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Masáže &amp; Terapie</h4>
+      <ul>
+        <li><a href="masaze.html">Maderoterapie těla</a></li>
+        <li><a href="masaze.html">Lymfodrenáž</a></li>
+        <li><a href="masaze.html">Španělská masáž</a></li>
+        <li><a href="masaze.html">Reflexní terapie</a></li>
+        <li><a href="masaze.html">Čínská masáž nohou</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kosmetika &amp; Design</h4>
+      <ul>
+        <li><a href="kosmetika.html">Ošetření pleti</a></li>
+        <li><a href="kosmetika.html">Anti-age terapie</a></li>
+        <li><a href="interier.html">Showroom OR</a></li>
+        <li><a href="interier.html">Bytový textil</a></li>
+        <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="index.html#kontakt">Hradební 1543, UH</a></li>
+        <li><a href="mailto:info@sestysmysl.cz">info@sestysmysl.cz</a></li>
+        <li><a href="index.html#kontakt">Otevírací doba</a></li>
+        <li><a href="index.html#rezervace">Rezervace</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
+    <div class="footer-bottom-links">
+      <a href="#">Ochrana osobních údajů</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<script>
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+  // Close on outside click
+  mobileMenu.addEventListener('click', e => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+</script>
+</body>
+</html>
