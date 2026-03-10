@@ -57,6 +57,7 @@
       background: rgba(255,255,255,0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
+      height: 72px;
     }
     .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
     .nav-logo img { height: 38px; width: auto; }
@@ -70,7 +71,9 @@
     .nav-brand-sub {
       font-size: 0.52rem; letter-spacing: 0.14em;
       color: var(--gold); text-transform: uppercase; margin-top: 2px; white-space: nowrap;
+      display: none;
     }
+    nav.solid .nav-brand-sub { display: block; }
     .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
     .nav-links a {
       text-decoration: none; color: var(--sage);
