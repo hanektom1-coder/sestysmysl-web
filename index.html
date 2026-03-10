@@ -478,7 +478,9 @@
       .hamburger { display: flex; }
 
       /* Hero */
-      .hero { padding: 100px 6vw 70px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 100px 6vw 70px; }
       .page-hero { padding: 100px 6vw 70px; }
       .hero-h1, .page-hero h1 { font-size: clamp(3.8rem, 14vw, 7rem); }
       .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
