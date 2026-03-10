@@ -90,16 +90,13 @@
     /* HERO – full width, clean */
     .hero {
       min-height: 100vh;
-      display: grid; grid-template-columns: 1fr 1.4fr;
+      display: flex; flex-direction: column; justify-content: center;
       background: var(--white);
       position: relative;
       border-bottom: 1px solid var(--border);
       overflow: hidden;
     }
-    .hero-left {
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 140px 6vw 100px 8vw;
-    }
+
     .hero-right {
       position: relative; overflow: hidden;
     }
@@ -240,7 +237,7 @@
 
     /* ABOUT STRIP */
     .about {
-      display: grid; grid-template-columns: 1fr 1.4fr;
+      display: flex; flex-direction: column; justify-content: center;
       min-height: 500px;
     }
     .about-text {
@@ -323,7 +320,7 @@
 
     /* LOCATION */
     .location {
-      display: grid; grid-template-columns: 1fr 1.4fr;
+      display: flex; flex-direction: column; justify-content: center;
     }
     .loc-info {
       padding: 7rem 7vw 7rem 8vw;
@@ -597,7 +594,6 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
   <div class="hero-text">
     <p class="hero-eyebrow">Uherské Hradiště</p>
     <h1 class="hero-h1">Šestý <em>Smysl</em></h1>
@@ -610,10 +606,7 @@
       </div>
     </div>
   </div>
-  </div>
-  <div class="hero-right">
-    <img src="hero-photo.jpg" alt="Prostory Šestý Smysl">
-  </div>
+
 </section>
 
 <!-- THREE TILES -->
@@ -676,7 +669,6 @@
         <span class="about-trio-item">Od Richarda</span>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- WHY -->
@@ -701,7 +693,6 @@
       <h3>Holistický pohled</h3>
       <p>Péče o tělo, krásu a domov jako jeden celek. Skutečná harmonie se promítá všude kolem vás.</p>
     </div>
-  </div>
 </section>
 
 <!-- LOCATION / CONTACT -->
@@ -774,14 +765,12 @@
         <li><a href="#rezervace">Rezervace</a></li>
       </ul>
     </div>
-  </div>
   <div class="footer-bottom">
     <span>© 2025 Šestý Smysl – Uherské Hradiště</span>
     <div class="footer-bottom-links">
       <a href="#">Ochrana osobních údajů</a>
       <a href="#">Cookies</a>
     </div>
-  </div>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
