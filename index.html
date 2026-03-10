@@ -51,6 +51,9 @@
       height: 72px;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 5vw;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
       transition: background 0.4s, border-color 0.4s;
     }
     nav.solid {
@@ -71,9 +74,8 @@
     .nav-brand-sub {
       font-size: 0.52rem; letter-spacing: 0.14em;
       color: var(--gold); text-transform: uppercase; margin-top: 2px; white-space: nowrap;
-      display: none;
+      display: block;
     }
-    nav.solid .nav-brand-sub { display: block; }
     .nav-links { display: flex; align-items: center; gap: 2.8rem; list-style: none; }
     .nav-links a {
       text-decoration: none; color: var(--sage);
@@ -769,8 +771,8 @@
         <li><a href="#rezervace">Rezervace</a></li>
       </ul>
     </div>
+  </div><!-- /footer-top -->
   <div class="footer-bottom">
-    <span>© 2025 Šestý Smysl – Uherské Hradiště</span>
     <div class="footer-bottom-links">
       <a href="#">Ochrana osobních údajů</a>
       <a href="#">Cookies</a>
