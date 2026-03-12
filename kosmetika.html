@@ -72,8 +72,9 @@
     .svc-meta { text-align: right; white-space: nowrap; flex-shrink: 0; }
     .svc-duration { font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-pale); }
     .svc-price { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--ink); line-height: 1; letter-spacing: 0.01em; }
-    .svc-category-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 0.5rem; display: flex; align-items: center; gap: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+    .svc-category-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 0; display: flex; align-items: center; gap: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; }
     .svc-category-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .svc-category-title + .service-item { border-top: none; }
 
     /* Skin types — cream background, full-width grid */
     .skin { padding: 8rem 8vw; background: var(--cream); }
@@ -399,17 +400,17 @@
   </div>
   <div class="service-item">
     <div class="svc-num">14</div>
-    <div class="svc-body"><h3>Depilace spodní ret</h3></div>
+    <div class="svc-body"><h3>Depilace spodní ret <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
     <div class="svc-meta"><span class="svc-price">250 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">15</div>
-    <div class="svc-body"><h3>Depilace brada</h3></div>
+    <div class="svc-body"><h3>Depilace brada <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
     <div class="svc-meta"><span class="svc-price">350 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">16</div>
-    <div class="svc-body"><h3>Depilace celý obličej</h3></div>
+    <div class="svc-body"><h3>Depilace celý obličej <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
     <div class="svc-meta"><span class="svc-price">850 Kč</span></div>
   </div>
   </div><!-- /col2 -->
