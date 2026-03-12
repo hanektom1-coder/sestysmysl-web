@@ -172,7 +172,7 @@
     .mobile-cta:hover { background: var(--ink); }
     .mobile-brand-sub { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-pale); text-align: center; }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal { opacity: 1; }
     .reveal.in { opacity: 1; transform: none; }
 
     /* RESPONSIVE */
@@ -515,11 +515,7 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Reveal
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')); }, 800);
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 
   // Hamburger
   const hamburger = document.getElementById('hamburger');
