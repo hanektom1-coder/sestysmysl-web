@@ -106,7 +106,7 @@
     .footer-bottom-links a { color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.25s; }
     .footer-bottom-links a:hover { color: var(--gold); }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal { opacity: 1; }
     .reveal.in { opacity: 1; transform: none; }
   
     /* ── HAMBURGER ── */
@@ -449,11 +449,7 @@
     </div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')); }, 800);
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 </script>
 <script>
 
