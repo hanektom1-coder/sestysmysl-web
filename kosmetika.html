@@ -99,11 +99,14 @@
     .page-cta h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
 
     footer { background: var(--ink); padding: 5rem 8vw 2.5rem; color: rgba(255,255,255,0.4); }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2.5rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2.5rem; }
     .footer-brand p { font-size: 0.78rem; line-height: 1.8; max-width: 280px; }
     .footer-brand-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.1rem; font-weight: 400; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.5rem; display: block; }
     .footer-brand-sub { font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1.4rem; }
-    .footer-col h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; margin-bottom: 1.4rem; font-weight: 400; text-transform: uppercase; }
+    .footer-col h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; margin-bottom: 1rem; font-weight: 400; text-transform: uppercase; }
+    .footer-col h4 a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.25s; }
+    .footer-col h4 a:hover { color: var(--gold); }
+    .footer-col p { font-size: 0.76rem; line-height: 1.8; color: rgba(255,255,255,0.38); }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 0.65rem; font-size: 0.76rem; }
     .footer-col a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.25s; }
@@ -243,7 +246,7 @@
       /* Page CTA */
       .page-cta { flex-direction: column; padding: 5rem 6vw; }
       footer { padding: 4rem 6vw 2.5rem; }
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding-bottom: 3rem; }
       .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
       .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
       .page-cta h2 { font-size: clamp(2.5rem, 10vw, 5rem); }
@@ -469,45 +472,39 @@
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-    <p>Tři světy péče v jednom elegantním prostoru v Uherském Hradišti. Masáže, kosmetika a interiérový design pro váš harmonický životní styl.</p>
+      <span class="footer-brand-name">Šestý Smysl</span>
+      <span class="footer-brand-sub">body · beauty · interier design</span>
+      <p>Tři světy péče v jednom elegantním prostoru. Masáže &amp; terapie, profesionální kosmetika a interiérový design na jednom místě v Uherském Hradišti.</p>
     </div>
     <div class="footer-col">
-      <h4>Masáže &amp; Terapie</h4>
-      <ul>
-        <li><a href="masaze.html">Maderoterapie</a></li>
-        <li><a href="masaze.html">Lymfodrenáž</a></li>
-        <li><a href="masaze.html">Španělská masáž</a></li>
-        <li><a href="masaze.html">Reflexní terapie</a></li>
-        <li><a href="masaze.html">Čínská masáž nohou</a></li>
-      </ul>
+      <h4><a href="masaze.html">Masáže &amp; Terapie</a></h4>
+      <p>Maderoterapie, lymfomodeling, lymfodrenáž, španělská masáž, ajurvéda, reflexní terapie a čínská masáž nohou.</p>
     </div>
     <div class="footer-col">
-      <h4>Kosmetika &amp; Design</h4>
-      <ul>
-        <li><a href="kosmetika.html">Kosmetika</a></li>
-        <li><a href="kosmetika.html">Manikúra</a></li>
-        <li><a href="kosmetika.html">Pedikúra</a></li>
-        <li><a href="interier.html">Showroom</a></li>
-        <li><a href="interier.html">Bytový textil</a></li>
-        <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
-      </ul>
+      <h4><a href="kosmetika.html">Kosmetika</a></h4>
+      <p>Pedikúra, manikúra SPA, kosmetika Matis, ošetření očního okolí a epilace Lycon.</p>
+    </div>
+    <div class="footer-col">
+      <h4><a href="interier.html">Interier Design</a></h4>
+      <p>Showroom OR od Richarda — bytový textil, dekorace, květiny a interiérové poradenství.</p>
     </div>
     <div class="footer-col">
       <h4>Kontakt</h4>
       <ul>
-        <li><a href="#kontakt">Uherské Hradiště</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#1c75727a735c6f796f68656f71656f70327f66"><span class="__cf_email__" data-cfemail="1871767e77586b7d6b6c616b75616b74367b62">[email&#160;protected]</span></a></li>
-        <li><a href="#kontakt">Otevírací doba</a></li>
-        <li><a href="#rezervace">Rezervace</a></li>
+        <li><a href="index.html#kontakt">Hradební 1543, UH</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#e08d818485928f948592819089859588a0878d81898cce838f8d"><span class="__cf_email__" data-cfemail="600d010405120f14051201100905150820070d01090c4e030f0d">[email&#160;protected]</span></a></li>
+        <li><a href="tel:+420776323427">+420 776 323 427</a></li>
+        <li><a href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervace online</a></li>
       </ul>
     </div>
-  </div><!-- /footer-top -->
+  </div>
   <div class="footer-bottom">
-    <span>© 2025 Šestý Smysl – Uherské Hradiště</span>
+    <span>© 2025 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
     <div class="footer-bottom-links">
       <a href="#">Ochrana osobních údajů</a>
       <a href="#">Cookies</a>
     </div>
+  </div>
 </footer>
 <script>
   const obs = new IntersectionObserver(entries => {
