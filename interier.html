@@ -37,7 +37,7 @@
     .nav-btn { font-size: 0.7rem; letter-spacing: .16em; text-transform: uppercase; padding: 0.6rem 1.5rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; min-width: 110px; text-align: center; }
     .nav-btn:hover { background: var(--sage); color: var(--white); }
 
-    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px 5vw; background: var(--white); border-bottom: 1px solid var(--border); }
     .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
     .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
@@ -106,7 +106,7 @@
     .footer-bottom-links a { color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.25s; }
     .footer-bottom-links a:hover { color: var(--gold); }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal { opacity: 1; }
     .reveal.in { opacity: 1; transform: none; }
   
     /* ── HAMBURGER ── */
@@ -278,11 +278,27 @@
     <li><a href="index.html#kontakt">Kontakt</a></li>
   </ul>
   <a href="index.html#kontakt" class="nav-btn">Rezervace</a>
+  <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigace">
+  <ul class="mobile-menu-links">
+    <li><a href="masaze.html">Masáže</a></li>
+    <li><a href="kosmetika.html">Kosmetika</a></li>
+    <li><a href="interier.html" class="active">Interier design</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <div class="mobile-menu-bottom">
+    <a href="index.html#kontakt" class="mobile-cta">Rezervace</a>
+    <span class="mobile-brand-sub">Maderoterapie UH · RK Beauty · OR</span>
+  </div>
+</div>
 
 <section class="page-hero">
   <p class="hero-eyebrow">Šestý Smysl · Uherské Hradiště</p>
-  <h1>Interier <em>Design</em></h1>
+  <h1>Interier<br><em>Design</em></h1>
   <p class="hero-tagline">Od Richarda · dekorace · showroom</p>
   <div class="hero-bottom">
     <p class="hero-p">Prostor, ve kterém žijete, vypovídá o tom, kdo jste. OR od Richarda vám pomůže vytvořit domov, který bude vaším útočištěm.</p>
@@ -407,8 +423,9 @@
     <div class="footer-col">
       <h4>Kosmetika &amp; Design</h4>
       <ul>
-        <li><a href="kosmetika.html">Ošetření pleti</a></li>
-        <li><a href="kosmetika.html">Anti-age terapie</a></li>
+        <li><a href="kosmetika.html">Kosmetika</a></li>
+        <li><a href="kosmetika.html">Manikúra</a></li>
+        <li><a href="kosmetika.html">Pedikúra</a></li>
         <li><a href="interier.html">Showroom</a></li>
         <li><a href="interier.html">Bytový textil</a></li>
         <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
@@ -432,10 +449,7 @@
     </div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0.07 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 </script>
 <script>
 

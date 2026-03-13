@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kosmetika &amp; Beauty – R-Studio | Šestý Smysl Uherské Hradiště</title>
-  <meta name="description" content="R-Studio — profesionální kosmetika a péče o pleť v Uherském Hradišti. Hloubkové čištění, anti-age ošetření, hydratace a péče pro každý typ pleti.">
-  <meta name="keywords" content="kosmetika Uherské Hradiště, R-Studio, ošetření pleti Uherské Hradiště, hloubkové čištění, anti-age ošetření, hydratace pleti, Šestý Smysl">
+  <title>Kosmetika &amp; Beauty – RK Beauty | Šestý Smysl Uherské Hradiště</title>
+  <meta name="description" content="RK Beauty — profesionální kosmetika a péče o pleť v Uherském Hradišti. Hloubkové čištění, anti-age ošetření, hydratace a péče pro každý typ pleti.">
+  <meta name="keywords" content="kosmetika Uherské Hradiště, RK Beauty, ošetření pleti Uherské Hradiště, hloubkové čištění, anti-age ošetření, hydratace pleti, Šestý Smysl">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.sestysmysl.cz/kosmetika">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"R-Studio – Šestý Smysl","description":"Profesionální kosmetika a péče o pleť v Uherském Hradišti","address":{"@type":"PostalAddress","addressLocality":"Uherské Hradiště","addressCountry":"CZ"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"RK Beauty – Šestý Smysl","description":"Profesionální kosmetika a péče o pleť v Uherském Hradišti","address":{"@type":"PostalAddress","addressLocality":"Uherské Hradiště","addressCountry":"CZ"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     .nav-btn { font-size: 0.7rem; letter-spacing: .16em; text-transform: uppercase; padding: 0.6rem 1.5rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; min-width: 110px; text-align: center; }
     .nav-btn:hover { background: var(--sage); color: var(--white); }
 
-    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px 5vw; background: var(--white); border-bottom: 1px solid var(--border); }
     .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
     .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
@@ -54,21 +54,27 @@
     .label { font-size: .63rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; display: flex; align-items: center; gap: 1rem; }
     .label::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; }
 
-    .services { padding: 8rem 8vw; }
-    .services-header { margin-bottom: 5rem; }
-    .services-header h2 { font-size: clamp(3rem, 5vw, 6rem); line-height: 0.9; }
+    .services { padding: 6rem 8vw; }
+    .services-header { margin-bottom: 3.5rem; }
+    .services-header h2 { font-size: clamp(2.2rem, 4vw, 4rem); line-height: 0.9; }
     .services-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+    .services-col { }
 
-    .service-item { display: grid; grid-template-columns: 60px 1fr 120px; gap: 3rem; align-items: start; padding: 3.5rem 0; border-top: 1px solid var(--border); transition: all .25s; }
+    .service-item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; border-top: 1px solid var(--border); transition: background .2s; }
     .service-item:last-child { border-bottom: 1px solid var(--border); }
-    .service-item:hover { background: var(--off); margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
-    .svc-num { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.8rem; font-weight: 100; color: rgba(184,150,90,0.35); line-height: 1; padding-top: .5rem; }
-    .svc-body h3 { font-size: clamp(1.8rem, 2.5vw, 2.8rem); color: var(--ink); margin-bottom: .8rem; font-weight: 200; }
-    .svc-body p { font-size: 0.93rem; line-height: 1.9; color: var(--sage-mid); max-width: 600px; }
+    .service-item:hover { background: var(--off); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+    .svc-num { display: none; }
+    .svc-body h3 { font-size: 0.95rem; font-family: 'DM Sans', sans-serif; color: var(--ink); margin-bottom: 0; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; text-align: left; }
+    .svc-body p { font-size: 0.82rem; line-height: 1.9; color: var(--sage-mid); max-width: 600px; }
     .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.2rem; }
     .tag { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; padding: .25rem .7rem; border: 1px solid rgba(61,74,62,.12); color: var(--sage-mid); }
-    .svc-meta { text-align: right; padding-top: .5rem; }
+    .svc-meta { text-align: right; white-space: nowrap; flex-shrink: 0; }
     .svc-duration { font-size: .65rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sage-pale); }
+    .svc-price { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--ink); line-height: 1; letter-spacing: 0.01em; }
+    .svc-category-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 0; display: flex; align-items: center; gap: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+    .svc-category-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .svc-category-title + .service-item { border-top: none; }
 
     /* Skin types — cream background, full-width grid */
     .skin { padding: 8rem 8vw; background: var(--cream); }
@@ -217,10 +223,10 @@
       .cta { flex-direction: column; padding: 4rem 6vw; text-align: left; }
 
       /* Services list */
-      .services { padding: 5rem 6vw; }
-      .service-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
-      .svc-meta { display: none; }
-      .svc-body h3 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+      .services { padding: 4rem 5vw; }
+      .services-grid { grid-template-columns: 1fr; gap: 0; }
+      .service-item { padding: 0.65rem 0; }
+      .svc-meta { display: block; }
       .categories { padding: 5rem 6vw; }
       .cat-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
       .cat-body h3 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
@@ -279,12 +285,28 @@
     <li><a href="index.html#kontakt">Kontakt</a></li>
   </ul>
   <a href="index.html#rezervace" class="nav-btn">Rezervace</a>
+  <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigace">
+  <ul class="mobile-menu-links">
+    <li><a href="masaze.html">Masáže</a></li>
+    <li><a href="kosmetika.html" class="active">Kosmetika</a></li>
+    <li><a href="interier.html">Interier design</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <div class="mobile-menu-bottom">
+    <a href="index.html#rezervace" class="mobile-cta">Rezervace</a>
+    <span class="mobile-brand-sub">Maderoterapie UH · RK Beauty · OR</span>
+  </div>
+</div>
 
 <section class="page-hero">
   <p class="hero-eyebrow">Šestý Smysl · Uherské Hradiště</p>
   <h1>Kosmetika<br>&amp; <em>Beauty</em></h1>
-  <p class="hero-tagline">R-Studio — krása, péče, sebevědomí</p>
+  <p class="hero-tagline">RK Beauty — krása, péče, sebevědomí</p>
   <div class="hero-bottom">
     <p class="hero-p">Profesionální kosmetická péče s individuálním přístupem. Prémiové produkty, moderní techniky, viditelné výsledky již po prvním ošetření.</p>
     <div class="hero-cta-row">
@@ -296,63 +318,103 @@
 
 <section id="prehled" class="services reveal">
   <div class="services-header">
-    <p class="label">Nabídka · R-Studio</p>
+    <p class="label">Nabídka · RK Beauty</p>
     <h2>Všechna<br><em>ošetření</em></h2>
   </div>
+  <div class="services-grid">
+  <div class="services-col">
+  <!-- PÉČE O PLEŤ -->
+  <div class="svc-category-title">Péče o pleť</div>
+  <div class="service-item">
+    <div class="svc-num">08</div>
+    <div class="svc-body"><h3>Kosmetika Matis</h3></div>
+    <div class="svc-meta"><span class="svc-price">1 650 – 2 650 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">09</div>
+    <div class="svc-body"><h3>Ošetření očního okolí</h3></div>
+    <div class="svc-meta"><span class="svc-price">650 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">10</div>
+    <div class="svc-body"><h3>Úprava obočí</h3></div>
+    <div class="svc-meta"><span class="svc-price">170 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">11</div>
+    <div class="svc-body"><h3>Barvení obočí</h3></div>
+    <div class="svc-meta"><span class="svc-price">170 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">12</div>
+    <div class="svc-body"><h3>Barvení řas</h3></div>
+    <div class="svc-meta"><span class="svc-price">170 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">13</div>
+    <div class="svc-body"><h3>Depilace horní ret <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
+    <div class="svc-meta"><span class="svc-price">250 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">14</div>
+    <div class="svc-body"><h3>Depilace spodní ret <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
+    <div class="svc-meta"><span class="svc-price">250 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">15</div>
+    <div class="svc-body"><h3>Depilace brada <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
+    <div class="svc-meta"><span class="svc-price">350 Kč</span></div>
+  </div>
+  <div class="service-item">
+    <div class="svc-num">16</div>
+    <div class="svc-body"><h3>Depilace celý obličej <span style="font-size:0.7em;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:300;letter-spacing:0.1em;">Lycon</span></h3></div>
+    <div class="svc-meta"><span class="svc-price">850 Kč</span></div>
+  </div>
+  </div><!-- /col1 -->
+
+  <div class="services-col">
+  <!-- PÉČE O NOHY -->
+  <div class="svc-category-title">Péče o nohy</div>
   <div class="service-item">
     <div class="svc-num">01</div>
-    <div class="svc-body">
-      <h3>Hloubkové čištění pleti</h3>
-      <p>Komplexní ošetření zahrnující parní lázeň, mechanické a chemické čištění pórů, extrakce a zklidňující masku. Výsledkem je čistá, svěží a zářivá pleť bez nečistot a přebytečného mazu. Základ pravidelné péče každých 4–6 týdnů.</p>
-      <div class="svc-tags"><span class="tag">Čistění pórů</span><span class="tag">Maz</span><span class="tag">Svěžest</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+    <div class="svc-body"><h3>Pedikúra</h3></div>
+    <div class="svc-meta"><span class="svc-price">700 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">02</div>
-    <div class="svc-body">
-      <h3>Anti-age ošetření</h3>
-      <p>Intenzivní liftingové ošetření pro zralou nebo začínající zralou pleť. Séra s aktivními látkami, masážní techniky stimulující tvorbu kolagenu a zpevňující masky. Viditelný lifting, vyhlazení vrásek a obnovení elasticity.</p>
-      <div class="svc-tags"><span class="tag">Lifting</span><span class="tag">Vrásky</span><span class="tag">Kolagen</span><span class="tag">Elasticita</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">75 min</span></div>
+    <div class="svc-body"><h3>Maska chodidla</h3></div>
+    <div class="svc-meta"><span class="svc-price">110 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">03</div>
-    <div class="svc-body">
-      <h3>Hydratační terapie</h3>
-      <p>Hluboká hydratace pro vyprahlou a dehydratovanou pleť. Vícevrstvá séra a masky s kyselinou hyaluronovou obnoví přirozenou hydrataci, posílí ochrannou bariéru a vrátí pleti pružnost. Pleť doslova napijeme.</p>
-      <div class="svc-tags"><span class="tag">Kyselina hyaluronová</span><span class="tag">Hydratace</span><span class="tag">Bariéra</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+    <div class="svc-body"><h3>Peeling chodidla</h3></div>
+    <div class="svc-meta"><span class="svc-price">80 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">04</div>
-    <div class="svc-body">
-      <h3>Péče o problematickou pleť</h3>
-      <p>Specializované ošetření pro aknózní, smíšenou nebo citlivou pleť. Antibakteriální a protizánětlivé přísady zklidní zarudlou pleť, minimalizují póry a zabrání vzniku nových nedokonalostí. Bez agrese, s výsledky.</p>
-      <div class="svc-tags"><span class="tag">Akné</span><span class="tag">Záněty</span><span class="tag">Citlivá pleť</span><span class="tag">Póry</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+    <div class="svc-body"><h3>Gellak</h3></div>
+    <div class="svc-meta"><span class="svc-price">350 Kč</span></div>
   </div>
+
+  <!-- PÉČE O RUCE -->
+  <div class="svc-category-title">Péče o ruce</div>
   <div class="service-item">
     <div class="svc-num">05</div>
-    <div class="svc-body">
-      <h3>Rozjasnění &amp; sjednocení tónu</h3>
-      <p>Ošetření zaměřené na hyperpigmentaci, skvrny a nerovnoměrný tón pleti. Kyseliny a enzymy pracují na rovnoměrném rozjasnění a sjednocení komplexu. Výsledkem je pleti zdravý, jednotný glow.</p>
-      <div class="svc-tags"><span class="tag">Pigmentace</span><span class="tag">Rozjasnění</span><span class="tag">Glow</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">60 min</span></div>
+    <div class="svc-body"><h3>Manikúra SPA</h3></div>
+    <div class="svc-meta"><span class="svc-price">550 Kč</span></div>
   </div>
   <div class="service-item">
     <div class="svc-num">06</div>
-    <div class="svc-body">
-      <h3>Oční okolí &amp; rty</h3>
-      <p>Speciální ošetření pro jemnou partii očního okolí a rtů. Minimalizuje jemné linky, tmavé kruhy a otoky. Intenzivní séra obnoví elasticitu a hydrataci v nejcitlivějších partiích obličeje.</p>
-      <div class="svc-tags"><span class="tag">Oční kruhy</span><span class="tag">Oční okolí</span><span class="tag">Rty</span></div>
-    </div>
-    <div class="svc-meta"><span class="svc-duration">45 min</span></div>
+    <div class="svc-body"><h3>Manikúra Gellak + Suchá manikúra</h3></div>
+    <div class="svc-meta"><span class="svc-price">650 Kč</span></div>
   </div>
+  <div class="service-item">
+    <div class="svc-num">07</div>
+    <div class="svc-body"><h3>Manikúra P-Shine</h3></div>
+    <div class="svc-meta"><span class="svc-price">500 Kč</span></div>
+  </div>
+  </div><!-- /col2 -->
+  </div><!-- /services-grid -->
 </section>
 
 <section class="skin reveal">
@@ -379,7 +441,7 @@
 </section>
 
 <section class="strip reveal">
-  <h2>Proč<br>R-Studio<br><em>funguje</em></h2>
+  <h2>Proč<br>RK Beauty<br><em>funguje</em></h2>
   <div class="strip-right">
     <div class="strip-item">
       <h3>Individuální analýza</h3>
@@ -422,8 +484,9 @@
     <div class="footer-col">
       <h4>Kosmetika &amp; Design</h4>
       <ul>
-        <li><a href="kosmetika.html">Ošetření pleti</a></li>
-        <li><a href="kosmetika.html">Anti-age terapie</a></li>
+        <li><a href="kosmetika.html">Kosmetika</a></li>
+        <li><a href="kosmetika.html">Manikúra</a></li>
+        <li><a href="kosmetika.html">Pedikúra</a></li>
         <li><a href="interier.html">Showroom</a></li>
         <li><a href="interier.html">Bytový textil</a></li>
         <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
@@ -449,8 +512,9 @@
 <script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0.07 });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')); }, 800);
 </script>
 <script>
 
