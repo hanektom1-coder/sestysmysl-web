@@ -38,7 +38,7 @@
     .nav-btn:hover { background: var(--sage); color: var(--white); }
 
     /* HERO */
-    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px 5vw; background: var(--white); border-bottom: 1px solid var(--border); }
     .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
     .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
@@ -78,6 +78,15 @@
 
     /* SERVICE LIST */
     .services { padding: 8rem 8vw; }
+    .svc-category-title { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 3rem 0 0; display: flex; align-items: center; gap: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+    .svc-category-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .svc-category-title + .svc-compact-item { border-top: none; }
+    .svc-categories-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 3rem; margin-top: 0.5rem; align-items: start; }
+    .svc-category-block { }
+    .svc-compact-item { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--border); }
+    .svc-compact-item:last-child { border-bottom: 1px solid var(--border); }
+    .svc-compact-name { font-size: 0.82rem; font-family: 'DM Sans', sans-serif; font-weight: 300; color: var(--ink); letter-spacing: 0.02em; }
+    .svc-compact-price { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--ink); white-space: nowrap; flex-shrink: 0; }
     .services-header { margin-bottom: 5rem; }
     .services-header h2 { font-size: clamp(3rem, 5vw, 6rem); line-height: 0.9; }
     .services-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
@@ -172,7 +181,7 @@
     .mobile-cta:hover { background: var(--ink); }
     .mobile-brand-sub { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-pale); text-align: center; }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal { opacity: 1; }
     .reveal.in { opacity: 1; transform: none; }
 
     /* RESPONSIVE */
@@ -188,6 +197,7 @@
       .lenka-quote { padding: 4rem 6vw; }
       .services { padding: 5rem 6vw; }
       .service-item { grid-template-columns: 44px 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+      .svc-categories-row { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .svc-meta { display: none; }
       .contra-grid { grid-template-columns: 1fr; gap: 3rem; }
       .contra { padding: 4rem 6vw; }
@@ -307,12 +317,13 @@
     <h2>Všechny<br><em>terapie</em></h2>
   </div>
 
+  <!-- HLAVNÍ MASÁŽE -->
   <div class="service-item">
     <div class="svc-num">01</div>
     <div class="svc-body">
       <h3>Maderoterapie těla</h3>
-      <p>Celosvětově známá jako <em>Wood Therapy</em> — moderní a revoluční technika pro formování postavy a zlepšení kvality pokožky. Speciálně anatomicky navržené dřevěné pomůcky umožňují 100% přírodní, neinvazivní a šetrné ošetření.</p>
-      <p class="svc-detail">Maderoterapie vznikla před více než sto lety v Kolumbii. Stimuluje lymfatický systém, aby se v těle nehromadily toxiny — díky tomu její účinky trvají déle než u laserových či ultrazvukových metod. Vhodná pro celulitidu, otoky nohou, po liposukci nebo při snížené funkci štítné žlázy.</p>
+      <p>Celosvětově známá jako <em>Wood Therapy</em> — moderní technika pro formování postavy a zpevnění pokožky. Anatomicky navržené dřevěné pomůcky umožňují 100% přírodní, neinvazivní ošetření.</p>
+      <p class="svc-detail">Stimuluje lymfatický systém, zabraňuje hromadění toxinů — proto její účinky trvají déle než u laserových metod. Vhodná pro celulitidu, otoky, po liposukci nebo při snížené funkci štítné žlázy.</p>
       <div class="svc-tags"><span class="tag">Celulitida</span><span class="tag">Otoky</span><span class="tag">Formování postavy</span><span class="tag">Detoxikace lymfy</span><span class="tag">Zpevnění pokožky</span></div>
     </div>
     <div class="svc-meta">
@@ -325,24 +336,54 @@
   <div class="service-item">
     <div class="svc-num">02</div>
     <div class="svc-body">
-      <h3>Lymfodrenáž</h3>
-      <p>Jemná, rytmická masáž cíleně stimulující lymfatický systém — přirozenou obranu těla. Na rozdíl od krevního oběhu nemá lymfa vlastní pumpu, proto při nedostatečném proudění dochází k hromadění škodlivin v tkáních.</p>
-      <p class="svc-detail">Lymfodrenáž pomáhá odstraňovat otoky, zbavovat tělo toxinů a posilovat imunitu. Ideální po chirurgických zákrocích, jako podpora při hubnutí nebo při pocitu těžkých nohou. Přináší hluboký pocit lehkosti celého těla.</p>
-      <div class="svc-tags"><span class="tag">Otoky</span><span class="tag">Imunita</span><span class="tag">Těžké nohy</span><span class="tag">Po operaci</span><span class="tag">Detox</span></div>
+      <h3>Lymfomodeling těla</h3>
+      <p>Revoluční metoda spojující maderoterapii, manuální lymfodrenáž a modelační masáž v jednom ošetření. Pro každou ženu, která chce podpořit štíhlou linii nebo se prostě cítit skvěle ve svém těle.</p>
+      <p class="svc-detail">Výsledek je vidět i cítit ihned — pokožka je pružnější, tělo lehčí. Stimuluje lymfatický systém, odbourává celulitidu a redukuje otoky. Nejúčinnější procedura pro dlouhodobé výsledky.</p>
+      <div class="svc-tags"><span class="tag">Celulitida</span><span class="tag">Modelování postavy</span><span class="tag">Lymfa</span><span class="tag">Otoky</span><span class="tag">Okamžitý výsledek</span></div>
     </div>
     <div class="svc-meta">
       <span class="svc-price-from">od</span>
-      <span class="svc-price">790 Kč</span>
-      <span class="svc-duration">60 / 90 min</span>
+      <span class="svc-price">1 950 Kč</span>
+      <span class="svc-duration">75 / 100 min</span>
     </div>
   </div>
 
   <div class="service-item">
     <div class="svc-num">03</div>
     <div class="svc-body">
+      <h3>Lymfodrenáž manuální</h3>
+      <p>Jemná, rytmická masáž cíleně stimulující lymfatický systém — přirozenou obranu těla. Na rozdíl od krevního oběhu nemá lymfa vlastní pumpu, proto při nedostatečném proudění dochází k hromadění škodlivin.</p>
+      <p class="svc-detail">Pomáhá odstraňovat otoky, zbavovat tělo toxinů a posilovat imunitu. Ideální po chirurgických zákrocích, jako podpora při hubnutí nebo při pocitu těžkých nohou.</p>
+      <div class="svc-tags"><span class="tag">Otoky</span><span class="tag">Imunita</span><span class="tag">Těžké nohy</span><span class="tag">Po operaci</span><span class="tag">Detox</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from">od</span>
+      <span class="svc-price">1 550 Kč</span>
+      <span class="svc-duration">60 / 90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">04</div>
+    <div class="svc-body">
+      <h3>Harmonizující lymfa</h3>
+      <p>Ruční lymfatická masáž celého těla — ruce, břicho, nohy. Komplexní péče navozující hluboký pocit lehkosti a rovnováhy. Ideální volba pro ty, kteří hledají celkovou obnovu těla i mysli.</p>
+      <p class="svc-detail">Kombinuje techniky manuální lymfodrenáže s harmonizačními prvky. Uvolňuje nahromaděné napětí, podporuje správnou funkci lymfatického systému a přináší trvalý pocit pohody.</p>
+      <div class="svc-tags"><span class="tag">Celé tělo</span><span class="tag">Harmonie</span><span class="tag">Lymfa</span><span class="tag">Relaxace</span><span class="tag">Rovnováha</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from"></span>
+      <span class="svc-price">1 750 Kč</span>
+      <span class="svc-duration">90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">05</div>
+    <div class="svc-body">
       <h3>Španělská masáž</h3>
       <p>Hloubková relaxační masáž celého těla s prémiovými oleji. Kombinuje prvky švédské a terapeutické masáže pro dokonalé uvolnění svalového napětí a zklidnění nervového systému.</p>
-      <p class="svc-detail">Španělská masáž pracuje s celým tělem jako s celkem — uvolňuje fascie, zlepšuje prokrvení a navozuje stav hluboké relaxace. Ideální při chronickém stresu, bolestech zad nebo jako pravidelná regenerační péče.</p>
+      <p class="svc-detail">Pracuje s celým tělem jako s celkem — uvolňuje fascie, zlepšuje prokrvení a navozuje stav hluboké relaxace. Ideální při chronickém stresu, bolestech zad nebo jako pravidelná regenerační péče.</p>
       <div class="svc-tags"><span class="tag">Relaxace</span><span class="tag">Svalové napětí</span><span class="tag">Stres</span><span class="tag">Záda</span><span class="tag">Regenerace</span></div>
     </div>
     <div class="svc-meta">
@@ -353,11 +394,41 @@
   </div>
 
   <div class="service-item">
-    <div class="svc-num">04</div>
+    <div class="svc-num">06</div>
+    <div class="svc-body">
+      <h3>Španělská masáž obličeje a dekoltu</h3>
+      <p>Tradiční technika zaměřená na obličej, krk a dekolt. Jemné, propracované tahy zlepšují prokrvení pleti, uvolňují napětí mimických svalů a dodávají pokožce přirozený lesk.</p>
+      <p class="svc-detail">Kombinuje masážní techniky s lymfatickými prvky pro viditelné zpevnění a rozjasnění pleti. Skvělá alternativa k invazivním kosmetickým zákrokům — přirozená a relaxační.</p>
+      <div class="svc-tags"><span class="tag">Obličej</span><span class="tag">Dekolt</span><span class="tag">Pleť</span><span class="tag">Zpevnění</span><span class="tag">Prokrvení</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from"></span>
+      <span class="svc-price">1 550 Kč</span>
+      <span class="svc-duration">60 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">07</div>
+    <div class="svc-body">
+      <h3>Ajurvédská masáž Abhyanga</h3>
+      <p>Celotělová masáž pomocí teplých bylinných olejů vybíraných podle individuální konstituce. Vychází z tisícileté ajurvédské medicíny — systému pro harmonii těla, mysli a duše.</p>
+      <p class="svc-detail">Teplý olej proniká hluboko do tkání, vyživuje pokožku, uvolňuje klouby a svaly. Pravidelná Abhyanga zpomaluje stárnutí, zlepšuje kvalitu spánku a posiluje imunitu.</p>
+      <div class="svc-tags"><span class="tag">Ajurvéda</span><span class="tag">Bylinné oleje</span><span class="tag">Celé tělo</span><span class="tag">Spánek</span><span class="tag">Imunita</span></div>
+    </div>
+    <div class="svc-meta">
+      <span class="svc-price-from"></span>
+      <span class="svc-price">1 550 Kč</span>
+      <span class="svc-duration">90 min</span>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="svc-num">08</div>
     <div class="svc-body">
       <h3>Reflexní terapie</h3>
-      <p>Starobylá technika pracující s reflexními zónami na chodidlech, které odpovídají jednotlivým orgánům a systémům těla. Jemným tlakem na přesně definované body stimulujeme samoléčebné procesy organismu.</p>
-      <p class="svc-detail">Reflexní terapie vychází z principu, že celé tělo je „zmapováno" na ploskách nohou. Pravidelná péče pomáhá navracet rovnováhu, podporuje funkci vnitřních orgánů a přináší celkový pocit harmonie.</p>
+      <p>Starobylá technika pracující s reflexními zónami na chodidlech, které odpovídají jednotlivým orgánům a systémům těla. Jemným tlakem na přesně definované body stimulujeme samoléčebné procesy.</p>
+      <p class="svc-detail">Vychází z principu, že celé tělo je zmapováno na ploskách nohou. Pravidelná péče pomáhá navracet rovnováhu, podporuje funkci vnitřních orgánů a přináší celkový pocit harmonie.</p>
       <div class="svc-tags"><span class="tag">Reflexní zóny</span><span class="tag">Orgány</span><span class="tag">Rovnováha</span><span class="tag">Holismus</span></div>
     </div>
     <div class="svc-meta">
@@ -368,19 +439,58 @@
   </div>
 
   <div class="service-item">
-    <div class="svc-num">05</div>
+    <div class="svc-num">09</div>
     <div class="svc-body">
-      <h3>Čínská masáž nohou</h3>
-      <p>Tradiční čínská technika propojující reflexní terapii s akupresurními body na chodidlech a lýtkách. Vychází z tisícileté čínské medicíny a teorie energetických drah — meridiánů.</p>
-      <p class="svc-detail">Revitalizuje energetické dráhy, uvolňuje únavu dolních končetin, zlepšuje kvalitu spánku a harmonizuje tok energie v celém organismu. Oblíbená procedura pro ty, kdo tráví hodně času ve stoje nebo mají problémy se spánkem.</p>
+      <h3>AN MO — čínská masáž nohou</h3>
+      <p>Bylinná koupel nohou, úvodní masáž chodidel a tradiční čínská technika propojující reflexní terapii s akupresurními body. Vychází z tisícileté čínské medicíny a teorie energetických drah — meridiánů.</p>
+      <p class="svc-detail">Revitalizuje energetické dráhy, uvolňuje únavu dolních končetin, zlepšuje kvalitu spánku a harmonizuje tok energie v celém organismu. Oblíbená procedura pro ty, kdo tráví hodně času ve stoje.</p>
       <div class="svc-tags"><span class="tag">Čínská medicína</span><span class="tag">Meridiány</span><span class="tag">Spánek</span><span class="tag">Únava nohou</span><span class="tag">Energie</span></div>
     </div>
     <div class="svc-meta">
-      <span class="svc-price-from">od</span>
-      <span class="svc-price">590 Kč</span>
-      <span class="svc-duration">45 / 60 min</span>
+      <span class="svc-price-from"></span>
+      <span class="svc-price">1 950 Kč</span>
+      <span class="svc-duration">90 min</span>
     </div>
   </div>
+
+  <!-- KOMPAKTNÍ CENÍKY -->
+  <div class="svc-categories-row">
+
+    <div class="svc-category-block">
+      <div class="svc-category-title">Maderoterapie</div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Tělo 90 min</span><span class="svc-compact-price">1 550 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Nohy / partie 60 min</span><span class="svc-compact-price">1 050 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Partie + pleť 120 min</span><span class="svc-compact-price">1 800 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Pleť a dekolt 60 min</span><span class="svc-compact-price">850 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Břicho 45 min</span><span class="svc-compact-price">850 Kč</span></div>
+    </div>
+
+    <div class="svc-category-block">
+      <div class="svc-category-title">Lymfotaping</div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Horní končetina segmentově</span><span class="svc-compact-price">200 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Celá horní končetina</span><span class="svc-compact-price">450 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Dolní končetina segmentově</span><span class="svc-compact-price">250 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Celá dolní končetina</span><span class="svc-compact-price">450 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Problematická oblast</span><span class="svc-compact-price">250 Kč</span></div>
+    </div>
+
+    <div class="svc-category-block">
+      <div class="svc-category-title">Epilace Lycon</div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Lýtka / stehna / třísla Kali</span><span class="svc-compact-price">600 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Lýtka a třísla Kalifornie</span><span class="svc-compact-price">1 000 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Celé nohy / lýtka a třísla</span><span class="svc-compact-price">1 000 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Celé nohy a třísla Kali</span><span class="svc-compact-price">1 300 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Celé nohy a třísla</span><span class="svc-compact-price">1 150 Kč</span></div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Paže / podpaží / třísla</span><span class="svc-compact-price">450 Kč</span></div>
+    </div>
+
+    <div class="svc-category-block">
+      <div class="svc-category-title">Doplňkové</div>
+      <div class="svc-compact-item"><span class="svc-compact-name">Tělové svíce (1–2 ks)</span><span class="svc-compact-price">300 Kč</span></div>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- CONTRAINDICATIONS -->
@@ -486,8 +596,9 @@
     <div class="footer-col">
       <h4>Kosmetika &amp; Design</h4>
       <ul>
-        <li><a href="kosmetika.html">Ošetření pleti</a></li>
-        <li><a href="kosmetika.html">Anti-age terapie</a></li>
+        <li><a href="kosmetika.html">Kosmetika</a></li>
+        <li><a href="kosmetika.html">Manikúra</a></li>
+        <li><a href="kosmetika.html">Pedikúra</a></li>
         <li><a href="interier.html">Showroom OR</a></li>
         <li><a href="interier.html">Bytový textil</a></li>
         <li><a href="interier.html">Dekorace &amp; Květiny</a></li>
@@ -514,10 +625,7 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Reveal
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0.07 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 
   // Hamburger
   const hamburger = document.getElementById('hamburger');
