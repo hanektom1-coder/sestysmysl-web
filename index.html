@@ -598,52 +598,49 @@
 
   
   /* === INTERIER BANNER (homepage) === */
-  .interier-banner {
+  .interior-banner {
     padding: 0;
     overflow: hidden;
   }
-  .interier-banner-inner {
+  .interior-banner-inner {
     position: relative;
-    height: 560px;
-    overflow: hidden;
+    height: 580px;
   }
-  .interier-banner-inner img {
+  .interior-banner-inner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 55%;
+    object-position: center 40%;
     display: block;
   }
-  .interier-banner-overlay {
+  .interior-banner-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(26,31,27,0.80) 0%, rgba(26,31,27,0.25) 80%, transparent 100%);
+    inset: 0;
+    background: linear-gradient(to right, rgba(26,31,27,0.72) 0%, rgba(26,31,27,0.15) 65%, transparent 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4rem 0 5%;
+    padding: 0 5%;
+    max-width: 600px;
   }
-  .interier-banner-overlay .label {
+  .interior-banner-overlay .label {
     color: var(--gold, #b89c6e);
     letter-spacing: 0.15em;
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
   }
-  .interier-banner-overlay h2 {
+  .interior-banner-overlay h2 {
     color: #fff;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.1;
     margin: 0 0 1rem;
   }
-  .interier-banner-overlay h2 em {
+  .interior-banner-overlay h2 em {
     color: var(--gold, #b89c6e);
     font-style: normal;
   }
-  .interier-banner-overlay > p {
+  .interior-banner-overlay > p {
     color: rgba(255,255,255,0.8);
     font-size: 1rem;
     line-height: 1.7;
@@ -666,8 +663,8 @@
     border-color: #fff;
   }
   @media (max-width: 768px) {
-    .interier-banner-inner { height: 420px; }
-    .interier-banner-overlay {
+    .interior-banner-inner { height: 420px; }
+    .interior-banner-overlay {
       background: linear-gradient(to top, rgba(26,31,27,0.8) 0%, rgba(26,31,27,0.3) 60%, transparent 100%);
       justify-content: flex-end;
       padding-bottom: 2.5rem;
