@@ -560,7 +560,7 @@
 <li>686 01 Uherské Hradiště</li>
 <li>Po–Pá: 8:00–17:00</li>
 <li>So: 8:00–12:00</li>
-<li><a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a></li>
+<li><a href="/cdn-cgi/l/email-protection#9ef7f0f8f1deedfbedeae7edf3e7edf2ebf6b0fde4"><span class="__cf_email__" data-cfemail="7811161e17380b1d0b0c010b15010b140d10561b02">[email protected]</span></a></li>
 </ul>
 </div>
 </div>
@@ -573,6 +573,23 @@
 </div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-</script>
-<script></script></body></html>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+}
+</script></body></html>
