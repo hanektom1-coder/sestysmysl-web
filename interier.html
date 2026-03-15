@@ -351,7 +351,29 @@
   .contact-social a { color: var(--ink, #1a1f1b); opacity: 0.5; transition: opacity 0.2s, color 0.2s; display: flex; align-items: center; }
   .contact-social a:hover { opacity: 1; color: var(--gold, #b89c6e); }
 
-  </style>
+  
+  /* === FOOTER === */
+  footer { background: var(--ink, #1a1f1b); color: rgba(255,255,255,0.55); font-size: 0.85rem; }
+  .footer-top { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 3rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; }
+  .footer-brand-name { display: block; font-family: var(--font-display, inherit); font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+  .footer-brand p { line-height: 1.7; margin-bottom: 1.5rem; }
+  .footer-social { display: flex; gap: 1rem; }
+  .footer-social a { color: rgba(255,255,255,0.4); transition: color 0.2s; display: flex; align-items: center; }
+  .footer-social a:hover { color: var(--gold, #b89c6e); }
+  .footer-col h4 { color: #fff; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 500; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col ul li { color: rgba(255,255,255,0.55); }
+  .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold, #b89c6e); }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; }
+  .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; margin-left: 1.5rem; transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--gold, #b89c6e); }
+  @media (max-width: 768px) {
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-bottom a { margin: 0; }
+  }
+</style>
 </head>
 <body>
 <nav>
@@ -516,38 +538,36 @@
 <div class="footer-top">
 <div class="footer-brand">
 <span class="footer-brand-name">Šestý Smysl</span>
-<span class="footer-brand-sub">body · beauty · interior design</span>
-<p>Tři světy péče v jednom elegantním prostoru. Masáže &amp; terapie, profesionální kosmetika a interiérový design na jednom místě v Uherském Hradišti.</p>
+<p>Tři světy péče v jednom elegantním prostoru v Uherském Hradišti. Masáže, kosmetika a interiérový design.</p>
 <div class="footer-social">
 <a aria-label="Instagram" href="https://www.instagram.com/sestysmysl_uh" rel="noopener" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5" stroke="none"></circle></svg></a>
 <a aria-label="Facebook" href="#" rel="noopener" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-</div></div>
-<div class="footer-col">
-<h4><a href="masaze.html">Masáže &amp; Terapie</a></h4>
-<p>Maderoterapie, lymfomodeling, lymfodrenáž, španělská masáž, ajurvéda, reflexní terapie a čínská masáž nohou.</p>
+</div>
 </div>
 <div class="footer-col">
-<h4><a href="kosmetika.html">Kosmetika</a></h4>
-<p>Pedikúra, manikúra SPA, kosmetika Matis, ošetření očního okolí a epilace Lycon.</p>
-</div>
-<div class="footer-col">
-<h4><a href="interier.html">Interior Design</a></h4>
-<p>Showroom OR od Richarda — bytový textil, dekorace, květiny a interiérové poradenství.</p>
+<h4>Navigace</h4>
+<ul>
+<li><a href="index.html">Úvod</a></li>
+<li><a href="masaze.html">Masáže &amp; Terapie</a></li>
+<li><a href="kosmetika.html">Kosmetika &amp; Beauty</a></li>
+<li><a href="interier.html">Interior Design</a></li>
+</ul>
 </div>
 <div class="footer-col">
 <h4>Kontakt</h4>
 <ul>
-<li><a href="index.html#kontakt">Hradební 1543, UH</a></li>
-<li><a href="/cdn-cgi/l/email-protection#e08d818485928f948592819089859588a0878d81898cce838f8d"><span class="__cf_email__" data-cfemail="600d010405120f14051201100905150820070d01090c4e030f0d">[email protected]</span></a></li>
-<li><a href="tel:+420776323427">+420 776 323 427</a></li>
-<li><a href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervace online</a></li>
+<li>Hradební 1543</li>
+<li>686 01 Uherské Hradiště</li>
+<li>Po–Pá: 8:00–17:00</li>
+<li>So: 8:00–12:00</li>
+<li><a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
 <span>© 2025 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
-<div class="footer-bottom-links">
-<a href="#">Ochrana osobních údajů</a>
+<div>
+<a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
 <a href="#">Cookies</a>
 </div>
 </div>
