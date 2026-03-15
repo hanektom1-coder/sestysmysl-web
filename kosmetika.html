@@ -360,6 +360,14 @@
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-bottom a { margin: 0; }
   }
+
+  @media (max-width: 768px) {
+    .room-photo-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .room-photo-img img { height: 280px; }
+    .room-photo-img::before { display: none; }
+    .services-grid { grid-template-columns: 1fr !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -588,7 +596,7 @@
 <li>686 01 Uherské Hradiště</li>
 <li>Po–Pá: 8:00–17:00</li>
 <li>So: 8:00–12:00</li>
-<li><a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a></li>
+<li><a href="/cdn-cgi/l/email-protection#f1989f979eb18294828588829c88829d8499df928b"><span class="__cf_email__" data-cfemail="99f0f7fff6d9eafceaede0eaf4e0eaf5ecf1b7fae3">[email protected]</span></a></li>
 </ul>
 </div>
 </div>
@@ -600,25 +608,24 @@
 </div>
 </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')); }, 800);
 </script>
-<script>
-
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
+<script></script><script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
     const open = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
   });
-  // Close on link click
   mobileMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -627,15 +634,5 @@
       document.body.style.overflow = '';
     });
   });
-  // Close on outside click
-  mobileMenu.addEventListener('click', e => {
-    if (e.target === mobileMenu) {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-
-</script>
-</body>
-</html>
+}
+</script></body></html>
