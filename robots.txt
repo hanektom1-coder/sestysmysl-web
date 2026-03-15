@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sestysmysl.cz/sitemap.xml
+Sitemap: https://www.sestysmysluh.cz/sitemap.xml
