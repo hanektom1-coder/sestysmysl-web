@@ -5,13 +5,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Šestý Smysl – Masáže, kosmetika &amp; design | Uherské Hradiště</title>
-<meta content="Masáže, kosmetika a interiérový design v Uherském Hradišti. Šestý Smysl – maderoterapie, lymfomodeling, epilace Lycon, showroom bytového designu. Rezervujte online." name="description"/>
+<meta content="Tři světy péče v jednom prostoru v Uherském Hradišti. Masáže a terapie, profesionální kosmetika a interiérový design." name="description"/>
 <meta content="masáže Uherské Hradiště, kosmetika Uherské Hradiště, interiérový design Uherské Hradiště, maderoterapie, lymfodrenáž, španělská masáž, reflexní terapie, Šestý Smysl" name="keywords"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://www.sestysmysl.cz/" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Šestý Smysl – Masáže, kosmetika &amp; interiérový design" property="og:title"/>
-<meta content="Masáže, kosmetika a interiérový design v Uherském Hradišti. Šestý Smysl – maderoterapie, lymfomodeling, epilace Lycon, showroom bytového designu. Rezervujte online." property="og:description"/>
+<meta content="Tři světy péče v jednom elegantním prostoru v Uherském Hradišti. Masáže, kosmetika a interiérový design." property="og:description"/>
 <meta content="https://www.sestysmysl.cz/" property="og:url"/>
 <meta content="https://www.sestysmysl.cz/og-image.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -20,7 +20,7 @@
 <meta content="Šestý Smysl" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Šestý Smysl – Masáže, kosmetika &amp; interiérový design" name="twitter:title"/>
-<meta content="Masáže, kosmetika a interiérový design v Uherském Hradišti. Šestý Smysl – maderoterapie, lymfomodeling, epilace Lycon, showroom bytového designu. Rezervujte online." name="twitter:description"/>
+<meta content="Tři světy péče v jednom elegantním prostoru v Uherském Hradišti. Masáže, kosmetika a interiérový design." name="twitter:description"/>
 <meta content="https://www.sestysmysl.cz/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -597,82 +597,27 @@
     }
 
   
-  /* === INTERIER BANNER (homepage) === */
-  .interior-banner {
-    padding: 0;
-    overflow: hidden;
+  
+  /* === SALON BANNER === */
+  .salon-banner { padding: 0; overflow: hidden; }
+  .salon-banner-inner { position: relative; height: 560px; overflow: hidden; }
+  .salon-banner-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
+  .salon-banner-overlay {
+    position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(26,31,27,0.82) 0%, rgba(26,31,27,0.25) 80%, transparent 100%);
+    display: flex; flex-direction: column; justify-content: center; padding: 0 4rem 0 5%;
   }
-  .interior-banner-inner {
-    position: relative;
-    height: 580px;
-  }
-  .interior-banner-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
-    display: block;
-  }
-  .interior-banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(26,31,27,0.72) 0%, rgba(26,31,27,0.15) 65%, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5%;
-    max-width: 600px;
-  }
-  .interior-banner-overlay .label {
-    color: var(--gold, #b89c6e);
-    letter-spacing: 0.15em;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  .interior-banner-overlay h2 {
-    color: #fff;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1;
-    margin: 0 0 1rem;
-  }
-  .interior-banner-overlay h2 em {
-    color: var(--gold, #b89c6e);
-    font-style: normal;
-  }
-  .interior-banner-overlay > p {
-    color: rgba(255,255,255,0.8);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.8rem;
-  }
-  .btn-light {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    border: 1px solid rgba(255,255,255,0.7);
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    width: fit-content;
-  }
-  .btn-light:hover {
-    background: rgba(255,255,255,0.15);
-    border-color: #fff;
-  }
+  .salon-banner-overlay .label { color: var(--gold, #b89c6e); letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .salon-banner-overlay h2 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0 0 1rem; }
+  .salon-banner-overlay h2 em { color: var(--gold, #b89c6e); font-style: normal; }
+  .salon-banner-overlay > p { color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.7; margin-bottom: 1.8rem; }
+  .btn-light { display: inline-block; padding: 0.75rem 2rem; border: 1px solid rgba(255,255,255,0.7); color: #fff; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; width: fit-content; }
+  .btn-light:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
   @media (max-width: 768px) {
-    .interior-banner-inner { height: 420px; }
-    .interior-banner-overlay {
-      background: linear-gradient(to top, rgba(26,31,27,0.8) 0%, rgba(26,31,27,0.3) 60%, transparent 100%);
-      justify-content: flex-end;
-      padding-bottom: 2.5rem;
-      max-width: 100%;
-    }
+    .salon-banner-inner { height: 420px; }
+    .salon-banner-overlay { width: 100%; background: linear-gradient(to top, rgba(26,31,27,0.85) 0%, rgba(26,31,27,0.3) 60%, transparent 100%); justify-content: flex-end; padding: 0 2rem 2.5rem; }
   }
-
-  </style>
+</style>
 </head>
 <body>
 <!-- NAV -->
@@ -778,6 +723,18 @@
 </div>
 </div>
 </div></section>
+<section class="salon-banner reveal">
+<div class="salon-banner-inner">
+<img alt="Showroom Šestý Smysl – interiérový design a wellness Uherské Hradiště" loading="lazy" src="salon-interier.jpg"/>
+<div class="salon-banner-overlay">
+<p class="label">OR od Richarda</p>
+<h2>Interiérový design<br/><em>&amp; showroom</em></h2>
+<p>Dekorace, bytový textil a živé květiny — vše pod jednou střechou.</p>
+<a class="btn-light" href="interierovy-design">Prozkoumat showroom</a>
+</div>
+</div>
+</section>
+
 <section class="interier-banner reveal">
 <div class="interier-banner-inner">
 <img alt="Showroom Šestý Smysl – interiérový design a wellness Uherské Hradiště" loading="lazy" src="salon-interier.jpg"/>
