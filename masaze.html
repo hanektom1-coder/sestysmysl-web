@@ -311,6 +311,14 @@
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-bottom a { margin: 0; }
   }
+
+  @media (max-width: 768px) {
+    .svc-categories-row { grid-template-columns: 1fr 1fr !important; gap: 2rem; }
+  }
+  @media (max-width: 480px) {
+    .svc-categories-row { grid-template-columns: 1fr !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -680,7 +688,7 @@
 <li>686 01 Uherské Hradiště</li>
 <li>Po–Pá: 8:00–17:00</li>
 <li>So: 8:00–12:00</li>
-<li><a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a></li>
+<li><a href="/cdn-cgi/l/email-protection#5e373038311e2d3b2d2a272d33272d322b36703d24"><span class="__cf_email__" data-cfemail="375e59515877445244434e445a4e445b425f19544d">[email protected]</span></a></li>
 </ul>
 </div>
 </div>
@@ -692,4 +700,24 @@
 </div>
 </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script></script></body></html>
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+}
+</script></body></html>
