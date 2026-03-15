@@ -304,6 +304,67 @@
       .page-cta { padding: 4rem 5vw; }
     }
 
+  
+  /* === ROOM PHOTO SEKCE === */
+  .room-photo {
+    padding: 6rem 0;
+    background: var(--cream);
+  }
+  .room-photo-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .room-photo-img {
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .room-photo-img::before {
+    content: '';
+    position: absolute;
+    inset: -12px 12px 12px -12px;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    z-index: 0;
+  }
+  .room-photo-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .room-photo-text {
+    padding: 1rem 0;
+  }
+  .room-photo-text h2 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin: 0.8rem 0 1.5rem;
+    line-height: 1.1;
+  }
+  .room-photo-text p {
+    color: var(--text-muted, #666);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    max-width: 420px;
+  }
+  @media (max-width: 768px) {
+    .room-photo-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .room-photo-img img {
+      height: 280px;
+    }
+    .room-photo-img::before { display: none; }
+  }
+
   </style>
 </head>
 <body>
@@ -387,6 +448,19 @@
 </div>
 </div>
 </section>
+<section class="room-photo reveal">
+<div class="room-photo-inner">
+<div class="room-photo-img">
+<img alt="Showroom OR od Richarda – interiérový design Uherské Hradiště" loading="lazy" src="salon-interier.jpg"/>
+</div>
+<div class="room-photo-text">
+<p class="label">OR od Richarda · Šestý Smysl</p>
+<h2>Showroom,<br/><em>který inspiruje</em></h2>
+<p>Navštivte náš showroom v Uherském Hradišti a nechte se unést světem interiérového designu. Každý kus, každá dekorace — vybrána s citem pro detail a harmonii.</p>
+</div>
+</div>
+</section>
+
 <section class="styles reveal">
 <p class="label">Inspirace</p>
 <h2>Styly, které<br/><em>milujeme</em></h2>
