@@ -318,7 +318,27 @@
     .map-strip-map { height: 240px; }
   }
 
-  </style>
+  
+  /* === SALON BANNER === */
+  .salon-banner { padding: 0; overflow: hidden; }
+  .salon-banner-inner { position: relative; height: 560px; overflow: hidden; }
+  .salon-banner-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block; }
+  .salon-banner-overlay {
+    position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(26,31,27,0.82) 0%, rgba(26,31,27,0.25) 80%, transparent 100%);
+    display: flex; flex-direction: column; justify-content: center; padding: 0 4rem 0 5%;
+  }
+  .salon-banner-overlay .label { color: var(--gold, #b89c6e); letter-spacing: 0.15em; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .salon-banner-overlay h2 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0 0 1rem; }
+  .salon-banner-overlay h2 em { color: var(--gold, #b89c6e); font-style: normal; }
+  .salon-banner-overlay > p { color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.7; margin-bottom: 1.8rem; }
+  .btn-light { display: inline-block; padding: 0.75rem 2rem; border: 1px solid rgba(255,255,255,0.7); color: #fff; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s ease; width: fit-content; }
+  .btn-light:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  @media (max-width: 768px) {
+    .salon-banner-inner { height: 420px; }
+    .salon-banner-overlay { width: 100%; background: linear-gradient(to top, rgba(26,31,27,0.85) 0%, rgba(26,31,27,0.3) 60%, transparent 100%); justify-content: flex-end; padding: 0 2rem 2.5rem; }
+  }
+</style>
 </head>
 <body>
 <nav>
@@ -364,6 +384,17 @@
 </div>
 </div>
 </section>
+<section class="salon-banner reveal">
+<div class="salon-banner-inner">
+<img alt="Showroom OR od Richarda – interiérový design Uherské Hradiště" loading="lazy" src="salon-interier.jpg"/>
+<div class="salon-banner-overlay">
+<p class="label">OR od Richarda · Šestý Smysl</p>
+<h2>Váš showroom<br/><em>v Uherském Hradišti</em></h2>
+<p>Přijďte se inspirovat. Dekorace, bytový textil a živé květiny — vše pod jednou střechou.</p>
+</div>
+</div>
+</section>
+
 <section class="categories reveal" id="nabidka">
 <div class="categories-header">
 <p class="label">Nabídka · OR — Od Richarda</p>
