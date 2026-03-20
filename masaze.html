@@ -228,54 +228,16 @@
     }
   
   /* === MAP STRIP === */
-  .map-strip {
-    padding: 5rem 0;
-    background: var(--ink, #1a1f1b);
-  }
-  .map-strip-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .map-strip-text .label {
-    color: var(--gold, #b89c6e);
-  }
-  .map-strip-text h2 {
-    color: #fff;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    line-height: 1.15;
-    margin: 0.8rem 0 1.2rem;
-  }
-  .map-strip-text h2 em {
-    color: var(--gold, #b89c6e);
-    font-style: normal;
-  }
-  .map-strip-text p {
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    font-size: 0.88rem;
-  }
-  .map-strip-map {
-    border-radius: 2px;
-    overflow: hidden;
-    height: 420px;
-  }
-  .map-strip-map iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
+  .map-strip { padding: 5rem 0; background: var(--ink, #1a1f1b); }
+  .map-strip-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: start; }
+  .map-strip-text .label { color: var(--gold, #b89c6e); font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; }
+  .map-strip-text h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; margin: 0.8rem 0 1rem; }
+  .map-strip-text h2 em { color: var(--gold, #b89c6e); font-style: normal; }
+  .map-strip-text p { color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 0.8rem; font-size: 0.85rem; }
+  .map-strip-map { border-radius: 2px; overflow: hidden; height: 400px; }
+  .map-strip-map iframe { width: 100%; height: 100%; border: none; display: block; }
   @media (max-width: 768px) {
-    .map-strip-inner {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+    .map-strip-inner { grid-template-columns: 1fr; gap: 2rem; }
     .map-strip-map { height: 240px; }
   }
 
@@ -645,8 +607,8 @@
 <div class="map-strip-text">
 <p class="label">Kde nás najdete</p>
 <h2>Hradební 1543<br/><em>Uherské Hradiště</em></h2>
-<p>686 01 Uherské Hradiště<br/>Po–Pá: 9:00–17:00  |  So: 9:00–12:00</p>
-<p style="font-size:0.82rem;line-height:1.8;margin-bottom:1.2rem;">Bc. Lenka Hanáčková<br/>IČO: 03348041<br/><a href="tel:+420776323427" style="color:inherit;">+420 776 323 427</a><br/><a href="mailto:maderoterapieuh@gmail.com" style="color:inherit;">maderoterapieuh@gmail.com</a></p>
+<p>686 01 Uherské Hradiště<br/>Po–Pá: 9:00–17:00 | So: 9:00–12:00</p>
+<p>Bc. Lenka Hanáčková<br/>IČO: 03348041<br/><a href="tel:+420776323427" style="color:rgba(255,255,255,0.65);">+420 776 323 427</a><br/><a href="mailto:maderoterapieuh@gmail.com" style="color:rgba(255,255,255,0.65);">maderoterapieuh@gmail.com</a></p>
 <a class="btn-dark" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Navigovat</a>
 </div>
 <div class="map-strip-map">
@@ -659,7 +621,7 @@
 <h2>Objednejte<br/>se k <em>Lence</em></h2>
 <div class="cta-contact">
 <a href="tel:+420776323427">+420 776 323 427</a>
-<a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>
+<a href="/cdn-cgi/l/email-protection#f29f939697809d86978093829b97879ab2959f939b9edc919d9f"><span class="__cf_email__" data-cfemail="e885898c8d9a879c8d9a8998818d9d80a88f85898184c68b8785">[email&#160;protected]</span></a>
 <div class="cta-buttons">
 <a class="btn-dark" href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervovat online</a>
 <a class="btn-ghost" href="index.html#kontakt">Kde nás najdete</a>
@@ -692,7 +654,7 @@
 <li>686 01 Uherské Hradiště</li>
 <li>Po–Pá: 9:00–17:00</li>
 <li>So: 9:00–12:00</li>
-<li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+<li><a href="/cdn-cgi/l/email-protection#8fe2eeebeafde0fbeafdeeffe6eafae7cfe8e2eee6e3a1ece0e2"><span class="__cf_email__" data-cfemail="c6aba7a2a3b4a9b2a3b4a7b6afa3b3ae86a1aba7afaae8a5a9ab">[email&#160;protected]</span></a></li>
 </ul>
 </div>
 </div>
@@ -704,25 +666,9 @@
 </div>
 </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-      document.body.style.overflow = '';
-    });
-  });
-}
-</script>
-</body></html>
+  hamburger.addEventL
