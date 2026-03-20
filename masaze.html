@@ -155,7 +155,13 @@
     .modal-body ul { padding-left: 1.4rem; margin-bottom: 1.2rem; }
     .modal-body ul li { margin-bottom: 0.5rem; }
     .modal-body strong { color: var(--ink); font-weight: 400; }
-    @media(max-width:600px) { .modal-box { padding: 2.5rem 1.5rem; } }
+    .modal-hero-img { width: calc(100% + 6rem); margin: -3.5rem -3rem 2.5rem; display: block; height: 320px; object-fit: cover; object-position: center; }
+    .modal-img { width: 100%; display: block; margin: 1.5rem 0; height: 260px; object-fit: cover; object-position: center; }
+    .modal-img-caption { font-size: 0.72rem; color: var(--sage-pale); letter-spacing: 0.08em; margin-top: -1rem; margin-bottom: 1.5rem; }
+    @media(max-width:600px) {
+      .modal-box { padding: 2.5rem 1.5rem; }
+      .modal-hero-img { width: calc(100% + 3rem); margin: -2.5rem -1.5rem 2rem; height: 220px; }
+    }
 
     /* CTA */
     .page-cta { padding: 8rem 8vw; background: var(--white); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
@@ -743,6 +749,8 @@ if (hamburger && mobileMenu) {
 <div class="modal-overlay" id="modal1">
 <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
 <button class="modal-close" onclick="closeModal('modal1')" aria-label="Zavřít">✕</button>
+<!-- FOTO NAHOŘE: nahraď "blog-madero-hero.jpg" svým souborem (doporučeno 1400×600px) -->
+<img alt="Maderoterapie — dřevěné nástroje" class="modal-hero-img" src="blog-madero-hero.jpg" loading="lazy">
 <p class="modal-tag">Maderoterapie</p>
 <h2 id="modal1-title">Co je maderoterapie a jak funguje Wood Therapy?</h2>
 <p class="modal-meta">Maderoterapie UH · 3 min čtení</p>
@@ -750,6 +758,9 @@ if (hamburger && mobileMenu) {
 <p>Maderoterapie vznikla před více než sto lety v Kolumbii a pomalu si dobývá svět. Název pochází ze španělského slova <strong>„madero"</strong> — dřevo. Dřevěné nástroje, speciálně tvarované podle anatomie lidského těla, umožňují přesnou mechanickou stimulaci lymfatického systému, rozvolnění tukových buněk a modelování tělesných kontur — to vše bez jehel, chemie nebo přístrojů.</p>
 <h3>Jak terapie probíhá?</h3>
 <p>Terapeut pracuje se sadou dřevěných pomůcek různých tvarů a velikostí — od válečků a lopatek až po speciální sochory. Každý nástroj je navržen pro jinou část těla a jiný účel: rozehřívání tkáně, lymfodrenáž, nebo tvarování kontur. Pohyby jsou rytmické, cílené a vždy ve směru lymfatického toku — od periferie směrem k srdci.</p>
+<!-- FOTO UPROSTŘED: nahraď "blog-madero-nastroje.jpg" svým souborem -->
+<img alt="Dřevěné nástroje pro maderoterapii" class="modal-img" src="blog-madero-nastroje.jpg" loading="lazy">
+<p class="modal-img-caption">Sada dřevěných nástrojů používaných při maderoterapii</p>
 <h3>Co maderoterapie dokáže?</h3>
 <ul>
 <li><strong>Redukce celulitidy</strong> — mechanická stimulace rozbíjí tukové uzliny a zlepšuje cirkulaci</li>
@@ -768,6 +779,8 @@ if (hamburger && mobileMenu) {
 <div class="modal-overlay" id="modal2">
 <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
 <button class="modal-close" onclick="closeModal('modal2')" aria-label="Zavřít">✕</button>
+<!-- FOTO NAHOŘE: nahraď "blog-lymfa-hero.jpg" svým souborem -->
+<img alt="Lymfatická masáž" class="modal-hero-img" src="blog-lymfa-hero.jpg" loading="lazy">
 <p class="modal-tag">Lymfatický systém</p>
 <h2 id="modal2-title">Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h2>
 <p class="modal-meta">Maderoterapie UH · 4 min čtení</p>
@@ -784,6 +797,9 @@ if (hamburger && mobileMenu) {
 <li>Zhoršená kvalita pleti — šedivost, otoky pod očima</li>
 <li>Celulitida a hromadění tukových uzlin</li>
 </ul>
+<!-- FOTO UPROSTŘED: nahraď "blog-lymfa-system.jpg" svým souborem -->
+<img alt="Lymfatický systém" class="modal-img" src="blog-lymfa-system.jpg" loading="lazy">
+<p class="modal-img-caption">Lymfatický systém prochází celým tělem</p>
 <h3>Jak lymfu rozproudit?</h3>
 <p>Nejúčinnější metodou je <strong>ruční lymfatická masáž</strong> nebo <strong>maderoterapie</strong> — obě pracují přímo s lymfatickými cestami a napomáhají transportu lymfy správným směrem. Doplňkem je pravidelný pohyb (zejména chůze a plavání), vědomé hluboké dýchání a dostatečný pitný režim.</p>
 <p>Lymfodrenáž není luxus — je to péče o základní funkci těla. A výsledky bývají překvapivě rychlé: po sérii ošetření klienti popisují lehčí nohy, méně otoků, lepší pleť i vyšší energii.</p>
@@ -794,6 +810,8 @@ if (hamburger && mobileMenu) {
 <div class="modal-overlay" id="modal3">
 <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
 <button class="modal-close" onclick="closeModal('modal3')" aria-label="Zavřít">✕</button>
+<!-- FOTO NAHOŘE: nahraď "blog-celulitida-hero.jpg" svým souborem -->
+<img alt="Péče o tělo" class="modal-hero-img" src="blog-celulitida-hero.jpg" loading="lazy">
 <p class="modal-tag">Celulitida</p>
 <h2 id="modal3-title">Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h2>
 <p class="modal-meta">Maderoterapie UH · 5 min čtení</p>
@@ -803,6 +821,9 @@ if (hamburger && mobileMenu) {
 <p>Celulitida není přebytek tuku — je to <strong>strukturální změna podkožní tkáně</strong>. Tukové buňky jsou odděleny kolagenovými přepážkami. Když tyto přepážky ztvrdnou a zkrátí se (vlivem hormonů, špatné cirkulace nebo věku), tukové buňky se vyklenují směrem nahoru k povrchu kůže — a vzniká typický efekt pomerančové kůže.</p>
 <h3>Proč dieta a cvičení nestačí?</h3>
 <p>Cvičení a zdravá strava jsou skvělé pro celkové zdraví a redukci tělesného tuku. Ale na zkrácené kolagenové přepážky a zhoršenou mikrocirkulaci v podkoží nemají přímý vliv. Proto i po dramatickém zhubnutí celulitida zůstává — nebo se dokonce zhorší (kůže ztrácí napětí).</p>
+<!-- FOTO UPROSTŘED: nahraď "blog-celulitida-terapie.jpg" svým souborem -->
+<img alt="Maderoterapie na celulitidu" class="modal-img" src="blog-celulitida-terapie.jpg" loading="lazy">
+<p class="modal-img-caption">Maderoterapie — účinná metoda v boji s celulitidou</p>
 <h3>Co skutečně funguje?</h3>
 <p>Účinná léčba celulitidy musí cílit na <strong>tři příčiny zároveň</strong>: zhoršenou cirkulaci, ztuhnuté kolagenové přepážky a stagnující lymfu. Metody s prokázaným efektem:</p>
 <ul>
