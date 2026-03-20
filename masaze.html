@@ -132,38 +132,13 @@
     .blog-header h2 { font-size: clamp(2.5rem, 4vw, 5rem); line-height: 0.9; }
     .blog-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
     .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); }
-    .blog-card { background: var(--white); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; transition: background .25s; cursor: pointer; }
+    .blog-card { background: var(--white); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; transition: background .25s; cursor: pointer; text-decoration: none; color: inherit; }
     .blog-card:hover { background: var(--off); }
     .blog-card:hover .blog-read { color: var(--gold); }
     .blog-tag { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
     .blog-card h3 { font-size: 1.4rem; color: var(--ink); line-height: 1.1; font-weight: 200; }
     .blog-card p { font-size: 0.88rem; line-height: 1.85; color: var(--sage-mid); flex: 1; }
     .blog-read { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-pale); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); transition: color .25s; display: flex; justify-content: space-between; align-items: center; }
-    /* Modal */
-    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(26,31,27,0.7); backdrop-filter: blur(6px); overflow-y: auto; padding: 2rem 1rem; }
-    .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
-    .modal-box { background: var(--white); max-width: 720px; width: 100%; margin: auto; padding: 3.5rem 3rem; position: relative; animation: modalIn .3s ease; }
-    @keyframes modalIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
-    .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; cursor: pointer; color: var(--sage-pale); font-size: 1.4rem; line-height: 1; transition: color .2s; padding: 0.3rem; }
-    .modal-close:hover { color: var(--ink); }
-    .modal-tag { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
-    .modal-box h2 { font-family: 'Big Shoulders Display', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 200; line-height: 1.05; color: var(--ink); margin-bottom: 0.6rem; }
-    .modal-meta { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-pale); margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
-    .modal-body { font-size: 0.95rem; line-height: 1.95; color: var(--sage-mid); }
-    .modal-body h3 { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.3rem; font-weight: 300; color: var(--ink); margin: 2rem 0 0.8rem; }
-    .modal-body p { margin-bottom: 1.2rem; }
-    .modal-body ul { padding-left: 1.4rem; margin-bottom: 1.2rem; }
-    .modal-body ul li { margin-bottom: 0.5rem; }
-    .modal-body strong { color: var(--ink); font-weight: 400; }
-    .modal-hero-img { width: calc(100% + 6rem); margin: -3.5rem -3rem 2.5rem; display: block; height: 320px; object-fit: cover; object-position: center; }
-    .modal-img { width: 100%; display: block; margin: 1.5rem 0; height: 260px; object-fit: cover; object-position: center; }
-    .modal-img-caption { font-size: 0.72rem; color: var(--sage-pale); letter-spacing: 0.08em; margin-top: -1rem; margin-bottom: 1.5rem; }
-    .modal-cta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .modal-cta p { font-size: 0.78rem; color: var(--sage-pale); letter-spacing: 0.08em; }
-    .btn-dark { display: inline-block; padding: .75rem 1.8rem; background: var(--sage); color: var(--white); text-decoration: none; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; transition: background .3s; white-space: nowrap; }
-    .btn-dark:hover { background: var(--ink); }
-    @media(max-width:600px) {
-      .modal-box { padding: 2.5rem 1.5rem; }
       .modal-hero-img { width: calc(100% + 3rem); margin: -2.5rem -1.5rem 2rem; height: 220px; }
     }
 
@@ -644,24 +619,24 @@
 </div>
 </div>
 <div class="blog-grid">
-<div class="blog-card" onclick="openModal('modal1')" role="button" tabindex="0">
+<a class="blog-card" href="blog-maderoterapie.html">
 <span class="blog-tag">Maderoterapie</span>
 <h3>Co je maderoterapie a jak funguje Wood Therapy?</h3>
 <p>Maderoterapie vznikla před více než sto lety v Kolumbii. Název pochází ze španělského „madero" — dřevo. Dřevěné nástroje speciálně anatomicky tvarované umožňují přesnou stimulaci lymfatického systému a rozvolnění tukových buněk, které jinými metodami není možné.</p>
 <span class="blog-read">Maderoterapie UH · 3 min čtení <span>→</span></span>
-</div>
-<div class="blog-card" onclick="openModal('modal2')" role="button" tabindex="0">
+</a>
+<a class="blog-card" href="blog-lymfa.html">
 <span class="blog-tag">Lymfatický systém</span>
 <h3>Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h3>
 <p>Lymfatický systém je do určité míry podobný systému krevnímu, ale nemá vlastní pumpu. Nedostatečným prouděním lymfy dochází ke snížení funkce celého mízního systému a hromadění škodlivých látek v tkáních. Co s tím dělat?</p>
 <span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
-</div>
-<div class="blog-card" onclick="openModal('modal3')" role="button" tabindex="0">
+</a>
+<a class="blog-card" href="blog-celulitida.html">
 <span class="blog-tag">Celulitida</span>
 <h3>Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h3>
 <p>Celulitida postihuje až 90 % žen bez ohledu na věk nebo váhu. Hrudkovité útvary připomínající pomerančovou kůži vznikají omezením průtoku krve a lymfy v tkáních — ne jen přebytkem tuku. Proto samotná dieta nestačí a co skutečně funguje.</p>
 <span class="blog-read">Maderoterapie UH · 5 min čtení <span>→</span></span>
-</div>
+</a>
 </div>
 </section>
 <!-- CTA -->
@@ -748,223 +723,5 @@ if (hamburger && mobileMenu) {
     });
   });
 }
-</script>
-<!-- Blog Modal 1 -->
-<div class="modal-overlay" id="modal1">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
-<button class="modal-close" onclick="closeModal('modal1')" aria-label="Zavřít">✕</button>
-<!-- FOTO NAHOŘE: nahraď "blog-madero-hero.jpg" svým souborem (doporučeno 1400×600px) -->
-<img alt="Maderoterapie — dřevěné nástroje" class="modal-hero-img" src="blog-madero-hero.jpg" loading="lazy">
-<p class="modal-tag">Maderoterapie</p>
-<h2 id="modal1-title">Co je maderoterapie a jak funguje Wood Therapy?</h2>
-<p class="modal-meta">Maderoterapie UH · 3 min čtení</p>
-<div class="modal-body">
-<p>Maderoterapie vznikla před více než sto lety v Kolumbii a pomalu si dobývá svět. Název pochází ze španělského slova <strong>„madero"</strong> — dřevo. Dřevěné nástroje, speciálně tvarované podle anatomie lidského těla, umožňují přesnou mechanickou stimulaci lymfatického systému, rozvolnění tukových buněk a modelování tělesných kontur — to vše bez jehel, chemie nebo přístrojů.</p>
-<h3>Jak terapie probíhá?</h3>
-<p>Terapeut pracuje se sadou dřevěných pomůcek různých tvarů a velikostí — od válečků a lopatek až po speciální sochory. Každý nástroj je navržen pro jinou část těla a jiný účel: rozehřívání tkáně, lymfodrenáž, nebo tvarování kontur. Pohyby jsou rytmické, cílené a vždy ve směru lymfatického toku — od periferie směrem k srdci.</p>
-<!-- FOTO UPROSTŘED: nahraď "blog-madero-nastroje.jpg" svým souborem -->
-<img alt="Dřevěné nástroje pro maderoterapii" class="modal-img" src="blog-madero-nastroje.jpg" loading="lazy">
-<p class="modal-img-caption">Sada dřevěných nástrojů používaných při maderoterapii</p>
-<h3>Co maderoterapie dokáže?</h3>
-<ul>
-<li><strong>Redukce celulitidy</strong> — mechanická stimulace rozbíjí tukové uzliny a zlepšuje cirkulaci</li>
-<li><strong>Lymfodrenáž</strong> — urychluje odvod odpadních látek z tkání</li>
-<li><strong>Modelování postavy</strong> — zpevňuje a tvaruje bez invazivního zákroku</li>
-<li><strong>Uvolnění svalů</strong> — hluboká práce s tkání odstraňuje napětí a otoky</li>
-<li><strong>Zlepšení kůže</strong> — stimulace podporuje tvorbu kolagenu a elastinu</li>
-</ul>
-<h3>Pro koho je vhodná?</h3>
-<p>Maderoterapie je vhodná pro téměř každého. Zvláště oblíbená je u žen po porodu, při problematické celulitidě nebo při potřebě tvarovat specifické partie — boky, stehna, břicho. Není vhodná v těhotenství, při zánětech kůže nebo akutních žilních onemocněních.</p>
-<p>Viditelné výsledky se obvykle dostavují již po 3–5 ošetřeních. Pro trvalý efekt doporučujeme sérii 10–15 procedur s frekvencí 1–2× týdně.</p>
-<div class="modal-cta">
-<p>Chcete si přečíst celý článek?</p>
-<a class="btn-dark" href="blog-maderoterapie.html">Číst celý článek →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Blog Modal 2 -->
-<div class="modal-overlay" id="modal2">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
-<button class="modal-close" onclick="closeModal('modal2')" aria-label="Zavřít">✕</button>
-<!-- FOTO NAHOŘE: nahraď "blog-lymfa-hero.jpg" svým souborem -->
-<img alt="Lymfatická masáž" class="modal-hero-img" src="blog-lymfa-hero.jpg" loading="lazy">
-<p class="modal-tag">Lymfatický systém</p>
-<h2 id="modal2-title">Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h2>
-<p class="modal-meta">Maderoterapie UH · 4 min čtení</p>
-<div class="modal-body">
-<p>O krevním oběhu se mluví hodně. Ale lymfatický systém — stejně rozsáhlá síť cév a uzlin, která prochází celým tělem — zůstává v pozadí, přestože hraje zásadní roli v imunitě, detoxikaci i celkovém zdraví. Kdy jste naposledy mysleli na lymfu?</p>
-<h3>Co lymfatický systém dělá?</h3>
-<p>Lymfa je nažloutlá tekutina, která obklopuje každou buňku v těle. Odvádí z tkání odpadní látky, nadbytečnou tekutinu, bakterie a buněčné zbytky — a transportuje je do lymfatických uzlin, kde jsou neutralizovány. Zároveň je součástí imunitního systému: lymfocyty (bílé krvinky) vznikají a dozrávají právě v lymfatické tkáni.</p>
-<h3>Proč lymfa „stagnuje"?</h3>
-<p>Na rozdíl od krve, kterou pumpuje srdce, lymfa nemá vlastní pumpu. Pohybuje se pouze díky <strong>svalovým kontrakcím, pohybu těla a dýchání</strong>. Sedavý způsob života, nedostatek pohybu, špatné dýchání nebo těsné oblečení — to vše tok lymfy zpomaluje. Výsledkem jsou:</p>
-<ul>
-<li>Otoky — zejména na nohou, kotníkách a obličeji</li>
-<li>Pocit těžkých nohou a únavy</li>
-<li>Opakující se infekce — oslabená imunita</li>
-<li>Zhoršená kvalita pleti — šedivost, otoky pod očima</li>
-<li>Celulitida a hromadění tukových uzlin</li>
-</ul>
-<!-- FOTO UPROSTŘED: nahraď "blog-lymfa-system.jpg" svým souborem -->
-<img alt="Lymfatický systém" class="modal-img" src="blog-lymfa-system.jpg" loading="lazy">
-<p class="modal-img-caption">Lymfatický systém prochází celým tělem</p>
-<h3>Jak lymfu rozproudit?</h3>
-<p>Nejúčinnější metodou je <strong>ruční lymfatická masáž</strong> nebo <strong>maderoterapie</strong> — obě pracují přímo s lymfatickými cestami a napomáhají transportu lymfy správným směrem. Doplňkem je pravidelný pohyb (zejména chůze a plavání), vědomé hluboké dýchání a dostatečný pitný režim.</p>
-<p>Lymfodrenáž není luxus — je to péče o základní funkci těla. A výsledky bývají překvapivě rychlé: po sérii ošetření klienti popisují lehčí nohy, méně otoků, lepší pleť i vyšší energii.</p>
-<div class="modal-cta">
-<p>Chcete si přečíst celý článek?</p>
-<a class="btn-dark" href="blog-lymfa.html">Číst celý článek →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Blog Modal 3 -->
-<div class="modal-overlay" id="modal3">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
-<button class="modal-close" onclick="closeModal('modal3')" aria-label="Zavřít">✕</button>
-<!-- FOTO NAHOŘE: nahraď "blog-celulitida-hero.jpg" svým souborem -->
-<img alt="Péče o tělo" class="modal-hero-img" src="blog-celulitida-hero.jpg" loading="lazy">
-<p class="modal-tag">Celulitida</p>
-<h2 id="modal3-title">Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h2>
-<p class="modal-meta">Maderoterapie UH · 5 min čtení</p>
-<div class="modal-body">
-<p>Celulitida postihuje až <strong>90 % žen</strong> bez ohledu na věk nebo váhu. Hubené ženy ji mají, sportovkyně ji mají, ženy po čtyřicítce i dvacetileté. A přesto ji většina z nás označuje za estetický nedostatek, který by měl zmizet po dostatečném cvičení a zdravé stravě. Proč to tak nefunguje?</p>
-<h3>Co celulitida skutečně je?</h3>
-<p>Celulitida není přebytek tuku — je to <strong>strukturální změna podkožní tkáně</strong>. Tukové buňky jsou odděleny kolagenovými přepážkami. Když tyto přepážky ztvrdnou a zkrátí se (vlivem hormonů, špatné cirkulace nebo věku), tukové buňky se vyklenují směrem nahoru k povrchu kůže — a vzniká typický efekt pomerančové kůže.</p>
-<h3>Proč dieta a cvičení nestačí?</h3>
-<p>Cvičení a zdravá strava jsou skvělé pro celkové zdraví a redukci tělesného tuku. Ale na zkrácené kolagenové přepážky a zhoršenou mikrocirkulaci v podkoží nemají přímý vliv. Proto i po dramatickém zhubnutí celulitida zůstává — nebo se dokonce zhorší (kůže ztrácí napětí).</p>
-<!-- FOTO UPROSTŘED: nahraď "blog-celulitida-terapie.jpg" svým souborem -->
-<img alt="Maderoterapie na celulitidu" class="modal-img" src="blog-celulitida-terapie.jpg" loading="lazy">
-<p class="modal-img-caption">Maderoterapie — účinná metoda v boji s celulitidou</p>
-<h3>Co skutečně funguje?</h3>
-<p>Účinná léčba celulitidy musí cílit na <strong>tři příčiny zároveň</strong>: zhoršenou cirkulaci, ztuhnuté kolagenové přepážky a stagnující lymfu. Metody s prokázaným efektem:</p>
-<ul>
-<li><strong>Maderoterapie</strong> — mechanická stimulace rozbíjí tukové uzliny, zlepšuje cirkulaci a lymfodrenáž</li>
-<li><strong>Lymfodrenážní masáž</strong> — odstraňuje zadržovanou tekutinu a toxiny z tkání</li>
-<li><strong>Lymfomodeling</strong> — kombinuje lymfodrenáž s modelováním kontur těla</li>
-<li><strong>Pohyb</strong> — jako podpůrná metoda, ideálně chůze, plavání nebo jóga</li>
-</ul>
-<h3>Kolik ošetření potřebuji?</h3>
-<p>To závisí na stupni celulitidy a individuální reakci těla. Obecně platí: <strong>stupeň 1–2</strong> (viditelná jen při zmáčknutí) — 6–10 ošetření. <strong>Stupeň 3</strong> (viditelná vestoje) — 10–20 ošetření v pravidelné sérii.</p>
-<p>Výsledky nejsou okamžité, ale jsou trvalé — pokud je udržujete pravidelnou péčí. Celulitida je chronický stav, ne nemoc, a přístup k ní by měl být dlouhodobý a komplexní.</p>
-</div>
-</div>
-</div>
-<!-- Blog Modal 1 -->
-<div class="modal-overlay" id="modal1">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
-<button class="modal-close" onclick="closeModal('modal1')" aria-label="Zavřít">✕</button>
-<p class="modal-tag">Maderoterapie</p>
-<h2 id="modal1-title">Co je maderoterapie a jak funguje Wood Therapy?</h2>
-<p class="modal-meta">Maderoterapie UH · 3 min čtení</p>
-<div class="modal-body">
-<p>Maderoterapie vznikla před více než sto lety v Kolumbii a pomalu si dobývá svět. Název pochází ze španělského slova <strong>„madero"</strong> — dřevo. Dřevěné nástroje, speciálně tvarované podle anatomie lidského těla, umožňují přesnou mechanickou stimulaci lymfatického systému, rozvolnění tukových buněk a modelování tělesných kontur — to vše bez jehel, chemie nebo přístrojů.</p>
-<h3>Jak terapie probíhá?</h3>
-<p>Terapeut pracuje se sadou dřevěných pomůcek různých tvarů a velikostí — od válečků a lopatek až po speciální sochory. Každý nástroj je navržen pro jinou část těla a jiný účel: rozehřívání tkáně, lymfodrenáž, nebo tvarování kontur. Pohyby jsou rytmické, cílené a vždy ve směru lymfatického toku — od periferie směrem k srdci.</p>
-<h3>Co maderoterapie dokáže?</h3>
-<ul>
-<li><strong>Redukce celulitidy</strong> — mechanická stimulace rozbíjí tukové uzliny a zlepšuje cirkulaci</li>
-<li><strong>Lymfodrenáž</strong> — urychluje odvod odpadních látek z tkání</li>
-<li><strong>Modelování postavy</strong> — zpevňuje a tvaruje bez invazivního zákroku</li>
-<li><strong>Uvolnění svalů</strong> — hluboká práce s tkání odstraňuje napětí a otoky</li>
-<li><strong>Zlepšení kůže</strong> — stimulace podporuje tvorbu kolagenu a elastinu</li>
-</ul>
-<h3>Pro koho je vhodná?</h3>
-<p>Maderoterapie je vhodná pro téměř každého. Zvláště oblíbená je u žen po porodu, při problematické celulitidě nebo při potřebě tvarovat specifické partie — boky, stehna, břicho. Není vhodná v těhotenství, při zánětech kůže nebo akutních žilních onemocněních.</p>
-<p>Viditelné výsledky se obvykle dostavují již po 3–5 ošetřeních. Pro trvalý efekt doporučujeme sérii 10–15 procedur s frekvencí 1–2× týdně.</p>
-<div class="modal-cta">
-<p>Chcete si přečíst celý článek?</p>
-<a class="btn-dark" href="blog-maderoterapie.html">Číst celý článek →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Blog Modal 2 -->
-<div class="modal-overlay" id="modal2">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
-<button class="modal-close" onclick="closeModal('modal2')" aria-label="Zavřít">✕</button>
-<p class="modal-tag">Lymfatický systém</p>
-<h2 id="modal2-title">Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h2>
-<p class="modal-meta">Maderoterapie UH · 4 min čtení</p>
-<div class="modal-body">
-<p>O krevním oběhu se mluví hodně. Ale lymfatický systém — stejně rozsáhlá síť cév a uzlin, která prochází celým tělem — zůstává v pozadí, přestože hraje zásadní roli v imunitě, detoxikaci i celkovém zdraví. Kdy jste naposledy mysleli na lymfu?</p>
-<h3>Co lymfatický systém dělá?</h3>
-<p>Lymfa je nažloutlá tekutina, která obklopuje každou buňku v těle. Odvádí z tkání odpadní látky, nadbytečnou tekutinu, bakterie a buněčné zbytky — a transportuje je do lymfatických uzlin, kde jsou neutralizovány. Zároveň je součástí imunitního systému: lymfocyty (bílé krvinky) vznikají a dozrávají právě v lymfatické tkáni.</p>
-<h3>Proč lymfa „stagnuje"?</h3>
-<p>Na rozdíl od krve, kterou pumpuje srdce, lymfa nemá vlastní pumpu. Pohybuje se pouze díky <strong>svalovým kontrakcím, pohybu těla a dýchání</strong>. Sedavý způsob života, nedostatek pohybu, špatné dýchání nebo těsné oblečení — to vše tok lymfy zpomaluje. Výsledkem jsou:</p>
-<ul>
-<li>Otoky — zejména na nohou, kotníkách a obličeji</li>
-<li>Pocit těžkých nohou a únavy</li>
-<li>Opakující se infekce — oslabená imunita</li>
-<li>Zhoršená kvalita pleti — šedivost, otoky pod očima</li>
-<li>Celulitida a hromadění tukových uzlin</li>
-</ul>
-<h3>Jak lymfu rozproudit?</h3>
-<p>Nejúčinnější metodou je <strong>ruční lymfatická masáž</strong> nebo <strong>maderoterapie</strong> — obě pracují přímo s lymfatickými cestami a napomáhají transportu lymfy správným směrem. Doplňkem je pravidelný pohyb (zejména chůze a plavání), vědomé hluboké dýchání a dostatečný pitný režim.</p>
-<p>Lymfodrenáž není luxus — je to péče o základní funkci těla. A výsledky bývají překvapivě rychlé: po sérii ošetření klienti popisují lehčí nohy, méně otoků, lepší pleť i vyšší energii.</p>
-<div class="modal-cta">
-<p>Chcete si přečíst celý článek?</p>
-<a class="btn-dark" href="blog-lymfa.html">Číst celý článek →</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Blog Modal 3 -->
-<div class="modal-overlay" id="modal3">
-<div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
-<button class="modal-close" onclick="closeModal('modal3')" aria-label="Zavřít">✕</button>
-<p class="modal-tag">Celulitida</p>
-<h2 id="modal3-title">Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h2>
-<p class="modal-meta">Maderoterapie UH · 5 min čtení</p>
-<div class="modal-body">
-<p>Celulitida postihuje až <strong>90 % žen</strong> bez ohledu na věk nebo váhu. Hubené ženy ji mají, sportovkyně ji mají, ženy po čtyřicítce i dvacetileté. A přesto ji většina z nás označuje za estetický nedostatek, který by měl zmizet po dostatečném cvičení a zdravé stravě. Proč to tak nefunguje?</p>
-<h3>Co celulitida skutečně je?</h3>
-<p>Celulitida není přebytek tuku — je to <strong>strukturální změna podkožní tkáně</strong>. Tukové buňky jsou odděleny kolagenovými přepážkami. Když tyto přepážky ztvrdnou a zkrátí se (vlivem hormonů, špatné cirkulace nebo věku), tukové buňky se vyklenují směrem nahoru k povrchu kůže — a vzniká typický efekt pomerančové kůže.</p>
-<h3>Proč dieta a cvičení nestačí?</h3>
-<p>Cvičení a zdravá strava jsou skvělé pro celkové zdraví a redukci tělesného tuku. Ale na zkrácené kolagenové přepážky a zhoršenou mikrocirkulaci v podkoží nemají přímý vliv. Proto i po dramatickém zhubnutí celulitida zůstává — nebo se dokonce zhorší (kůže ztrácí napětí).</p>
-<h3>Co skutečně funguje?</h3>
-<p>Účinná léčba celulitidy musí cílit na <strong>tři příčiny zároveň</strong>: zhoršenou cirkulaci, ztuhnuté kolagenové přepážky a stagnující lymfu. Metody s prokázaným efektem:</p>
-<ul>
-<li><strong>Maderoterapie</strong> — mechanická stimulace rozbíjí tukové uzliny, zlepšuje cirkulaci a lymfodrenáž</li>
-<li><strong>Lymfodrenážní masáž</strong> — odstraňuje zadržovanou tekutinu a toxiny z tkání</li>
-<li><strong>Lymfomodeling</strong> — kombinuje lymfodrenáž s modelováním kontur těla</li>
-<li><strong>Pohyb</strong> — jako podpůrná metoda, ideálně chůze, plavání nebo jóga</li>
-</ul>
-<h3>Kolik ošetření potřebuji?</h3>
-<p>To závisí na stupni celulitidy a individuální reakci těla. Obecně platí: <strong>stupeň 1–2</strong> (viditelná jen při zmáčknutí) — 6–10 ošetření. <strong>Stupeň 3</strong> (viditelná vestoje) — 10–20 ošetření v pravidelné sérii.</p>
-<p>Výsledky nejsou okamžité, ale jsou trvalé — pokud je udržujete pravidelnou péčí. Celulitida je chronický stav, ne nemoc, a přístup k ní by měl být dlouhodobý a komplexní.</p>
-<div class="modal-cta">
-<p>Chcete si přečíst celý článek?</p>
-<a class="btn-dark" href="blog-celulitida.html">Číst celý článek →</a>
-</div>
-</div>
-</div>
-</div>
-<script>
-function openModal(id) {
-  const overlay = document.getElementById(id);
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closeModal(id);
-  });
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.open').forEach(m => {
-      m.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  }
-});
-document.querySelectorAll('.blog-card').forEach(card => {
-  card.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') card.click();
-  });
-});
 </script>
 </body></html>
