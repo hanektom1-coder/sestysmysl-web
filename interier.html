@@ -100,9 +100,9 @@
     .footer-col h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.7); letter-spacing: 0.1em; margin-bottom: 1rem; font-weight: 400; text-transform: uppercase; }
     .footer-col h4 a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.25s; }
     .footer-col h4 a:hover { color: var(--gold); }
-    .footer-col p { font-size: 0.76rem; line-height: 1.4; color: rgba(255,255,255,0.38); }
+    .footer-col p { font-size: 0.76rem; line-height: 1.8; color: rgba(255,255,255,0.38); }
     .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 0.2rem; font-size: 0.76rem; }
+    .footer-col li { margin-bottom: 0.65rem; font-size: 0.76rem; }
     .footer-col a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.25s; }
     .footer-col a:hover { color: var(--gold); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; color: rgba(255,255,255,0.28); }
@@ -267,55 +267,19 @@
 
   
   /* === MAP STRIP === */
-  .map-strip {
-    padding: 5rem 0;
-    background: var(--ink, #1a1f1b);
-  }
-  .map-strip-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .map-strip-text .label {
-    color: var(--gold, #b89c6e);
-  }
-  .map-strip-text h2 {
-    color: #fff;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    line-height: 1.15;
-    margin: 0.8rem 0 1.2rem;
-  }
-  .map-strip-text h2 em {
-    color: var(--gold, #b89c6e);
-    font-style: normal;
-  }
-  .map-strip-text p {
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
-  }
-  .map-strip-map {
-    border-radius: 2px;
-    overflow: hidden;
-    height: 320px;
-  }
-  .map-strip-map iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
+  .map-strip { display: grid; grid-template-columns: 1fr 1fr; }
+  .map-strip-info { padding: 6rem 5vw 6rem 6vw; background: var(--cream); display: flex; flex-direction: column; justify-content: center; }
+  .map-strip-info h2 { font-size: clamp(2rem, 3vw, 3.2rem); line-height: 1.1; color: var(--ink); margin-bottom: 2rem; }
+  .map-strip-info h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
+  .loc-list { list-style: none; margin-bottom: 2rem; }
+  .loc-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(61,74,62,0.1); font-size: 0.85rem; color: var(--sage-mid); line-height: 1.6; }
+  .loc-list li:last-child { border: none; }
+  .loc-icon { color: var(--gold); flex-shrink: 0; margin-top: 0.1rem; }
+  .map-strip-map { background: var(--sage); position: relative; overflow: hidden; min-height: 480px; }
+  .map-strip-map iframe { width: 100%; height: 100%; border: none; min-height: 480px; display: block; }
   @media (max-width: 768px) {
-    .map-strip-inner {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .map-strip-map { height: 240px; }
+    .map-strip { grid-template-columns: 1fr; }
+    .map-strip-map { min-height: 300px; }
   }
 
   
@@ -355,13 +319,13 @@
   /* === FOOTER === */
   footer { background: var(--ink, #1a1f1b); color: rgba(255,255,255,0.55); font-size: 0.85rem; }
   .footer-top { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; }
-  .footer-brand-name { display: block; font-family: 'Big Shoulders Display', sans-serif; font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+  .footer-brand-name { display: block; font-family: var(--font-display, inherit); font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
   .footer-brand p { line-height: 1.7; margin-bottom: 1.5rem; }
   .footer-social { display: flex; gap: 1rem; }
   .footer-social a { color: rgba(255,255,255,0.4); transition: color 0.2s; display: flex; align-items: center; }
   .footer-social a:hover { color: var(--gold, #b89c6e); }
   .footer-col h4 { color: #fff; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 500; }
-  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
   .footer-col ul li { color: rgba(255,255,255,0.55); }
   .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
   .footer-col ul li a:hover { color: var(--gold, #b89c6e); }
@@ -514,17 +478,19 @@
 </div>
 </section>
 <section class="map-strip reveal">
-<div class="map-strip-inner">
-<div class="map-strip-text">
+<div class="map-strip-info">
 <p class="label">Kde nás najdete</p>
-<h2>Hradební 1543<br/><em>Uherské Hradiště</em></h2>
-<p>686 01 Uherské Hradiště<br/>Po–Pá: 9:00–17:00  |  So: 9:00–12:00</p>
+<h2>Interior Design<br/>&amp; <em>Showroom</em></h2>
+<ul class="loc-list">
+<li><span class="loc-icon">📍</span><div><strong style="color:var(--ink)">Adresa</strong><br/>Hradební 1543, 686 01 Uherské Hradiště</div></li>
+<li><span class="loc-icon">🕐</span><div><strong style="color:var(--ink)">Provozní doba</strong><br/>Po–Pá: 9:00–17:00 | So: 9:00–12:00</div></li>
+<li><span class="loc-icon">📞</span><div><strong style="color:var(--ink)">Telefon</strong><br/><a href="tel:+420770398691" style="color:var(--gold)">+420 770 398 691</a></div></li>
+<li><span class="loc-icon">✉️</span><div><strong style="color:var(--ink)">E-mail</strong><br/><a href="mailto:info@sestysmysluh.cz" style="color:var(--gold)">info@sestysmysluh.cz</a></div></li>
+</ul>
 <a class="btn-dark" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Navigovat</a>
 </div>
 <div class="map-strip-map">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20792.08!2d17.4601!3d49.0687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e5e2b3f86c73%3A0xd8ccc91e9b58e22f!2sUhersk%C3%A9%20Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1699000000000" title="Šestý Smysl – Uherské Hradiště">
-</iframe>
-</div>
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.5!2d17.4583!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e4f0e3b3b3b3%3A0x0!2sHradebn%C3%AD+1543%2C+686+01+Uhersk%C3%A9+Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1710000000000" title="Šestý Smysl – Uherské Hradiště"></iframe>
 </div>
 </section>
 <section class="page-cta reveal">
@@ -558,14 +524,14 @@
 <ul>
 <li>Hradební 1543</li>
 <li>686 01 Uherské Hradiště</li>
-<li>Po–Pá: 9:00–17:00</li>
-<li>So: 9:00–12:00</li>
+<li>Po–Pá: 8:00–17:00</li>
+<li>So: 8:00–12:00</li>
 <li><a href="/cdn-cgi/l/email-protection#9ef7f0f8f1deedfbedeae7edf3e7edf2ebf6b0fde4"><span class="__cf_email__" data-cfemail="7811161e17380b1d0b0c010b15010b140d10561b02">[email protected]</span></a></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span>© 2026 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
+<span>© 2025 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
 <div>
 <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
 <a href="#">Cookies</a>
