@@ -344,14 +344,16 @@
     @media (max-width: 900px) { .hero-watermark { display: none; } }
     .page-hero .hero-cta-row {
       position: absolute;
-      left: 62%;
-      bottom: 16%;
+      left: calc(100% - 12vw - clamp(150px, 18vw, 280px));
       transform: translateX(-50%);
+      bottom: 16%;
     }
     @media (max-width: 900px) {
       .page-hero .hero-cta-row {
         position: static;
+        left: auto;
         transform: none;
+        bottom: auto;
       }
     }
     </style>
