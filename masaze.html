@@ -139,6 +139,12 @@
     .blog-card h3 { font-size: 1.4rem; color: var(--ink); line-height: 1.1; font-weight: 200; }
     .blog-card p { font-size: 0.88rem; line-height: 1.85; color: var(--sage-mid); flex: 1; }
     .blog-read { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-pale); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); transition: color .25s; display: flex; justify-content: space-between; align-items: center; }
+    .blog-hidden { display: none; }
+    .blog-more-wrap { padding: 2.5rem 0 0; display: flex; justify-content: center; }
+    .blog-more-btn { background: none; border: 1px solid var(--border); color: var(--sage-mid); font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.9rem 2.2rem; cursor: pointer; display: flex; align-items: center; gap: 0.7rem; transition: all .3s; }
+    .blog-more-btn:hover { border-color: var(--sage); color: var(--sage); }
+    .blog-more-arrow { transition: transform .3s; display: inline-block; }
+    .blog-more-btn.open .blog-more-arrow { transform: rotate(180deg); }
       .modal-hero-img { width: calc(100% + 3rem); margin: -2.5rem -1.5rem 2rem; height: 220px; }
     }
 
@@ -604,7 +610,7 @@
 <h2>Čtěte<br/><em>více</em></h2>
 </div>
 </div>
-<div class="blog-grid">
+<div class="blog-grid" id="blogGrid">
 <a class="blog-card" href="blog-maderoterapie.html">
 <span class="blog-tag">Maderoterapie</span>
 <h3>Co je maderoterapie a jak funguje Wood Therapy?</h3>
@@ -623,6 +629,27 @@
 <p>Celulitida postihuje až 90 % žen bez ohledu na věk nebo váhu. Hrudkovité útvary připomínající pomerančovou kůži vznikají omezením průtoku krve a lymfy v tkáních — ne jen přebytkem tuku. Proto samotná dieta nestačí a co skutečně funguje.</p>
 <span class="blog-read">Maderoterapie UH · 5 min čtení <span>→</span></span>
 </a>
+<a class="blog-card blog-hidden" href="blog-lymfomodeling.html">
+<span class="blog-tag">Lymfomodeling</span>
+<h3>Lymfomodeling: tři terapie v jednom a výsledky viditelné hned</h3>
+<p>Lymfomodeling spojuje maderoterapii, manuální lymfodrenáž a modelační masáž do jediného ošetření. Výsledek je vidět i cítit ihned — pokožka pružnější, tělo lehčí. Proč dává nejlepší dlouhodobé výsledky?</p>
+<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
+</a>
+<a class="blog-card blog-hidden" href="blog-an-mo.html">
+<span class="blog-tag">Čínská medicína</span>
+<h3>AN MO: čínská masáž nohou, která léčí celé tělo</h3>
+<p>Číňané říkají, že chodidla jsou druhým srdcem člověka. AN MO spojuje bylinnou koupel, reflexní terapii a akupresurní body v jediném rituálu. Zjistěte, proč změní kvalitu vašeho spánku a vrátí vám energii.</p>
+<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
+</a>
+<a class="blog-card blog-hidden" href="blog-spanelska-masaz-obliceje.html">
+<span class="blog-tag">Španělská masáž</span>
+<h3>Španělská masáž obličeje: přirozená alternativa k invazivním zákrokům</h3>
+<p>Mimické svaly nesou každý den tíhu výrazů, emocí a stresu. Španělská masáž obličeje a dekoltu toto napětí systematicky uvolňuje — zpevňuje pleť, zlepšuje prokrvení a rozjasňuje. Bez jehel, bez chemie.</p>
+<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
+</a>
+</div>
+<div class="blog-more-wrap">
+<button class="blog-more-btn" id="blogMoreBtn" onclick="toggleBlogMore()">Zobrazit všechny články <span class="blog-more-arrow">↓</span></button>
 </div>
 </section>
 <!-- CTA -->
@@ -699,6 +726,20 @@ if (hamburger && mobileMenu) {
       document.body.style.overflow = '';
     });
   });
+}
+
+function toggleBlogMore() {
+  const hidden = document.querySelectorAll('.blog-hidden');
+  const btn = document.getElementById('blogMoreBtn');
+  const isOpen = btn.classList.contains('open');
+  hidden.forEach(card => {
+    card.style.display = isOpen ? 'none' : 'flex';
+    if (!isOpen) card.style.flexDirection = 'column';
+  });
+  btn.classList.toggle('open', !isOpen);
+  btn.innerHTML = isOpen
+    ? 'Zobrazit všechny články <span class="blog-more-arrow">↓</span>'
+    : 'Skrýt články <span class="blog-more-arrow" style="transform:rotate(180deg)">↓</span>';
 }
 </script>
 </body></html>
