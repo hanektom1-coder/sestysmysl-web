@@ -97,6 +97,64 @@
     .article-hero-img, .article-hero-img-placeholder { height: 280px; }
     .article-img { height: 220px; }
   }
+
+  /* COOKIE BANNER */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--ink, #1A1F1B);
+    color: rgba(255,255,255,0.8);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    border-top: 2px solid var(--gold, #B8965A);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  .cookie-banner.visible { transform: translateY(0); }
+  .cookie-banner p { margin: 0; flex: 1; min-width: 200px; }
+  .cookie-banner a { color: var(--gold, #B8965A); text-decoration: none; }
+  .cookie-banner a:hover { text-decoration: underline; }
+  .cookie-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; }
+  .cookie-accept {
+    padding: 0.5rem 1.4rem;
+    background: var(--gold, #B8965A);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: background 0.2s;
+  }
+  .cookie-accept:hover { background: var(--gold-light, #D4AE74); }
+  .cookie-decline {
+    padding: 0.5rem 1.4rem;
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .cookie-decline:hover { border-color: rgba(255,255,255,0.5); color: rgba(255,255,255,0.9); }
+  @media(max-width: 600px) {
+    .cookie-banner { flex-direction: column; align-items: flex-start; padding: 1.2rem 1.5rem; }
+    .cookie-buttons { width: 100%; }
+    .cookie-accept, .cookie-decline { flex: 1; text-align: center; }
+  }
 </style>
 </head>
 <body>
@@ -228,6 +286,34 @@ if (hamburger && mobileMenu) {
     }
   });
 }
+</script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Souhlas s cookies">
+  <p>Tento web používá Google Maps, které mohou ukládat cookies. Pokračováním souhlasíte s jejich použitím. <a href="ochrana-osobnich-udaju.html">Více informací</a></p>
+  <div class="cookie-buttons">
+    <button class="cookie-accept" id="cookieAccept">Přijmout</button>
+    <button class="cookie-decline" id="cookieDecline">Odmítnout</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  const consent = localStorage.getItem('cookieConsent');
+  if (!consent) {
+    setTimeout(() => banner.classList.add('visible'), 500);
+  }
+  document.getElementById('cookieAccept').addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.classList.remove('visible');
+  });
+  document.getElementById('cookieDecline').addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    banner.classList.remove('visible');
+  });
+})();
 </script>
 </body>
 </html>
