@@ -38,7 +38,7 @@
     .nav-btn { font-size: 0.7rem; letter-spacing: .16em; text-transform: uppercase; padding: 0.6rem 1.5rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; min-width: 110px; text-align: center; }
     .nav-btn:hover { background: var(--sage); color: var(--white); }
 
-    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px 5vw; background: var(--white); border-bottom: 1px solid var(--border); }
+    .page-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 8vw 100px 5vw; background: var(--white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
     .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1.2rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
     .page-hero h1 { font-size: clamp(5rem, 10vw, 13rem); line-height: 0.85; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 2.5rem; font-weight: 200; max-width: 900px; }
@@ -267,19 +267,55 @@
 
   
   /* === MAP STRIP === */
-  .map-strip { display: grid; grid-template-columns: 1fr 1fr; }
-  .map-strip-info { padding: 6rem 5vw 6rem 6vw; background: var(--cream); display: flex; flex-direction: column; justify-content: center; }
-  .map-strip-info h2 { font-size: clamp(2rem, 3vw, 3.2rem); line-height: 1.1; color: var(--ink); margin-bottom: 2rem; }
-  .map-strip-info h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
-  .loc-list { list-style: none; margin-bottom: 2rem; }
-  .loc-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(61,74,62,0.1); font-size: 0.85rem; color: var(--sage-mid); line-height: 1.6; }
-  .loc-list li:last-child { border: none; }
-  .loc-icon { color: var(--gold); flex-shrink: 0; margin-top: 0.1rem; }
-  .map-strip-map { background: var(--sage); position: relative; overflow: hidden; min-height: 480px; }
-  .map-strip-map iframe { width: 100%; height: 100%; border: none; min-height: 480px; display: block; }
+  .map-strip {
+    padding: 5rem 0;
+    background: var(--ink, #1a1f1b);
+  }
+  .map-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .map-strip-text .label {
+    color: var(--gold, #b89c6e);
+  }
+  .map-strip-text h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0.8rem 0 1.2rem;
+  }
+  .map-strip-text h2 em {
+    color: var(--gold, #b89c6e);
+    font-style: normal;
+  }
+  .map-strip-text p {
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  .map-strip-map {
+    border-radius: 2px;
+    overflow: hidden;
+    height: 320px;
+  }
+  .map-strip-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
   @media (max-width: 768px) {
-    .map-strip { grid-template-columns: 1fr; }
-    .map-strip-map { min-height: 300px; }
+    .map-strip-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .map-strip-map { height: 240px; }
   }
 
   
@@ -337,6 +373,16 @@
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-bottom a { margin: 0; }
   }
+    .hero-watermark {
+      position: absolute;
+      right: 12vw; top: 48%;
+      transform: translateY(-50%);
+      width: clamp(300px, 36vw, 560px);
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @media (max-width: 900px) { .hero-watermark { display: none; } }
 </style>
 </head>
 <body>
@@ -381,6 +427,7 @@
 <a class="btn-ghost" href="#nabidka">Co nabízíme</a>
 </div>
 </div>
+<div class="hero-watermark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 867 1210" aria-hidden="true"><path d="M 399.50 923.94 C353.76,918.76 317.18,908.15 278.83,888.93 C242.89,870.92 216.12,851.92 188.12,824.55 C132.02,769.72 95.75,699.95 84.55,625.32 C80.46,598.10 79.65,561.82 82.51,534.55 C88.92,473.54 109.16,418.00 142.85,369.00 C173.24,324.79 213.39,287.41 259.37,260.52 C299.30,237.16 351.85,219.69 397.60,214.58 C413.92,212.75 452.33,212.45 468.14,214.03 C520.18,219.23 571.85,236.26 616.00,262.76 C643.13,279.05 662.63,294.48 687.00,318.93 C718.51,350.55 739.37,380.14 757.48,418.90 C769.55,444.71 772.69,453.31 780.41,481.50 C789.25,513.83 793.36,556.26 791.07,591.50 C785.92,670.89 757.62,739.86 704.50,802.54 C672.59,840.19 624.66,875.41 577.77,895.66 C544.79,909.90 520.85,916.74 485.00,922.17 C474.04,923.83 465.49,924.28 439.50,924.53 C421.90,924.71 403.90,924.44 399.50,923.94 Z" fill="currentColor"/></svg></div>
 </section>
 <section class="salon-banner reveal">
 <div class="salon-banner-inner">
@@ -478,19 +525,17 @@
 </div>
 </section>
 <section class="map-strip reveal">
-<div class="map-strip-info">
+<div class="map-strip-inner">
+<div class="map-strip-text">
 <p class="label">Kde nás najdete</p>
-<h2>Interior Design<br/>&amp; <em>Showroom</em></h2>
-<ul class="loc-list">
-<li><span class="loc-icon">📍</span><div><strong style="color:var(--ink)">Adresa</strong><br/>Hradební 1543, 686 01 Uherské Hradiště</div></li>
-<li><span class="loc-icon">🕐</span><div><strong style="color:var(--ink)">Provozní doba</strong><br/>Po–Pá: 9:00–17:00 | So: 9:00–12:00</div></li>
-<li><span class="loc-icon">📞</span><div><strong style="color:var(--ink)">Telefon</strong><br/><a href="tel:+420770398691" style="color:var(--gold)">+420 770 398 691</a></div></li>
-<li><span class="loc-icon">✉️</span><div><strong style="color:var(--ink)">E-mail</strong><br/><a href="mailto:info@sestysmysluh.cz" style="color:var(--gold)">info@sestysmysluh.cz</a></div></li>
-</ul>
+<h2>Hradební 1543<br/><em>Uherské Hradiště</em></h2>
+<p>686 01 Uherské Hradiště<br/>Po–Pá: 8:00–17:00  |  So: 8:00–12:00</p>
 <a class="btn-dark" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Navigovat</a>
 </div>
 <div class="map-strip-map">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.5!2d17.4583!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e4f0e3b3b3b3%3A0x0!2sHradebn%C3%AD+1543%2C+686+01+Uhersk%C3%A9+Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1710000000000" title="Šestý Smysl – Uherské Hradiště"></iframe>
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20792.08!2d17.4601!3d49.0687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e5e2b3f86c73%3A0xd8ccc91e9b58e22f!2sUhersk%C3%A9%20Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1699000000000" title="Šestý Smysl – Uherské Hradiště">
+</iframe>
+</div>
 </div>
 </section>
 <section class="page-cta reveal">
