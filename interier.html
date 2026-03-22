@@ -267,19 +267,55 @@
 
   
   /* === MAP STRIP === */
-  .map-strip { display: grid; grid-template-columns: 1fr 1fr; }
-  .map-strip-info { padding: 6rem 5vw 6rem 6vw; background: var(--cream); display: flex; flex-direction: column; justify-content: center; }
-  .map-strip-info h2 { font-size: clamp(2rem, 3vw, 3.2rem); line-height: 1.1; color: var(--ink); margin-bottom: 2rem; }
-  .map-strip-info h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
-  .loc-list { list-style: none; margin-bottom: 2rem; }
-  .loc-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(61,74,62,0.1); font-size: 0.85rem; color: var(--sage-mid); line-height: 1.6; }
-  .loc-list li:last-child { border: none; }
-  .loc-icon { color: var(--gold); flex-shrink: 0; margin-top: 0.1rem; }
-  .map-strip-map { background: var(--sage); position: relative; overflow: hidden; min-height: 480px; }
-  .map-strip-map iframe { width: 100%; height: 100%; border: none; min-height: 480px; display: block; }
+  .map-strip {
+    padding: 5rem 0;
+    background: var(--ink, #1a1f1b);
+  }
+  .map-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .map-strip-text .label {
+    color: var(--gold, #b89c6e);
+  }
+  .map-strip-text h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0.8rem 0 1.2rem;
+  }
+  .map-strip-text h2 em {
+    color: var(--gold, #b89c6e);
+    font-style: normal;
+  }
+  .map-strip-text p {
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  .map-strip-map {
+    border-radius: 2px;
+    overflow: hidden;
+    height: 320px;
+  }
+  .map-strip-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
   @media (max-width: 768px) {
-    .map-strip { grid-template-columns: 1fr; }
-    .map-strip-map { min-height: 300px; }
+    .map-strip-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .map-strip-map { height: 240px; }
   }
 
   
@@ -347,22 +383,7 @@
       z-index: 1;
     }
     @media (max-width: 900px) { .hero-watermark { display: none; } }
-    .page-hero .hero-cta-row {
-      position: absolute;
-      left: calc(100% - 12vw - clamp(150px, 18vw, 280px));
-      transform: translateX(-50%);
-      bottom: 16%;
-      z-index: 1;
-    }
     @media (max-width: 900px) {
-      .page-hero .hero-cta-row {
-        position: static !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        bottom: auto !important;
-        z-index: auto !important;
-      }
     }
     </style>
 </head>
@@ -510,20 +531,17 @@
 </div>
 </section>
 <section class="map-strip reveal">
-<div class="map-strip-info">
+<div class="map-strip-inner">
+<div class="map-strip-text">
 <p class="label">Kde nás najdete</p>
-<h2>Interior Design<br/>&amp; <em>Showroom<br/>Uherské Hradiště</em></h2>
-<ul class="loc-list">
-<li><span class="loc-icon">📍</span><div><strong style="color:var(--ink)">Adresa</strong><br/>Hradební 1543, 686 01 Uherské Hradiště</div></li>
-<li><span class="loc-icon">🕐</span><div><strong style="color:var(--ink)">Otevírací doba</strong><br/>Po–Pá: 9:00–17:00 | So: 9:00–12:00</div></li>
-<li><span class="loc-icon">👤</span><div><strong style="color:var(--ink)">Richard Uherka</strong><br/>IČO: 11955651 | DIČ: 9209075018</div></li>
-<li><span class="loc-icon">📞</span><div><strong style="color:var(--ink)">Telefon</strong><br/><a href="tel:+420770398691" style="color:var(--gold)">+420 770 398 691</a></div></li>
-<li><span class="loc-icon">✉️</span><div><strong style="color:var(--ink)">E-mail</strong><br/><a href="/cdn-cgi/l/email-protection#771a161312051803120516071e12021f37101a161e1b5914181a" style="color:var(--gold)"><span class="__cf_email__" data-cfemail="a5c8c4c1c0d7cad1c0d7c4d5ccc0d0cde5c2c8c4ccc98bc6cac8">[email&#160;protected]</span></a></div></li>
-</ul>
+<h2>Hradební 1543<br/><em>Uherské Hradiště</em></h2>
+<p>686 01 Uherské Hradiště<br/>Po–Pá: 8:00–17:00  |  So: 8:00–12:00</p>
 <a class="btn-dark" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Navigovat</a>
 </div>
 <div class="map-strip-map">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.5!2d17.4583!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e4f0e3b3b3b3%3A0x0!2sHradebn%C3%AD+1543%2C+686+01+Uhersk%C3%A9+Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1710000000000" title="Šestý Smysl – Uherské Hradiště"></iframe>
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20792.08!2d17.4601!3d49.0687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712e5e2b3f86c73%3A0xd8ccc91e9b58e22f!2sUhersk%C3%A9%20Hradi%C5%A1t%C4%9B!5e0!3m2!1scs!2scz!4v1699000000000" title="Šestý Smysl – Uherské Hradiště">
+</iframe>
+</div>
 </div>
 </section>
 <section class="page-cta reveal">
