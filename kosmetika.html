@@ -342,7 +342,19 @@
       z-index: 1;
     }
     @media (max-width: 900px) { .hero-watermark { display: none; } }
-</style>
+    .page-hero .hero-cta-row {
+      position: absolute;
+      left: 62%;
+      bottom: 16%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 900px) {
+      .page-hero .hero-cta-row {
+        position: static;
+        transform: none;
+      }
+    }
+    </style>
 </head>
 <body>
 <nav>
