@@ -231,7 +231,8 @@
       transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
     }
     .tile:hover .tile-bg { transform: scale(1); }
-    .tile-bg-1 { background: linear-gradient(165deg, #4A5C4B 0%, #2C3A2D 50%, #1A251B 100%); }
+    .tile-bg-1 { background-image: url(masaze-salon-hero.jpg); background-size: cover; background-position: center; }
+    .tile-bg-1::after { content: ""; position: absolute; inset: 0; background: linear-gradient(165deg, rgba(74,92,75,0.55) 0%, rgba(44,58,45,0.45) 50%, rgba(26,37,27,0.6) 100%); }
     .tile-bg-2 { background: linear-gradient(165deg, #C8A870 0%, #9E7840 50%, #7A5820 100%); }
     .tile-bg-3 { background: linear-gradient(165deg, #8C7E66 0%, #6B5E48 50%, #4A3E2E 100%); }
     .tile-overlay {
