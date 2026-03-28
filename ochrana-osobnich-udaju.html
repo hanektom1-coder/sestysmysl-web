@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ochrana osobních údajů | Šestý Smysl</title>
+<meta content="Zásady ochrany osobních údajů salonu Šestý Smysl v Uherském Hradišti. Informace o zpracování osobních údajů dle GDPR." name="description"/>
+<meta content="noindex, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --white: #ffffff; --off: #F7F5F2; --cream: #F2EFE9;
+    --gold: #B8965A; --gold-light: #D4AE74;
+    --sage: #3D4A3E; --sage-mid: #5A6B5B; --sage-pale: #8A9E8B;
+    --ink: #1A1F1B; --border: rgba(61,74,62,0.1);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); font-weight: 300; overflow-x: hidden; }
+  h1,h2,h3,h4 { font-family: 'Big Shoulders Display', sans-serif; font-weight: 200; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .nav-brand-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.05rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--sage); text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--sage); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; transition: color .25s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-btn { font-size: 0.7rem; letter-spacing: .16em; text-transform: uppercase; padding: 0.6rem 1.5rem; border: 1px solid var(--sage); color: var(--sage); text-decoration: none; transition: all .3s; }
+  .nav-btn:hover { background: var(--sage); color: var(--white); }
+  .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 300; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--sage); transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  @media(max-width:900px) {
+    .nav-links { display: none; }
+    .nav-btn { display: none; }
+    .hamburger { display: flex; }
+  }
+  .mobile-menu { position: fixed; inset: 0; z-index: 250; background: var(--white); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 10vw; transform: translateX(100%); transition: transform 0.4s cubic-bezier(.77,0,.18,1); border-left: 3px solid var(--gold); }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 0; width: 100%; margin-bottom: 3rem; }
+  .mobile-menu-links li { border-bottom: 1px solid var(--border); }
+  .mobile-menu-links li:first-child { border-top: 1px solid var(--border); }
+  .mobile-menu-links a { display: block; padding: 1.4rem 0; font-family: 'Big Shoulders Display', sans-serif; font-size: clamp(2rem, 7vw, 3rem); font-weight: 200; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); text-decoration: none; transition: color 0.2s, padding-left 0.2s; }
+  .mobile-menu-links a:hover { color: var(--gold); padding-left: 0.5rem; }
+  .mobile-menu-bottom { display: flex; flex-direction: column; gap: 0.8rem; width: 100%; }
+  .mobile-cta { display: block; padding: 1rem 2rem; background: var(--sage); color: var(--white); text-align: center; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.3s; }
+  .mobile-cta:hover { background: var(--ink); }
+  .mobile-brand-sub { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-pale); text-align: center; }
+
+  /* PAGE HEADER */
+  .page-header { padding-top: 72px; background: var(--cream); border-bottom: 1px solid var(--border); }
+  .page-header-inner { padding: 5rem 8vw 4rem; }
+  .page-eyebrow { font-size: 0.63rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; }
+  .page-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; }
+  .page-header h1 { font-size: clamp(3rem, 6vw, 7rem); line-height: 0.88; color: var(--ink); font-weight: 200; }
+  .page-header h1 em { color: var(--sage); font-style: normal; font-weight: 100; }
+  .page-header-meta { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-pale); margin-top: 2rem; }
+
+  /* CONTENT */
+  .gdpr-wrap { max-width: 860px; margin: 0 auto; padding: 5rem 2rem 7rem; }
+  .gdpr-intro { font-size: 1rem; line-height: 2; color: var(--sage-mid); margin-bottom: 4rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+
+  /* Správci */
+  .controllers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); margin-bottom: 4rem; }
+  .controller-card { background: var(--off); padding: 2rem 1.8rem; }
+  .controller-label { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+  .controller-name { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.3rem; font-weight: 200; color: var(--ink); margin-bottom: 0.8rem; line-height: 1.1; }
+  .controller-detail { font-size: 0.8rem; color: var(--sage-mid); line-height: 1.9; }
+  .controller-detail strong { color: var(--ink); font-weight: 400; }
+
+  /* Sekce */
+  .gdpr-section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+  .gdpr-section:last-child { border-bottom: none; }
+  .gdpr-section-num { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
+  .gdpr-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--ink); margin-bottom: 1.2rem; line-height: 1; }
+  .gdpr-section p { font-size: 0.9rem; line-height: 1.95; color: var(--sage-mid); margin-bottom: 1rem; }
+  .gdpr-section p:last-child { margin-bottom: 0; }
+  .gdpr-section ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+  .gdpr-section ul li { font-size: 0.9rem; line-height: 1.85; color: var(--sage-mid); margin-bottom: 0.5rem; }
+  .gdpr-section strong { color: var(--ink); font-weight: 400; }
+  .gdpr-section a { color: var(--gold); text-decoration: none; }
+  .gdpr-section a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(255,255,255,0.55); font-size: 0.85rem; }
+  .footer-top { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; }
+  .footer-brand-name { display: block; font-family: 'Big Shoulders Display', sans-serif; font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+  .footer-brand p { line-height: 1.7; margin-bottom: 1.5rem; }
+  .footer-social { display: flex; gap: 1rem; }
+  .footer-social a { color: rgba(255,255,255,0.4); transition: color 0.2s; display: flex; align-items: center; }
+  .footer-social a:hover { color: var(--gold); }
+  .footer-col h4 { color: #fff; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 500; font-family: 'Big Shoulders Display', sans-serif; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; font-size: 0.8rem; }
+  .footer-col ul li { color: rgba(255,255,255,0.55); font-size: 0.8rem; }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+  .footer-bottom a { color: rgba(255,255,255,0.28); text-decoration: none; margin-left: 1.5rem; transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--gold); }
+
+  @media(max-width:768px) {
+    .controllers { grid-template-columns: 1fr; }
+    .page-header-inner { padding: 4rem 6vw 3rem; }
+    .gdpr-wrap { padding: 3rem 6vw 5rem; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-bottom a { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<nav>
+<a class="nav-brand-name" href="index.html">Šestý Smysl</a>
+<ul class="nav-links">
+<li><a href="masaze.html">Masáže</a></li>
+<li><a href="kosmetika.html">Kosmetika</a></li>
+<li><a href="interier.html">Interior design</a></li>
+<li><a href="index.html#kontakt">Kontakt</a></li>
+</ul>
+<a class="nav-btn" href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervace</a>
+<button aria-expanded="false" aria-label="Otevřít menu" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div aria-label="Navigace" class="mobile-menu" id="mobileMenu" role="dialog">
+<ul class="mobile-menu-links">
+<li><a href="masaze.html">Masáže</a></li>
+<li><a href="kosmetika.html">Kosmetika</a></li>
+<li><a href="interier.html">Interior design</a></li>
+<li><a href="index.html#kontakt">Kontakt</a></li>
+</ul>
+<div class="mobile-menu-bottom">
+<a class="mobile-cta" href="https://maderoterapie-uh.reservio.com/" target="_blank">Rezervace online</a>
+<span class="mobile-brand-sub">body · beauty · interior design</span>
+</div>
+</div>
+
+<div class="page-header">
+<div class="page-header-inner">
+<p class="page-eyebrow">Šestý Smysl · GDPR</p>
+<h1>Ochrana<br/><em>osobních údajů</em></h1>
+<p class="page-header-meta">Platné od 1. ledna 2026 · Aktualizováno 28. března 2026</p>
+</div>
+</div>
+
+<div class="gdpr-wrap">
+
+<p class="gdpr-intro">Vaše soukromí je pro nás důležité. Tento dokument vysvětluje, jaké osobní údaje zpracováváme, proč a jaká máte práva. Salon Šestý Smysl provozují tři samostatní podnikatelé — každý zpracovává osobní údaje výhradně v rozsahu své vlastní činnosti.</p>
+
+<!-- SPRÁVCI -->
+<div class="controllers" style="grid-template-columns: repeat(3,1fr);">
+<div class="controller-card">
+<span class="controller-label">Odpovědná osoba</span>
+<div class="controller-name">Richard Uherka</div>
+<div class="controller-detail">
+<strong>IČO:</strong> 11955651 | <strong>DIČ:</strong> 9209075018<br/>
+Hradební 1543, 686 01 Uherské Hradiště<br/>
+<a href="mailto:info@sestysmysluh.cz" style="color:var(--gold)">info@sestysmysluh.cz</a><br/>
++420 770 398 691
+</div>
+</div>
+<div class="controller-card">
+<span class="controller-label">Masáže &amp; Terapie</span>
+<div class="controller-name">Bc. Lenka Hanáčková</div>
+<div class="controller-detail">
+<strong>IČO:</strong> 03348041<br/>
+<a href="mailto:maderoterapieuh@gmail.com" style="color:var(--gold)">maderoterapieuh@gmail.com</a><br/>
++420 776 323 427
+</div>
+</div>
+<div class="controller-card">
+<span class="controller-label">Kosmetika &amp; Beauty</span>
+<div class="controller-name">Renáta Kučerová</div>
+<div class="controller-detail">
+<strong>IČO:</strong> 72332441<br/>
+<a href="mailto:kucerovarenata@seznam.cz" style="color:var(--gold)">kucerovarenata@seznam.cz</a><br/>
++420 608 772 597
+</div>
+</div>
+</div>
+
+<!-- SEKCE -->
+<div class="gdpr-section">
+<span class="gdpr-section-num">01</span>
+<h2>Jaké údaje zpracováváme</h2>
+<p>V rámci poskytování našich služeb zpracováváme pouze údaje nezbytně nutné pro jejich realizaci:</p>
+<ul>
+<li><strong>Kontaktní údaje</strong> — jméno, příjmení, telefonní číslo, e-mailová adresa</li>
+<li><strong>Rezervační údaje</strong> — datum a čas návštěvy, zvolená služba</li>
+<li><strong>Zdravotní informace</strong> — pouze v rozsahu nutném pro bezpečné provedení terapie (kontraindikace), poskytnuté dobrovolně klientem před ošetřením</li>
+</ul>
+<p>Nezpracováváme žádné citlivé osobní údaje nad rámec výše uvedeného a neuchováváme platební informace.</p>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">02</span>
+<h2>Účel a právní základ zpracování</h2>
+<p>Vaše osobní údaje zpracováváme na základě následujících právních titulů:</p>
+<ul>
+<li><strong>Plnění smlouvy</strong> (čl. 6 odst. 1 písm. b) GDPR) — zpracování nezbytné pro poskytnutí objednané služby a správu rezervace</li>
+<li><strong>Oprávněný zájem</strong> (čl. 6 odst. 1 písm. f) GDPR) — ochrana před podvodnými rezervacemi, vedení evidence pro účely reklamací</li>
+<li><strong>Souhlas</strong> (čl. 6 odst. 1 písm. a) GDPR) — pro zasílání informací o novinkách a akcích, udělený výslovně a kdykoli odvolatelný</li>
+</ul>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">03</span>
+<h2>Jak dlouho údaje uchováváme</h2>
+<p>Osobní údaje uchováváme pouze po dobu nezbytně nutnou pro daný účel:</p>
+<ul>
+<li><strong>Rezervační údaje</strong> — po dobu 1 roku od uskutečnění návštěvy</li>
+<li><strong>Údaje pro marketingové účely</strong> — do odvolání souhlasu</li>
+<li><strong>Účetní doklady</strong> — po dobu stanovenou příslušnými právními předpisy (zpravidla 5–10 let)</li>
+</ul>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">04</span>
+<h2>Komu údaje předáváme</h2>
+<p>Vaše osobní údaje neprodáváme ani nepředáváme třetím stranám za účelem marketingu. Údaje mohou být předány pouze:</p>
+<ul>
+<li><strong>Rezervačnímu systému Reservio</strong> — pro správu online rezervací Bc. Lenky Hanáčkové (zpracovatel)</li>
+<li><strong>Orgánům státní správy</strong> — pokud to vyžaduje zákon</li>
+</ul>
+<p>Všichni zpracovatelé jsou vázáni mlčenlivostí a zpracovávají údaje pouze dle našich pokynů.</p>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">05</span>
+<h2>Vaše práva</h2>
+<p>Jako subjekt údajů máte dle GDPR tato práva:</p>
+<ul>
+<li><strong>Právo na přístup</strong> — kdykoli nás můžete požádat o informaci, jaké údaje o vás zpracováváme</li>
+<li><strong>Právo na opravu</strong> — pokud jsou vaše údaje nepřesné, opravíme je</li>
+<li><strong>Právo na výmaz</strong> — „právo být zapomenut", pokud odpadl důvod zpracování</li>
+<li><strong>Právo na omezení zpracování</strong> — v zákonem stanovených případech</li>
+<li><strong>Právo na přenositelnost</strong> — obdržet své údaje ve strojově čitelném formátu</li>
+<li><strong>Právo vznést námitku</strong> — proti zpracování na základě oprávněného zájmu</li>
+<li><strong>Právo odvolat souhlas</strong> — kdykoli, bez vlivu na zákonnost předchozího zpracování</li>
+</ul>
+<p>Svá práva můžete uplatnit e-mailem na <a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a> nebo osobně v salonu. Na vaši žádost odpovíme do 30 dnů.</p>
+<p>Máte také právo podat stížnost u dozorového orgánu — <strong>Úřadu pro ochranu osobních údajů</strong> (<a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>).</p>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">06</span>
+<h2>Soubory cookies</h2>
+<p>Naše webové stránky používají pouze technicky nezbytné cookies zajišťující základní funkčnost webu. Nepoužíváme analytické ani marketingové cookies třetích stran bez vašeho souhlasu.</p>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">07</span>
+<h2>Google Maps</h2>
+<p>Na našich stránkách je vložena mapa služby Google Maps (Google LLC, USA). Při načtení mapy může Google získat informace o vaší návštěvě, včetně IP adresy a informací o prohlížeči. Google Maps jsou načítány přímo ze serverů Google, na jejich zpracování dat se vztahují <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Zásady ochrany soukromí Google</a>. Vložení mapy slouží výhradně k usnadnění navigace do našeho salonu.</p>
+</div>
+
+<div class="gdpr-section">
+<span class="gdpr-section-num">08</span>
+<h2>Změny tohoto dokumentu</h2>
+<p>Tento dokument můžeme průběžně aktualizovat. O podstatných změnách vás budeme informovat prostřednictvím webu. Datum poslední aktualizace je uvedeno v záhlaví této stránky.</p>
+<p>V případě dotazů nás neváhejte kontaktovat na <a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a>.</p>
+</div>
+
+</div>
+
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<span class="footer-brand-name">Šestý Smysl</span>
+<p>Tři světy péče v jednom elegantním prostoru v Uherském Hradišti. Masáže, kosmetika a interiérový design.</p>
+<div class="footer-social">
+<a aria-label="Instagram" href="https://www.instagram.com/sestysmysl_uh" rel="noopener" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5" stroke="none"></circle></svg></a>
+<a aria-label="Facebook" href="#" rel="noopener" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Navigace</h4>
+<ul>
+<li><a href="index.html">Úvod</a></li>
+<li><a href="masaze.html">Masáže &amp; Terapie</a></li>
+<li><a href="kosmetika.html">Kosmetika &amp; Beauty</a></li>
+<li><a href="interier.html">Interior Design</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Kontakt</h4>
+<ul>
+<li>Hradební 1543</li>
+<li>686 01 Uherské Hradiště</li>
+<li>Po–Pá: 9:00–17:00</li>
+<li>So: 9:00–12:00</li>
+<li><a href="mailto:info@sestysmysluh.cz">info@sestysmysluh.cz</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Šestý Smysl – Hradební 1543, 686 01 Uherské Hradiště</span>
+<div>
+<a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+<a href="#">Cookies</a>
+</div>
+</div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = !mobileMenu.classList.contains('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    }
+  });
+}
+</script>
+</body>
+</html>
