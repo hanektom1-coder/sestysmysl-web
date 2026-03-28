@@ -618,4 +618,22 @@ if (hamburger && mobileMenu) {
     document.body.style.overflow = open ? 'hidden' : '';
   });
   mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEvent
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+}
+</script>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+<p>Tento web používá soubory cookies nezbytné pro správné fungování. Vložená mapa Google Maps může zpracovávat data dle <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">zásad Google</a>. Více v <a href="ochrana-osobnich-udaju.html#cookies">zásadách ochrany osobních údajů</a>.</p>
+<div class="cookie-btns">
+<button class="cookie-decline" onclick="cookieDecline()">Odmítnout</button>
+<button class="cookie-accept" onclick="cookieAccept()">Souhlasím</button>
+</div>
+</div>
+</body></html>
