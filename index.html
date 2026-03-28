@@ -892,14 +892,22 @@
   });
 
 // Cookie banner
-try {
-  if (localStorage.getItem('cookieConsent')) {
-    document.getElementById('cookieBanner').classList.add('hidden');
-  }
-} catch(e) {}
+function getCookie(name) {
+  var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+  return v ? v[2] : null;
+}
+function setCookie(name, value, days) {
+  var d = new Date();
+  d.setTime(d.getTime() + 24*60*60*1000*days);
+  document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+}
+if (getCookie('cookieConsent')) {
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
 function cookieDismiss() {
   document.getElementById('cookieBanner').classList.add('hidden');
-  try { localStorage.setItem('cookieConsent', '1'); } catch(e) {}
+  setCookie('cookieConsent', '1', 365);
+} catch(e) {}
 }
 function cookieDecline() {
   localStorage.setItem('cookieConsent', 'declined');
