@@ -778,4 +778,27 @@ function cookieDismiss() {
 <button class="cookie-accept" onclick="cookieDismiss()">Souhlasím</button>
 </div>
 </div>
+
+<script>
+function getCookie(name) {
+  var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+  return v ? v[2] : null;
+}
+function setCookie(name, value, days) {
+  var d = new Date();
+  d.setTime(d.getTime() + 24*60*60*1000*days);
+  document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+}
+window.addEventListener('DOMContentLoaded', function() {
+  if (getCookie('cookieConsent')) {
+    var b = document.getElementById('cookieBanner');
+    if (b) b.classList.add('hidden');
+  }
+});
+function cookieDismiss() {
+  var b = document.getElementById('cookieBanner');
+  if (b) b.classList.add('hidden');
+  setCookie('cookieConsent', '1', 365);
+}
+</script>
 </body></html>
