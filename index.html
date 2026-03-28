@@ -891,29 +891,7 @@
     });
   });
 
-// Cookie banner
-function getCookie(name) {
-  var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-  return v ? v[2] : null;
-}
-function setCookie(name, value, days) {
-  var d = new Date();
-  d.setTime(d.getTime() + 24*60*60*1000*days);
-  document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
-}
-if (getCookie('cookieConsent')) {
-  document.getElementById('cookieBanner').classList.add('hidden');
-}
-function cookieDismiss() {
-  document.getElementById('cookieBanner').classList.add('hidden');
-  setCookie('cookieConsent', '1', 365);
-} catch(e) {}
-}
-function cookieDecline() {
-  localStorage.setItem('cookieConsent', 'declined');
-  var b = document.getElementById('cookieBanner');
-  if (b) b.classList.add('hidden');
-}
+// Cookie banner - handled below
 </script>
 <script>
 // Hamburger menu
@@ -921,7 +899,7 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
-pen = mobileMenu.classList.toggle('open');
+const open = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
