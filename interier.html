@@ -368,9 +368,16 @@
       }
     }
     
-  /* COOKIE BANNER */
-  .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--ink, #1A1F1B); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 5vw; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; transform: translateY(0); transition: transform 0.4s cubic-bezier(.77,0,.18,1); }
-  .cookie-banner.hidden { transform: translateY(150%); }
+    /* COOKIE BANNER */
+  .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: var(--ink, #1A1F1B); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 5vw; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+  .cookie-banner.hidden { display: none; }
+  .cookie-banner p { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin: 0; flex: 1; min-width: 200px; }
+  .cookie-banner a { color: var(--gold, #B8965A); text-decoration: none; }
+  .cookie-btns { display: flex; gap: 0.8rem; flex-shrink: 0; }
+  .cookie-accept { padding: 0.6rem 1.4rem; background: var(--sage, #3D4A3E); color: #fff; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
+  .cookie-accept:hover { background: var(--gold, #B8965A); }
+  .cookie-decline { padding: 0.6rem 1.4rem; background: none; color: rgba(255,255,255,0.45); border: 1px solid rgba(255,255,255,0.15); font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
+  @media(max-width:600px) { .cookie-banner { flex-direction: column; } .cookie-btns { width: 100%; } .cookie-accept, .cookie-decline { flex: 1; text-align: center; } }
   .cookie-banner p { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin: 0; flex: 1; min-width: 200px; }
   .cookie-banner a { color: var(--gold, #B8965A); text-decoration: none; }
   .cookie-banner a:hover { text-decoration: underline; }
@@ -589,17 +596,14 @@
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
 // Cookie banner
-(function() {
-  var consent = localStorage.getItem('cookieConsent');
-  if (consent) {
-    var b = document.getElementById('cookieBanner');
-    if (b) b.classList.add('hidden');
+try {
+  if (localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieBanner').classList.add('hidden');
   }
-})();
-function cookieAccept() {
-  localStorage.setItem('cookieConsent', 'accepted');
-  var b = document.getElementById('cookieBanner');
-  if (b) b.classList.add('hidden');
+} catch(e) {}
+function cookieDismiss() {
+  document.getElementById('cookieBanner').classList.add('hidden');
+  try { localStorage.setItem('cookieConsent', '1'); } catch(e) {}
 }
 function cookieDecline() {
   localStorage.setItem('cookieConsent', 'declined');
@@ -632,8 +636,9 @@ if (hamburger && mobileMenu) {
 <div class="cookie-banner" id="cookieBanner">
 <p>Tento web používá soubory cookies nezbytné pro správné fungování. Vložená mapa Google Maps může zpracovávat data dle <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">zásad Google</a>. Více v <a href="ochrana-osobnich-udaju.html#cookies">zásadách ochrany osobních údajů</a>.</p>
 <div class="cookie-btns">
-<button class="cookie-decline" onclick="cookieDecline()">Odmítnout</button>
-<button class="cookie-accept" onclick="cookieAccept()">Souhlasím</button>
+<button class="cookie-decline" onclick="cookieDismiss()">Odmítnout</button>
+<button class="cookie-accept" onclick="cookieDismiss()">Souhlasím</button>
+</div>
 </div>
 </div>
 </body></html>
