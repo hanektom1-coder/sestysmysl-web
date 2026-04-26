@@ -125,26 +125,6 @@
     .strip-item:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
     .strip-item h3 { font-size: 1.3rem; color: var(--white); margin-bottom: .5rem; font-weight: 200; }
     .strip-item p { font-size: 0.9rem; line-height: 1.85; color: rgba(255,255,255,.4); }
-
-    /* BLOG */
-    .blog { padding: 8rem 8vw; background: var(--white); border-top: 1px solid var(--border); }
-    .blog-header { margin-bottom: 4rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-    .blog-header h2 { font-size: clamp(2.5rem, 4vw, 5rem); line-height: 0.9; }
-    .blog-header h2 em { color: var(--sage); font-style: normal; font-weight: 100; }
-    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); }
-    .blog-card { background: var(--white); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; transition: background .25s; cursor: pointer; text-decoration: none; color: inherit; }
-    .blog-card:hover { background: var(--off); }
-    .blog-card:hover .blog-read { color: var(--gold); }
-    .blog-tag { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
-    .blog-card h3 { font-size: 1.4rem; color: var(--ink); line-height: 1.1; font-weight: 200; }
-    .blog-card p { font-size: 0.88rem; line-height: 1.85; color: var(--sage-mid); flex: 1; }
-    .blog-read { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-pale); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); transition: color .25s; display: flex; justify-content: space-between; align-items: center; }
-    .blog-hidden { display: none; }
-    .blog-more-wrap { padding: 2.5rem 0 0; display: flex; justify-content: center; }
-    .blog-more-btn { background: none; border: 1px solid var(--border); color: var(--sage-mid); font-family: 'DM Sans', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.9rem 2.2rem; cursor: pointer; display: flex; align-items: center; gap: 0.7rem; transition: all .3s; }
-    .blog-more-btn:hover { border-color: var(--sage); color: var(--sage); }
-    .blog-more-arrow { transition: transform .3s; display: inline-block; }
-    .blog-more-btn.open .blog-more-arrow { transform: rotate(180deg); }
       .modal-hero-img { width: calc(100% + 3rem); margin: -2.5rem -1.5rem 2rem; height: 220px; }
     }
 
@@ -208,8 +188,6 @@
       .contra-grid { grid-template-columns: 1fr; gap: 3rem; }
       .contra { padding: 4rem 6vw; }
       .strip { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 6vw; }
-      .blog-grid { grid-template-columns: 1fr; }
-      .blog { padding: 5rem 6vw; }
       footer { padding: 4rem 6vw 2.5rem; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding-bottom: 3rem; }
       .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
@@ -220,7 +198,6 @@
       .page-hero h1 { font-size: clamp(3rem, 16vw, 5.5rem); }
       .trust-bar { grid-template-columns: 1fr 1fr; }
       .services { padding: 4rem 5vw; }
-      .blog { padding: 4rem 5vw; }
       .footer-top { grid-template-columns: 1fr; }
     }
   
@@ -612,56 +589,6 @@
 </div>
 </div>
 </section>
-<!-- BLOG -->
-<section class="blog reveal" id="prehled-clanku">
-<div class="blog-header">
-<div>
-<p class="label">Ze světa terapií</p>
-<h2>Čtěte<br/><em>více</em></h2>
-</div>
-</div>
-<div class="blog-grid" id="blogGrid">
-<a class="blog-card" href="blog-maderoterapie.html">
-<span class="blog-tag">Maderoterapie</span>
-<h3>Co je maderoterapie a jak funguje Wood Therapy?</h3>
-<p>Maderoterapie vznikla před více než sto lety v Kolumbii. Název pochází ze španělského „madero" — dřevo. Dřevěné nástroje speciálně anatomicky tvarované umožňují přesnou stimulaci lymfatického systému a rozvolnění tukových buněk, které jinými metodami není možné.</p>
-<span class="blog-read">Maderoterapie UH · 3 min čtení <span>→</span></span>
-</a>
-<a class="blog-card" href="blog-lymfa.html">
-<span class="blog-tag">Lymfatický systém</span>
-<h3>Lymfa — záhadný systém, který rozhoduje o vašem zdraví</h3>
-<p>Lymfatický systém je do určité míry podobný systému krevnímu, ale nemá vlastní pumpu. Nedostatečným prouděním lymfy dochází ke snížení funkce celého mízního systému a hromadění škodlivých látek v tkáních. Co s tím dělat?</p>
-<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
-</a>
-<a class="blog-card" href="blog-celulitida.html">
-<span class="blog-tag">Celulitida</span>
-<h3>Celulitida: proč nestačí cvičení a dieta a co skutečně pomáhá</h3>
-<p>Celulitida postihuje až 90 % žen bez ohledu na věk nebo váhu. Hrudkovité útvary připomínající pomerančovou kůži vznikají omezením průtoku krve a lymfy v tkáních — ne jen přebytkem tuku. Proto samotná dieta nestačí a co skutečně funguje.</p>
-<span class="blog-read">Maderoterapie UH · 5 min čtení <span>→</span></span>
-</a>
-<a class="blog-card blog-hidden" href="blog-lymfomodeling.html">
-<span class="blog-tag">Lymfomodeling</span>
-<h3>Lymfomodeling: tři terapie v jednom a výsledky viditelné hned</h3>
-<p>Lymfomodeling spojuje maderoterapii, manuální lymfodrenáž a modelační masáž do jediného ošetření. Výsledek je vidět i cítit ihned — pokožka pružnější, tělo lehčí. Proč dává nejlepší dlouhodobé výsledky?</p>
-<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
-</a>
-<a class="blog-card blog-hidden" href="blog-an-mo.html">
-<span class="blog-tag">Čínská medicína</span>
-<h3>AN MO: čínská masáž nohou, která léčí celé tělo</h3>
-<p>Číňané říkají, že chodidla jsou druhým srdcem člověka. AN MO spojuje bylinnou koupel, reflexní terapii a akupresurní body v jediném rituálu. Zjistěte, proč změní kvalitu vašeho spánku a vrátí vám energii.</p>
-<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
-</a>
-<a class="blog-card blog-hidden" href="blog-spanelska-masaz-obliceje.html">
-<span class="blog-tag">Španělská masáž</span>
-<h3>Španělská masáž obličeje: přirozená alternativa k invazivním zákrokům</h3>
-<p>Mimické svaly nesou každý den tíhu výrazů, emocí a stresu. Španělská masáž obličeje a dekoltu toto napětí systematicky uvolňuje — zpevňuje pleť, zlepšuje prokrvení a rozjasňuje. Bez jehel, bez chemie.</p>
-<span class="blog-read">Maderoterapie UH · 4 min čtení <span>→</span></span>
-</a>
-</div>
-<div class="blog-more-wrap">
-<button class="blog-more-btn" id="blogMoreBtn" onclick="toggleBlogMore()">Zobrazit všechny články <span class="blog-more-arrow">↓</span></button>
-</div>
-</section>
 <!-- CTA -->
 <section class="map-strip reveal">
 <div class="map-strip-info">
@@ -738,19 +665,6 @@ if (hamburger && mobileMenu) {
   });
 }
 
-function toggleBlogMore() {
-  const hidden = document.querySelectorAll('.blog-hidden');
-  const btn = document.getElementById('blogMoreBtn');
-  const isOpen = btn.classList.contains('open');
-  hidden.forEach(card => {
-    card.style.display = isOpen ? 'none' : 'flex';
-    if (!isOpen) card.style.flexDirection = 'column';
-  });
-  btn.classList.toggle('open', !isOpen);
-  btn.innerHTML = isOpen
-    ? 'Zobrazit všechny články <span class="blog-more-arrow">↓</span>'
-    : 'Skrýt články <span class="blog-more-arrow" style="transform:rotate(180deg)">↓</span>';
-}
 // Cookie banner
 function getCookie(name) {
   var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
