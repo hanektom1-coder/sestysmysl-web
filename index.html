@@ -247,26 +247,16 @@
     }
     .tile-bg {
       position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-      transform: scale(1.04);
-      transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+      transition: filter 0.5s ease;
     }
-    .tile:hover .tile-bg { transform: scale(1); }
-    .tile-bg-1 { background-image: url(masaze-salon-hero.jpg); background-size: cover; background-position: center; }
-    .tile-bg-1::after { content: ""; position: absolute; inset: 0; background: linear-gradient(165deg, rgba(74,92,75,0.38) 0%, rgba(44,58,45,0.32) 50%, rgba(26,37,27,0.45) 100%); transition: background 0.5s ease; }
-    .tile:hover .tile-bg-1::after { background: linear-gradient(165deg, rgba(74,92,75,0.18) 0%, rgba(44,58,45,0.14) 50%, rgba(26,37,27,0.25) 100%); }
-    .tile-bg-2 { background-image: url(kosmetika-salon-hero.jpg); background-size: cover; background-position: center; }
-    .tile-bg-2::after { content: ""; position: absolute; inset: 0; background: linear-gradient(165deg, rgba(200,168,112,0.45) 0%, rgba(158,120,64,0.40) 50%, rgba(122,88,32,0.50) 100%); transition: background 0.5s ease; }
-    .tile:hover .tile-bg-2::after { background: linear-gradient(165deg, rgba(200,168,112,0.20) 0%, rgba(158,120,64,0.16) 50%, rgba(122,88,32,0.25) 100%); }
-    .tile-bg-3 { background-image: url(interier-salon-hero.jpg); background-size: cover; background-position: center; }
-    .tile-bg-3::after { content: ""; position: absolute; inset: 0; background: linear-gradient(165deg, rgba(140,126,102,0.45) 0%, rgba(107,94,72,0.40) 50%, rgba(74,62,46,0.50) 100%); transition: background 0.5s ease; }
-    .tile:hover .tile-bg-3::after { background: linear-gradient(165deg, rgba(140,126,102,0.20) 0%, rgba(107,94,72,0.16) 50%, rgba(74,62,46,0.25) 100%); }
+    .tile:hover .tile-bg { filter: brightness(1.12); }
+    .tile-bg-1 { background: linear-gradient(145deg, #2D3D2E 0%, #3D4A3E 50%, #4A5C4B 100%); }
+    .tile-bg-2 { background: linear-gradient(145deg, #6B4F22 0%, #8B6530 50%, #A3784A 100%); }
+    .tile-bg-3 { background: linear-gradient(145deg, #1E1A12 0%, #2E2416 50%, #3D3020 100%); }
     .tile-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
-      transition: opacity 0.4s;
+      background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%);
     }
-    .tile:hover .tile-overlay { opacity: 0.8; }
     .tile-content {
       position: absolute; bottom: 0; left: 0; right: 0;
       padding: 2.5rem 2.2rem;
