@@ -266,6 +266,8 @@
     @media (hover: none) {
       .tile.in-view .tile-bg { filter: brightness(1.08); }
       .tile.in-view .tile-color { opacity: 0; }
+      .tile.in-view .tile-desc { opacity: 1; transform: translateY(0); }
+      .tile.in-view .tile-arrow { opacity: 1; transform: translateY(0); }
     }
     .tile-img-masaze  { object-position: center 30%; }
     .tile-img-kosmetika { object-position: center 35%; }
@@ -304,14 +306,23 @@
       font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: rgba(255,255,255,0.55); display: block; margin-bottom: 1.2rem;
     }
+    .tile-desc {
+      font-size: 0.78rem; line-height: 1.7;
+      color: rgba(255,255,255,0.75);
+      opacity: 0; transform: translateY(10px);
+      transition: all 0.4s ease 0.05s;
+      margin-bottom: 1rem;
+      max-width: 260px;
+    }
     .tile-arrow {
       display: inline-flex; align-items: center; gap: 0.6rem;
       font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--gold-light);
       opacity: 0; transform: translateY(8px);
-      transition: all 0.35s ease 0.05s;
+      transition: all 0.35s ease 0.12s;
     }
     .tile-arrow::after { content: '→'; }
+    .tile:hover .tile-desc { opacity: 1; transform: translateY(0); }
     .tile:hover .tile-arrow { opacity: 1; transform: translateY(0); }
 
     /* SERVICES PREVIEW */
@@ -790,6 +801,7 @@
 <span class="tile-brand">Maderoterapie UH</span>
 <h2 class="tile-title">Masáže<br/>&amp; Terapie</h2>
 <span class="tile-sub">Maderoterapie · Lymfodrenáž · Terapie</span>
+<p class="tile-desc">Ošetření přizpůsobené vašim potřebám — ať hledáte úlevu od bolesti, detox, nebo jen chvíli klidu pro sebe.</p>
 <span class="tile-arrow">Více informací</span>
 </div>
 </a>
@@ -801,6 +813,7 @@
 <span class="tile-brand">RK Beauty</span>
 <h2 class="tile-title">Kosmetika<br/>&amp; Beauty</h2>
 <span class="tile-sub">Péče o pleť · Ošetření · Beauty</span>
+<p class="tile-desc">Profesionální kosmetika Matis, anti-age ošetření, manikúra SPA, pedikúra a epilace — vše s individuálním přístupem.</p>
 <span class="tile-arrow">Více informací</span>
 </div>
 </a>
@@ -812,6 +825,7 @@
 <span class="tile-brand">Od Richarda</span>
 <h2 class="tile-title">Interiérový<br/>Design</h2>
 <span class="tile-sub">Bytový design · Dekorace · Showroom</span>
+<p class="tile-desc">Showroom bytových dekorací a textilu s poradenstvím. Proměňte svůj domov v místo, kde se cítíte skutečně dobře.</p>
 <span class="tile-arrow">Více informací</span>
 </div>
 </a>
