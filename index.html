@@ -249,16 +249,25 @@
       position: absolute; inset: 0;
       transition: filter 0.5s ease;
     }
-    .tile:hover .tile-bg { filter: brightness(1.12); }
+    .tile:hover .tile-bg { filter: brightness(1.08); }
     .tile-bg-1 { background: linear-gradient(145deg, #2D3D2E 0%, #3D4A3E 50%, #4A5C4B 100%); }
     .tile-bg-2 { background: linear-gradient(145deg, #6B4F22 0%, #8B6530 50%, #A3784A 100%); }
     .tile-bg-3 { background: linear-gradient(145deg, #1E1A12 0%, #2E2416 50%, #3D3020 100%); }
+    .tile-color {
+      position: absolute; inset: 0; z-index: 1;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .tile:hover .tile-color { opacity: 0; }
+    .tile-color-1 { background: rgba(45, 61, 46, 0.42); }
+    .tile-color-2 { background: rgba(107, 79, 34, 0.38); }
+    .tile-color-3 { background: rgba(30, 26, 18, 0.48); }
     .tile-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%);
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%);
     }
     .tile-content {
-      position: absolute; bottom: 0; left: 0; right: 0;
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
       padding: 2.5rem 2.2rem;
       transform: translateY(0);
       transition: transform 0.4s ease;
@@ -726,6 +735,7 @@
 <div class="tiles">
 <a aria-label="Masáže a terapie" class="tile" href="masaze.html">
 <div class="tile-bg tile-bg-1"><img alt="" src="masaze-studio.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;"/></div>
+<div class="tile-color tile-color-1"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
 <span class="tile-brand">Maderoterapie UH</span>
@@ -736,6 +746,7 @@
 </a>
 <a aria-label="Kosmetika, manikúra a pedikúra" class="tile" href="kosmetika.html">
 <div class="tile-bg tile-bg-2"><img alt="" src="kosmetika-studio.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;"/></div>
+<div class="tile-color tile-color-2"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
 <span class="tile-brand">RK Beauty</span>
@@ -746,6 +757,7 @@
 </a>
 <a aria-label="Interiérový design" class="tile" href="interier.html">
 <div class="tile-bg tile-bg-3"><img alt="" src="interier-studio.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;"/></div>
+<div class="tile-color tile-color-3"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
 <span class="tile-brand">Od Richarda</span>
