@@ -262,6 +262,10 @@
     .tile-color-1 { background: rgba(45, 61, 46, 0.42); }
     .tile-color-2 { background: rgba(107, 79, 34, 0.38); }
     .tile-color-3 { background: rgba(30, 26, 18, 0.48); }
+    .tile-img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover; }
+    .tile-img-masaze  { object-position: center 30%; }
+    .tile-img-kosmetika { object-position: center 35%; }
+    .tile-img-interier { object-position: center 40%; }
     .tile-overlay {
       position: absolute; inset: 0; z-index: 2;
       background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%);
@@ -558,6 +562,8 @@
       /* Tiles */
       .tiles { grid-template-columns: 1fr; gap: 2px; }
       .tile { aspect-ratio: 4/3; }
+      .tile-img-masaze   { object-position: center 55%; }
+      .tile-img-kosmetika { object-position: center 55%; }
 
       /* About */
       .about { grid-template-columns: 1fr; }
@@ -734,7 +740,7 @@
 <section aria-label="Naše služby" id="sluzby">
 <div class="tiles">
 <a aria-label="Masáže a terapie" class="tile" href="masaze.html">
-<div class="tile-bg tile-bg-1"><img alt="" src="masaze-studio.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;"/></div>
+<div class="tile-bg tile-bg-1"><img alt="" src="masaze-studio.webp" class="tile-img tile-img-masaze"/></div>
 <div class="tile-color tile-color-1"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
@@ -745,7 +751,7 @@
 </div>
 </a>
 <a aria-label="Kosmetika, manikúra a pedikúra" class="tile" href="kosmetika.html">
-<div class="tile-bg tile-bg-2"><img alt="" src="kosmetika-studio.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;"/></div>
+<div class="tile-bg tile-bg-2"><img alt="" src="kosmetika-studio.webp" class="tile-img tile-img-kosmetika"/></div>
 <div class="tile-color tile-color-2"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
@@ -756,7 +762,7 @@
 </div>
 </a>
 <a aria-label="Interiérový design" class="tile" href="interier.html">
-<div class="tile-bg tile-bg-3"><img alt="" src="interier-studio.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;"/></div>
+<div class="tile-bg tile-bg-3"><img alt="" src="interier-studio.webp" class="tile-img tile-img-interier"/></div>
 <div class="tile-color tile-color-3"></div>
 <div class="tile-overlay"></div>
 <div class="tile-content">
