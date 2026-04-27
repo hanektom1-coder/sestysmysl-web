@@ -314,6 +314,40 @@
     .tile-arrow::after { content: '→'; }
     .tile:hover .tile-arrow { opacity: 1; transform: translateY(0); }
 
+    /* SERVICES PREVIEW */
+    .services-preview {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; background: var(--off);
+      border-top: 1px solid var(--border);
+    }
+    .svc-card {
+      padding: 3.5rem 3rem;
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+    }
+    .svc-card:last-child { border-right: none; }
+    .svc-card-label {
+      font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .svc-card h3 {
+      font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+      color: var(--ink); margin-bottom: 1rem; line-height: 1.1;
+    }
+    .svc-card p {
+      font-size: 0.84rem; line-height: 1.85;
+      color: var(--sage-mid); flex: 1;
+    }
+    .svc-card-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 1.8rem;
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sage); text-decoration: none;
+      transition: color 0.25s;
+    }
+    .svc-card-link::after { content: '→'; }
+    .svc-card-link:hover { color: var(--gold); }
+
     /* ABOUT STRIP */
     .about {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -569,6 +603,11 @@
       .tile-img-masaze   { object-position: center 55%; }
       .tile-img-kosmetika { object-position: center 55%; }
 
+      /* Services preview */
+      .services-preview { grid-template-columns: 1fr; }
+      .svc-card { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 6vw; }
+      .svc-card:last-child { border-bottom: none; }
+
       /* About */
       .about { grid-template-columns: 1fr; }
       .about-visual { min-height: 260px; }
@@ -727,7 +766,7 @@
 <h1 class="hero-h1">Šestý <em>Smysl</em></h1>
 <p class="hero-tagline">Maderoterapie UH  ·  RK Beauty  ·  Od Richarda</p>
 <div class="hero-bottom">
-<p class="hero-p">Tři světy v jednom prostoru. Pečujte o tělo, rozjasněte svoji pleť a inspirujte se pro váš domov.</p>
+<p class="hero-p">Tři světy v jednom prostoru v srdci Uherského Hradiště. Pečujte o tělo, rozjasněte svoji pleť a inspirujte se pro váš domov. Vše, co potřebujete pro skutečnou pohodu, najdete u nás pod jednou střechou.</p>
 <div class="hero-cta-row">
 <a class="btn-dark" href="#sluzby">Objevit služby</a>
 <a class="btn-ghost" href="#kontakt">Najít nás</a>
@@ -778,13 +817,35 @@
 </a>
 </div>
 </section>
+<!-- SERVICES PREVIEW -->
+<section class="services-preview reveal">
+<div class="svc-card">
+<span class="svc-card-label">Maderoterapie UH</span>
+<h3>Masáže<br/>&amp; Terapie</h3>
+<p>Specialistka na masáže a terapie nabízí maderoterapii, lymfodrenáž, španělskou masáž, reflexní terapii a An-Mo masáž. Každé ošetření je přizpůsobeno vašim potřebám — ať hledáte úlevu od bolesti, detox, nebo jen chvíli klidu pro sebe.</p>
+<a class="svc-card-link" href="masaze.html">Více o masážích</a>
+</div>
+<div class="svc-card">
+<span class="svc-card-label">RK Beauty</span>
+<h3>Kosmetika<br/>&amp; Beauty</h3>
+<p>Profesionální kosmetika Matis, hloubkové čištění pleti, anti-age ošetření, manikúra SPA, pedikúra a epilace Lycon. Vaše pleť si zaslouží tu nejlepší péči — v příjemném prostředí a s individuálním přístupem.</p>
+<a class="svc-card-link" href="kosmetika.html">Více o kosmetice</a>
+</div>
+<div class="svc-card">
+<span class="svc-card-label">Od Richarda</span>
+<h3>Interiérový<br/>Design</h3>
+<p>Showroom bytových dekorací, textilu a doplňků s poradenstvím v interiérovém designu. Nechte se inspirovat a proměňte svůj domov v místo, kde se cítíte skutečně dobře.</p>
+<a class="svc-card-link" href="interier.html">Více o designu</a>
+</div>
+</section>
 <!-- ABOUT -->
 <section class="about reveal">
 <div class="about-text">
 <p class="label">O nás</p>
 <h2>Péče o vás<br/>jako <em>celek</em></h2>
-<p>Jsme tři odborníci sdílející jeden krásný prostor v Uherském Hradišti. Každý z nás přináší vlastní odbornost — dohromady tvoříme místo, kde se postaráme o vaše tělo, krásu i domov.</p>
-<p>Věříme, že skutečná pohoda začíná uvnitř a promítá se do všeho kolem. Proto u nás najdete vše, co potřebujete pro harmonický životní styl pod jednou střechou.</p>
+<p>Jsme tři odborníci sdílející jeden krásný prostor na Hradební ulici v Uherském Hradišti. Každý z nás přináší vlastní specializaci — masáže a terapie, profesionální kosmetika a beauty péče, bytový design a dekorace. Dohromady tvoříme místo, kde se postaráme o vaše tělo, krásu i domov.</p>
+<p>Věříme, že skutečná pohoda začíná uvnitř a promítá se do všeho kolem vás. Nejde jen o jeden zážitek — jde o životní styl. Proto jsme spojili tři světy péče pod jednou střechou, aby byl přístupný každému, kdo hledá víc než jen službu.</p>
+<p>Přijďte se přesvědčit osobně. Uvítáme vás v prostoru, který jsme navrhli s důrazem na klidnou atmosféru a detail — protože právě v detailu se skrývá ta pravá péče.</p>
 <a class="btn-dark" href="#kontakt">Napsat nám</a>
 </div>
 <div class="about-visual">
@@ -809,17 +870,17 @@
 <div class="why-item">
 <div class="why-item-num">01</div>
 <h3>3 odborníci pod jednou střechou</h3>
-<p>Synergie masérky, kosmetičky a bytového designéra v jednom prostoru — to jinde nenajdete.</p>
+<p>Synergie masérky, kosmetičky a bytového designéra v jednom prostoru — to jinde nenajdete. Nemusíte kombinovat různé salony a cestovat po městě. U nás máte vše na jednom místě, a pokud chcete, můžete jeden den vyřešit masáž i nakoupit dekorace do bytu.</p>
 </div>
 <div class="why-item">
 <div class="why-item-num">02</div>
 <h3>Individuální přístup</h3>
-<p>Každý klient je jedinečný. Nasloucháme vašim potřebám a péči přizpůsobujeme přesně pro vás.</p>
+<p>Každý klient je jedinečný a přichází s jinými potřebami. Nasloucháme vám a péči přizpůsobujeme přesně pro vás — žádné šablony, žádné zkratky. Záleží nám na tom, abyste odcházeli spokojení a s pocitem, že jste se o sebe skutečně postarali.</p>
 </div>
 <div class="why-item">
 <div class="why-item-num">03</div>
 <h3>Holistický pohled</h3>
-<p>Péče o tělo, krásu a domov jako jeden celek. Skutečná harmonie se promítá všude kolem vás.</p>
+<p>Péče o tělo, krásu a domov jako jeden celek. Věříme, že prostředí, ve kterém žijete, ovlivňuje to, jak se cítíte — a naopak. Harmonie začíná u vás uvnitř a promítá se do každého koutu vašeho domova.</p>
 </div>
 </div></section>
 <!-- LOCATION / CONTACT -->
@@ -858,7 +919,7 @@
 <!-- CTA -->
 <div class="cta reveal" id="rezervace">
 <h2>Rezervujte svůj<br/>okamžik <em>pohody</em></h2>
-<p class="cta-aside">Nezávazná rezervace online nebo telefonicky. Rádi se vám přizpůsobíme.</p>
+<p class="cta-aside">Rezervujte termín online nebo nás kontaktujte telefonicky. Rádi se přizpůsobíme vašemu časovému rozvrhu a poradíme, která služba je pro vás ta pravá.</p>
 <div class="cta-side">
 <a class="btn-dark" href="mailto:info@sestysmysluh.cz">Napsat nám</a>
 </div>
