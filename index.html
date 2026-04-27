@@ -325,40 +325,6 @@
     .tile:hover .tile-desc { opacity: 1; transform: translateY(0); }
     .tile:hover .tile-arrow { opacity: 1; transform: translateY(0); }
 
-    /* SERVICES PREVIEW */
-    .services-preview {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 0; background: var(--white);
-      border-top: 1px solid var(--border);
-    }
-    .svc-card {
-      padding: 3.5rem 3rem;
-      border-right: 1px solid var(--border);
-      display: flex; flex-direction: column;
-    }
-    .svc-card:last-child { border-right: none; }
-    .svc-card-label {
-      font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-    }
-    .svc-card h3 {
-      font-size: clamp(1.3rem, 1.8vw, 1.8rem);
-      color: var(--ink); margin-bottom: 1rem; line-height: 1.1;
-    }
-    .svc-card p {
-      font-size: 0.84rem; line-height: 1.85;
-      color: var(--sage-mid); flex: 1;
-    }
-    .svc-card-link {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      margin-top: 1.8rem;
-      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--sage); text-decoration: none;
-      transition: color 0.25s;
-    }
-    .svc-card-link::after { content: '→'; }
-    .svc-card-link:hover { color: var(--gold); }
-
     /* ABOUT STRIP */
     .about {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -614,11 +580,6 @@
       .tile-img-masaze   { object-position: center 55%; }
       .tile-img-kosmetika { object-position: center 55%; }
 
-      /* Services preview */
-      .services-preview { grid-template-columns: 1fr; }
-      .svc-card { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 6vw; }
-      .svc-card:last-child { border-bottom: none; }
-
       /* About */
       .about { grid-template-columns: 1fr; }
       .about-visual { min-height: 260px; }
@@ -829,27 +790,6 @@
 <span class="tile-arrow">Více informací</span>
 </div>
 </a>
-</div>
-</section>
-<!-- SERVICES PREVIEW -->
-<section class="services-preview reveal">
-<div class="svc-card">
-<span class="svc-card-label">Maderoterapie UH</span>
-<h3>Masáže<br/>&amp; Terapie</h3>
-<p>Specialistka na masáže a terapie nabízí maderoterapii, lymfodrenáž, španělskou masáž, reflexní terapii a An-Mo masáž. Každé ošetření je přizpůsobeno vašim potřebám — ať hledáte úlevu od bolesti, detox, nebo jen chvíli klidu pro sebe.</p>
-<a class="svc-card-link" href="masaze.html">Více o masážích</a>
-</div>
-<div class="svc-card">
-<span class="svc-card-label">RK Beauty</span>
-<h3>Kosmetika<br/>&amp; Beauty</h3>
-<p>Profesionální kosmetika Matis, hloubkové čištění pleti, anti-age ošetření, manikúra SPA, pedikúra a epilace Lycon. Vaše pleť si zaslouží tu nejlepší péči — v příjemném prostředí a s individuálním přístupem.</p>
-<a class="svc-card-link" href="kosmetika.html">Více o kosmetice</a>
-</div>
-<div class="svc-card">
-<span class="svc-card-label">Od Richarda</span>
-<h3>Interiérový<br/>Design</h3>
-<p>Showroom bytových dekorací, textilu a doplňků s poradenstvím v interiérovém designu. Nechte se inspirovat a proměňte svůj domov v místo, kde se cítíte skutečně dobře.</p>
-<a class="svc-card-link" href="interier.html">Více o designu</a>
 </div>
 </section>
 <!-- ABOUT -->
