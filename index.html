@@ -263,6 +263,10 @@
     .tile-color-2 { background: rgba(107, 79, 34, 0.38); }
     .tile-color-3 { background: rgba(30, 26, 18, 0.48); }
     .tile-img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover; }
+    @media (hover: none) {
+      .tile.in-view .tile-bg { filter: brightness(1.08); }
+      .tile.in-view .tile-color { opacity: 0; }
+    }
     .tile-img-masaze  { object-position: center 30%; }
     .tile-img-kosmetika { object-position: center 35%; }
     .tile-img-interier { object-position: center 40%; }
@@ -913,6 +917,12 @@
       if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 72, behavior:'smooth'}); }
     });
   });
+  if (window.matchMedia('(hover: none)').matches) {
+    const tileObs = new IntersectionObserver(entries => {
+      entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
+    }, { threshold: 0.45 });
+    document.querySelectorAll('.tile').forEach(t => tileObs.observe(t));
+  }
 </script>
 <script>
 const hamburger = document.getElementById('hamburger');
