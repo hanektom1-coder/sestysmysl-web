@@ -935,7 +935,19 @@
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const t = document.querySelector(a.getAttribute('href'));
-      if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 72, behavior:'smooth'}); }
+      if(t){
+        e.preventDefault();
+        const mm = document.getElementById('mobileMenu');
+        const hb = document.getElementById('hamburger');
+        if (mm && mm.classList.contains('open')) {
+          mm.classList.remove('open');
+          if (hb) { hb.classList.remove('open'); hb.setAttribute('aria-expanded', false); }
+          document.body.style.overflow = '';
+          setTimeout(() => { window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 72, behavior:'smooth'}); }, 50);
+        } else {
+          window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 72, behavior:'smooth'});
+        }
+      }
     });
   });
 </script>
